@@ -12,15 +12,16 @@ function initPkg_LiveTool_Dom() {
 
 function initPkg_LiveTool_Module() {
 // 添加模块
-initPkg_LiveTool_Vote();
-initPkg_LiveTool_Enter();
-initPkg_LiveTool_Mute();
-initPkg_LiveTool_Gift();
-initPkg_LiveTool_Reply();
-initPkg_LiveTool_Treasure();
-initPkg_LiveTool_BarrageSpeed();
-initPkg_LiveTool_RankList();
-initPkg_LiveTool_BarrageSendCheck();
+initPkg_LiveTool_Vote();  // 投票
+initPkg_LiveTool_Enter();  // 自动欢迎
+initPkg_LiveTool_Mute();  // 关键词禁言
+initPkg_LiveTool_Gift();  // 自动谢礼物
+initPkg_LiveTool_Reply();  // 关键词回复
+initPkg_LiveTool_RedPacket();  // 自动抢红包(白胖直播间专属)
+initPkg_LiveTool_Treasure();  // 自动抢宝箱
+initPkg_LiveTool_BarrageSpeed();  // 弹幕时速
+initPkg_LiveTool_RankList();  // 排行榜
+initPkg_LiveTool_BarrageSendCheck();  // 检查弹幕是否发送成功
 
 // initPkg_LiveTool_Bojiang_Handle();
 }
@@ -54,6 +55,7 @@ function initPkg_LiveTool_HandleFunc() {
 			initPkg_LiveTool_LiveNotice_Handle(ret); // 开播提醒
 	initPkg_LiveTool_Mute_Handle(ret); // 关键词禁言
 	initPkg_LiveTool_Reply_Handle(ret); // 关键词回复
+	initPkg_LiveTool_RedPacket_Handle(ret); // 自动抢红包(白胖直播间专属)
 	initPkg_LiveTool_Gift_Handle(ret); // 自动谢礼物
 	initPkg_LiveTool_Treasure_Handle(ret); // 自动抢宝箱
 	initPkg_LiveTool_Enter_Handle(ret); // 自动欢迎
