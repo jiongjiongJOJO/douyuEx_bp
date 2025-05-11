@@ -23,6 +23,7 @@ function initPkg_VideoTools_Module() {
     initPkg_VideoTools_VideoSpeed();
     initPkg_VideoTools_Cinema();
     initPkg_VideoTools_VideoSync();
+    initPkg_VideoTools_FrameChase();
     initPkg_VideoTools_VideoRecall();
     initPkg_VideoTools_Filter();
     initPkg_VideoTools_Camera();
