@@ -78,7 +78,7 @@ function FrameChase_insertIcon() {
     container.appendChild(statusIndicator);
 
     // 插入到指定位置
-    const target = document.getElementsByClassName('left-d3671e')[0];
+    const target = document.getElementsByClassName('left-d3671e')[0] || document.getElementsByClassName('left-bfab3b')[0];
     if (target && target.childNodes[4]) {
         target.insertBefore(container, target.childNodes[4]);
     } else {
