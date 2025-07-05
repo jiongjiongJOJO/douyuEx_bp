@@ -4,7 +4,7 @@ let isRedPacketCD = false;
 let redPacketCd = 0; // 冷却时间（秒）
 let isWaitingReply = false; // 是否正在等待发送回复
 
-function initPkg_LiveTool_RedPacket() {
+function initPkg_LiveTool_RedPacket_Bp() {
     LiveTool_RedPacket_insertDom();
     LiveTool_RedPacket_insertFunc();
     initPkg_RedPacket_Set();
@@ -39,8 +39,7 @@ function LiveTool_RedPacket_insertDom() {
 function LiveTool_RedPacket_insertFunc() {
     // 开关点击事件
     document.getElementById("redpacket__switch").addEventListener("click", () => {
-        let isChecked = document.getElementById("redpacket__switch").checked;
-        isRedPacketOn = isChecked;
+        isRedPacketOn = document.getElementById("redpacket__switch").checked;
         saveData_isRedPacket(); // 只保存开关状态
     });
 
@@ -116,7 +115,7 @@ function initPkg_RedPacket_Set() {
     }
 }
 
-function initPkg_LiveTool_RedPacket_Handle(text) {
+function initPkg_LiveTool_RedPacket_Bp_Handle(text) {
     if (!isRedPacketOn || isRedPacketCD || isWaitingReply) return;
 
     if (getType(text) === "chatmsg") {

@@ -17,7 +17,8 @@ initPkg_LiveTool_Enter();  // 自动欢迎
 initPkg_LiveTool_Mute();  // 关键词禁言
 initPkg_LiveTool_Gift();  // 自动谢礼物
 initPkg_LiveTool_Reply();  // 关键词回复
-initPkg_LiveTool_RedPacket();  // 自动抢红包(白胖直播间专属)
+initPkg_LiveTool_RedPacket_Bp();  // 自动抢红包(白胖直播间专属)
+initPkg_LiveTool_CountBp();  // 自动发送计数弹幕（白胖直播间专属）
 initPkg_LiveTool_Treasure();  // 自动抢宝箱
 initPkg_LiveTool_BarrageSpeed();  // 弹幕时速
 initPkg_LiveTool_RankList();  // 排行榜
@@ -52,10 +53,10 @@ function initPkg_LiveTool_HandleFunc() {
 	// 开启ws，并且设置处理函数的入口
 	// 是否生效由每个处理函数决定，可以设置一个变量保存开启状态，判断是否要执行
 	let ws = new Ex_WebSocket_UnLogin(rid, (ret) => {
-			initPkg_LiveTool_LiveNotice_Handle(ret); // 开播提醒
+	initPkg_LiveTool_LiveNotice_Handle(ret); // 开播提醒
 	initPkg_LiveTool_Mute_Handle(ret); // 关键词禁言
 	initPkg_LiveTool_Reply_Handle(ret); // 关键词回复
-	initPkg_LiveTool_RedPacket_Handle(ret); // 自动抢红包(白胖直播间专属)
+	initPkg_LiveTool_RedPacket_Bp_Handle(ret); // 自动抢红包(白胖直播间专属)
 	initPkg_LiveTool_Gift_Handle(ret); // 自动谢礼物
 	initPkg_LiveTool_Treasure_Handle(ret); // 自动抢宝箱
 	initPkg_LiveTool_Enter_Handle(ret); // 自动欢迎
