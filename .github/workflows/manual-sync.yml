@@ -1,0 +1,114 @@
+name: Manual Sync and Build
+
+on:
+  workflow_dispatch:
+    inputs:
+      force_sync:
+        description: '强制同步（即使没有检测到更改）'
+        required: false
+        default: 'false'
+        type: boolean
+      custom_dist_name:
+        description: '自定义构建目录名称'
+        required: false
+        default: 'build-output'
+        type: string
+
+jobs:
+  manual-sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Set up upstream remote
+      run: |
+        git remote add upstream https://github.com/qianjiachun/douyuEx.git || true
+        git fetch upstream
+
+    - name: Force sync or check changes
+      id: sync-decision
+      run: |
+        FORCE_SYNC="${{ github.event.inputs.force_sync }}"
+        
+        if [ "$FORCE_SYNC" == "true" ]; then
+          echo "should_sync=true" >> $GITHUB_OUTPUT
+          echo "🔄 强制同步模式已启用"
+        else
+          LOCAL_COMMIT=$(git rev-parse HEAD)
+          UPSTREAM_COMMIT=$(git rev-parse upstream/master)
+          
+          if [ "$LOCAL_COMMIT" != "$UPSTREAM_COMMIT" ]; then
+            echo "should_sync=true" >> $GITHUB_OUTPUT
+            echo "✅ 检测到上游更新"
+          else
+            echo "should_sync=false" >> $GITHUB_OUTPUT
+            echo "ℹ️ 没有检测到上游更新"
+          fi
+        fi
+
+    - name: Perform sync
+      if: steps.sync-decision.outputs.should_sync == 'true'
+      run: |
+        git config user.name "GitHub Action"
+        git config user.email "action@github.com"
+        
+        echo "🔄 正在同步上游代码..."
+        git merge upstream/master --no-edit || {
+          echo "⚠️ 发现合并冲突，使用强制同步"
+          git reset --hard upstream/master
+        }
+
+    - name: Setup Node.js
+      if: steps.sync-decision.outputs.should_sync == 'true'
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Install dependencies and build
+      if: steps.sync-decision.outputs.should_sync == 'true'
+      run: |
+        echo "📦 安装依赖..."
+        npm install
+        
+        echo "🔨 开始构建..."
+        npm run build
+
+    - name: Rename build output
+      if: steps.sync-decision.outputs.should_sync == 'true'
+      run: |
+        DIST_NAME="${{ github.event.inputs.custom_dist_name }}"
+        
+        if [ -d "dist" ]; then
+          mv dist "$DIST_NAME"
+          echo "📁 构建目录已重命名为: $DIST_NAME"
+          ls -la "$DIST_NAME"/
+        else
+          echo "❌ 构建失败：dist目录不存在"
+          exit 1
+        fi
+
+    - name: Commit and push
+      if: steps.sync-decision.outputs.should_sync == 'true'
+      run: |
+        git add -A
+        
+        if git diff --staged --quiet; then
+          echo "ℹ️ 没有需要提交的更改"
+        else
+          git commit -m "🔧 手动同步上游并构建 - $(date '+%Y-%m-%d %H:%M:%S')"
+          git push origin master
+          echo "✅ 更改已提交并推送"
+        fi
+
+    - name: Upload artifacts
+      if: steps.sync-decision.outputs.should_sync == 'true'
+      uses: actions/upload-artifact@v4
+      with:
+        name: manual-build-${{ github.run_number }}
+        path: ${{ github.event.inputs.custom_dist_name }}/
+        retention-days: 30
