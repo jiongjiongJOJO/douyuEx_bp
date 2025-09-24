@@ -104,40 +104,58 @@ jobs:
         echo "📦 安装依赖..."
         npm install
         
-        # 备份原有的dist目录（如果存在）
-        if [ -d "dist" ]; then
-          echo "🔄 发现原有dist目录，进行备份..."
-          cp -r dist dist-upstream-backup
-        fi
-        
-        echo "🔨 开始构建..."
-        npm run build
-
-    - name: Create custom build output and preserve upstream dist
-      if: steps.sync-decision.outputs.should_sync == 'true'
-      run: |
         DIST_NAME="${{ github.event.inputs.custom_dist_name }}"
         
-        # 复制新构建的dist到自定义目录
+        echo "📊 同步后的目录状态:"
         if [ -d "dist" ]; then
-          cp -r dist "$DIST_NAME"
-          echo "✅ 构建目录已复制为: $DIST_NAME"
-          ls -la "$DIST_NAME"/
+          echo "� 发现上游dist目录，将进行保护"
+          ls -la dist/ | head -3
+          cp -r dist dist-upstream-backup
+          UPSTREAM_DIST_EXISTS=true
         else
-          echo "❌ 构建失败：dist目录不存在"
-          exit 1
+          echo "🔸 上游没有dist目录"
+          UPSTREAM_DIST_EXISTS=false
         fi
         
-        # 恢复原有的dist目录
-        if [ -d "dist-upstream-backup" ]; then
-          rm -rf dist
-          mv dist-upstream-backup dist
-          echo "✅ 已恢复原有的上游dist目录"
+        echo "🔨 开始构建Fork版本..."
+        npm run build
+        
+        # 检查构建结果
+        if [ -d "dist" ] && [ -f "dist/douyuex.js" ]; then
+          echo "✅ Fork版本构建成功"
+          
+          # 复制构建结果到自定义目录
+          cp -r dist "$DIST_NAME"
+          echo "✅ 构建结果已保存到: $DIST_NAME/"
+          ls -la "$DIST_NAME"/
+          
+          # 恢复上游dist目录
+          if [ "$UPSTREAM_DIST_EXISTS" == "true" ]; then
+            echo "🔄 恢复上游原始dist目录..."
+            rm -rf dist
+            mv dist-upstream-backup dist
+            echo "✅ 上游dist目录已恢复"
+          else
+            echo "ℹ️ 上游没有dist目录，保留构建的dist目录"
+          fi
+          
+        else
+          echo "❌ 构建失败"
+          # 恢复上游dist（如果存在）
+          if [ "$UPSTREAM_DIST_EXISTS" == "true" ]; then
+            rm -rf dist 2>/dev/null || true
+            mv dist-upstream-backup dist
+          fi
+          exit 1
         fi
         
         echo "📊 最终目录状态:"
         echo "🔸 dist/ (上游版本):"
-        ls -la dist/ | head -3
+        if [ -d "dist" ]; then
+          ls -la dist/ | head -3
+        else
+          echo "  不存在"
+        fi
         echo "🔸 $DIST_NAME/ (Fork版本):"
         ls -la "$DIST_NAME"/ | head -3
 

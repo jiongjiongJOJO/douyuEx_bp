@@ -24,17 +24,21 @@ function handleFolder(folderPath, excludingFileName) {
 function generateVersion() {
   let version = fs.readFileSync("./src/packages/Update/Update.js", "utf8");
   version = version.match(/var curVersion = "(.*?)"/)[1];
+  // 确保dist目录存在
+  if (!fs.existsSync("./dist")) fs.mkdirSync("./dist");
   fs.writeFileSync("./dist/douyuex_version.txt", version);
 }
 
 function build() {
+  // 确保dist目录存在
+  if (!fs.existsSync("./dist")) fs.mkdirSync("./dist");
+  
   generateVersion();
   handleFolder("./src", "main.js");
   css = css.replace(/\r\n/g, "");
   let template = fs.readFileSync("./src/main.js", "utf8");
   template = template.replace("/*编译器标记 勿删*/", css).replace("// 编译器标记 勿删", js);
 
-  if (!fs.existsSync("./dist")) fs.mkdirSync("./dist");
   fs.writeFileSync("./dist/douyuex.js", template);
 
   let header = "";

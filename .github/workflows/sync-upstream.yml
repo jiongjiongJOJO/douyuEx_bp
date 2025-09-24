@@ -114,61 +114,82 @@ jobs:
       if: steps.check-changes.outputs.changes_detected == 'true'
       run: npm install
 
-    - name: Build project
+    - name: Build project and manage directories
       if: steps.check-changes.outputs.changes_detected == 'true'
       run: |
-        # 备份原有的dist目录（如果存在）
+        echo "📊 同步后的目录状态:"
+        echo "🔸 当前dist目录:"
         if [ -d "dist" ]; then
-          echo "发现原有dist目录，进行备份..."
-          cp -r dist dist-upstream-backup
-          echo "原有dist目录已备份为dist-upstream-backup"
+          echo "  存在 (来自上游)"
+          ls -la dist/ | head -3
+        else
+          echo "  不存在"
         fi
         
-        # 运行构建
+        echo "🔸 当前build-output目录:"
+        if [ -d "build-output" ]; then
+          echo "  存在 (之前的构建)"
+          ls -la build-output/ | head -3
+        else
+          echo "  不存在"
+        fi
+        
+        # 保存上游的dist目录（如果存在）
+        UPSTREAM_DIST_EXISTS=false
+        if [ -d "dist" ]; then
+          echo "🔄 保存上游dist目录..."
+          cp -r dist dist-upstream-original
+          UPSTREAM_DIST_EXISTS=true
+          echo "✅ 上游dist目录已保存"
+        fi
+        
+        # 运行构建 - 这会创建或覆盖dist目录
+        echo "🔨 开始构建Fork版本..."
         npm run build
         
-        # 检查dist目录是否存在
-        if [ -d "dist" ]; then
-          echo "✅ 构建成功，dist目录已创建"
+        # 检查构建是否成功
+        if [ -d "dist" ] && [ -f "dist/douyuex.js" ]; then
+          echo "✅ Fork版本构建成功"
           ls -la dist/
+          
+          # 将Fork构建结果复制到build-output
+          cp -r dist build-output
+          echo "✅ Fork构建结果已保存到build-output/"
+          
+          # 恢复上游的dist目录
+          if [ "$UPSTREAM_DIST_EXISTS" == "true" ]; then
+            echo "🔄 恢复上游原始dist目录..."
+            rm -rf dist
+            mv dist-upstream-original dist
+            echo "✅ 上游dist目录已恢复"
+          else
+            echo "ℹ️ 上游没有dist目录，保留构建的dist目录"
+          fi
         else
-          echo "❌ 构建失败，dist目录不存在"
+          echo "❌ 构建失败"
+          # 如果构建失败，恢复上游dist
+          if [ "$UPSTREAM_DIST_EXISTS" == "true" ]; then
+            rm -rf dist 2>/dev/null || true
+            mv dist-upstream-original dist
+            echo "🔄 已恢复上游dist目录"
+          fi
           exit 1
         fi
-
-    - name: Create build-output and preserve upstream dist
-      if: steps.check-changes.outputs.changes_detected == 'true'
-      run: |
-        # 复制新构建的dist到build-output
-        if [ -d "dist" ]; then
-          cp -r dist build-output
-          echo "✅ 已复制新构建的内容到build-output目录"
-          ls -la build-output/
-        fi
         
-        # 恢复原有的dist目录（如果之前有备份）
-        if [ -d "dist-upstream-backup" ]; then
-          rm -rf dist
-          mv dist-upstream-backup dist
-          echo "✅ 已恢复原有的上游dist目录"
-          echo "📁 上游dist目录内容:"
-          ls -la dist/
-        fi
-        
-        # 显示最终的目录结构
+        # 显示最终状态
         echo ""
-        echo "📊 最终目录结构:"
+        echo "📊 最终目录状态:"
         echo "🔸 dist/ (上游原版):"
         if [ -d "dist" ]; then
-          ls -la dist/ | head -5
+          ls -la dist/ | head -3
         else
-          echo "  (不存在)"
+          echo "  不存在"
         fi
-        echo "🔸 build-output/ (新构建版本):"
+        echo "🔸 build-output/ (Fork构建版本):"
         if [ -d "build-output" ]; then
-          ls -la build-output/ | head -5
+          ls -la build-output/ | head -3
         else
-          echo "  (不存在)"
+          echo "  不存在"
         fi
 
     - name: Commit and push changes
