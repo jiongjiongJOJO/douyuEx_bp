@@ -53,11 +53,55 @@ jobs:
         git config user.name "GitHub Action"
         git config user.email "action@github.com"
         
-        # 合并上游更新
-        git merge upstream/master --no-edit || {
-          echo "合并冲突，尝试强制同步"
+        # 备份当前的build-output目录（如果存在）
+        if [ -d "build-output" ]; then
+          echo "🔄 备份现有的build-output目录..."
+          cp -r build-output build-output-backup
+        fi
+        
+        # 尝试合并上游更新
+        echo "🔄 尝试合并上游更新..."
+        if git merge upstream/master --no-edit; then
+          echo "✅ 成功合并上游更新"
+        else
+          echo "⚠️ 合并冲突，使用智能同步策略"
+          
+          # 保存重要文件
+          IMPORTANT_FILES=()
+          if [ -d "build-output" ]; then
+            IMPORTANT_FILES+=("build-output")
+          fi
+          if [ -f ".github/workflows/sync-upstream.yml" ]; then
+            IMPORTANT_FILES+=(".github")
+          fi
+          
+          # 备份重要文件
+          for item in "${IMPORTANT_FILES[@]}"; do
+            if [ -e "$item" ]; then
+              echo "📦 备份重要文件: $item"
+              cp -r "$item" "${item}-temp-backup"
+            fi
+          done
+          
+          # 强制重置到上游
           git reset --hard upstream/master
-        }
+          
+          # 恢复重要文件
+          for item in "${IMPORTANT_FILES[@]}"; do
+            if [ -d "${item}-temp-backup" ]; then
+              echo "🔄 恢复重要文件: $item"
+              rm -rf "$item" 2>/dev/null || true
+              mv "${item}-temp-backup" "$item"
+            fi
+          done
+        fi
+        
+        # 恢复build-output备份（如果存在）
+        if [ -d "build-output-backup" ]; then
+          echo "🔄 恢复build-output目录..."
+          rm -rf build-output 2>/dev/null || true
+          mv build-output-backup build-output
+        fi
 
     - name: Setup Node.js
       if: steps.check-changes.outputs.changes_detected == 'true'
@@ -73,25 +117,58 @@ jobs:
     - name: Build project
       if: steps.check-changes.outputs.changes_detected == 'true'
       run: |
+        # 备份原有的dist目录（如果存在）
+        if [ -d "dist" ]; then
+          echo "发现原有dist目录，进行备份..."
+          cp -r dist dist-upstream-backup
+          echo "原有dist目录已备份为dist-upstream-backup"
+        fi
+        
+        # 运行构建
         npm run build
         
         # 检查dist目录是否存在
         if [ -d "dist" ]; then
-          echo "构建成功，dist目录已创建"
+          echo "✅ 构建成功，dist目录已创建"
           ls -la dist/
         else
-          echo "构建失败，dist目录不存在"
+          echo "❌ 构建失败，dist目录不存在"
           exit 1
         fi
 
-    - name: Rename dist to build-output
+    - name: Create build-output and preserve upstream dist
       if: steps.check-changes.outputs.changes_detected == 'true'
       run: |
-        # 重命名dist目录为build-output以避免与上游冲突
+        # 复制新构建的dist到build-output
         if [ -d "dist" ]; then
-          mv dist build-output
-          echo "已将dist目录重命名为build-output"
+          cp -r dist build-output
+          echo "✅ 已复制新构建的内容到build-output目录"
           ls -la build-output/
+        fi
+        
+        # 恢复原有的dist目录（如果之前有备份）
+        if [ -d "dist-upstream-backup" ]; then
+          rm -rf dist
+          mv dist-upstream-backup dist
+          echo "✅ 已恢复原有的上游dist目录"
+          echo "📁 上游dist目录内容:"
+          ls -la dist/
+        fi
+        
+        # 显示最终的目录结构
+        echo ""
+        echo "📊 最终目录结构:"
+        echo "🔸 dist/ (上游原版):"
+        if [ -d "dist" ]; then
+          ls -la dist/ | head -5
+        else
+          echo "  (不存在)"
+        fi
+        echo "🔸 build-output/ (新构建版本):"
+        if [ -d "build-output" ]; then
+          ls -la build-output/ | head -5
+        else
+          echo "  (不存在)"
         fi
 
     - name: Commit and push changes
@@ -122,11 +199,24 @@ jobs:
         echo "- **上游commit**: ${{ steps.check-changes.outputs.upstream_commit }}" >> release-info.md
         echo "- **本地commit**: ${{ steps.check-changes.outputs.local_commit }}" >> release-info.md
         echo "" >> release-info.md
-        echo "### 📦 构建产物" >> release-info.md
-        echo "构建产物已保存在 \`build-output\` 目录中：" >> release-info.md
+        echo "### 📦 目录说明" >> release-info.md
+        echo "- \`dist/\` - 上游原版构建文件（保持与上游同步）" >> release-info.md
+        echo "- \`build-output/\` - Fork版本构建文件（本次CI构建产物）" >> release-info.md
         echo "" >> release-info.md
+        echo "### 📄 构建产物 (build-output)" >> release-info.md
         if [ -d "build-output" ]; then
           for file in build-output/*; do
+            if [ -f "$file" ]; then
+              filename=$(basename "$file")
+              filesize=$(du -h "$file" | cut -f1)
+              echo "- 📄 \`$filename\` ($filesize)" >> release-info.md
+            fi
+          done
+        fi
+        echo "" >> release-info.md
+        echo "### 📄 上游文件 (dist)" >> release-info.md
+        if [ -d "dist" ]; then
+          for file in dist/*; do
             if [ -f "$file" ]; then
               filename=$(basename "$file")
               filesize=$(du -h "$file" | cut -f1)

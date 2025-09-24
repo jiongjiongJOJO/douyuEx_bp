@@ -57,11 +57,40 @@ jobs:
         git config user.name "GitHub Action"
         git config user.email "action@github.com"
         
-        echo "🔄 正在同步上游代码..."
-        git merge upstream/master --no-edit || {
+        DIST_NAME="${{ github.event.inputs.custom_dist_name }}"
+        
+        # 备份重要文件
+        BACKUP_FILES=()
+        if [ -d "$DIST_NAME" ]; then
+          BACKUP_FILES+=("$DIST_NAME")
+        fi
+        if [ -d ".github" ]; then
+          BACKUP_FILES+=(".github")
+        fi
+        
+        for item in "${BACKUP_FILES[@]}"; do
+          if [ -e "$item" ]; then
+            echo "� 备份: $item"
+            cp -r "$item" "${item}-backup"
+          fi
+        done
+        
+        echo "�🔄 正在同步上游代码..."
+        if git merge upstream/master --no-edit; then
+          echo "✅ 成功合并上游更新"
+        else
           echo "⚠️ 发现合并冲突，使用强制同步"
           git reset --hard upstream/master
-        }
+          
+          # 恢复备份的文件
+          for item in "${BACKUP_FILES[@]}"; do
+            if [ -d "${item}-backup" ]; then
+              echo "🔄 恢复: $item"
+              rm -rf "$item" 2>/dev/null || true
+              mv "${item}-backup" "$item"
+            fi
+          done
+        fi
 
     - name: Setup Node.js
       if: steps.sync-decision.outputs.should_sync == 'true'
@@ -75,22 +104,42 @@ jobs:
         echo "📦 安装依赖..."
         npm install
         
+        # 备份原有的dist目录（如果存在）
+        if [ -d "dist" ]; then
+          echo "🔄 发现原有dist目录，进行备份..."
+          cp -r dist dist-upstream-backup
+        fi
+        
         echo "🔨 开始构建..."
         npm run build
 
-    - name: Rename build output
+    - name: Create custom build output and preserve upstream dist
       if: steps.sync-decision.outputs.should_sync == 'true'
       run: |
         DIST_NAME="${{ github.event.inputs.custom_dist_name }}"
         
+        # 复制新构建的dist到自定义目录
         if [ -d "dist" ]; then
-          mv dist "$DIST_NAME"
-          echo "📁 构建目录已重命名为: $DIST_NAME"
+          cp -r dist "$DIST_NAME"
+          echo "✅ 构建目录已复制为: $DIST_NAME"
           ls -la "$DIST_NAME"/
         else
           echo "❌ 构建失败：dist目录不存在"
           exit 1
         fi
+        
+        # 恢复原有的dist目录
+        if [ -d "dist-upstream-backup" ]; then
+          rm -rf dist
+          mv dist-upstream-backup dist
+          echo "✅ 已恢复原有的上游dist目录"
+        fi
+        
+        echo "📊 最终目录状态:"
+        echo "🔸 dist/ (上游版本):"
+        ls -la dist/ | head -3
+        echo "🔸 $DIST_NAME/ (Fork版本):"
+        ls -la "$DIST_NAME"/ | head -3
 
     - name: Commit and push
       if: steps.sync-decision.outputs.should_sync == 'true'
