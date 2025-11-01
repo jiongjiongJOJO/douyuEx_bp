@@ -3,7 +3,7 @@
 // @name         DouyuEx-斗鱼直播间增强插件
 // @namespace    https://github.com/qianjiachun
 // @icon         data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTA4cHgiIGhlaWdodD0iMTA4cHgiIHZpZXdCb3g9IjAgMCAxMDggMTA4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHRpdGxlPueyvueBteeQgzwvdGl0bGU+CiAgICA8ZyBpZD0i6aG16Z2iLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLnsr7ngbXnkIMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuODMwNzY5LCAwLjgzMDc2OSkiIGZpbGwtcnVsZT0ibm9uemVybyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik01My4xNjkyMzA3LDEwNi4zMzg0NjEgQzIzLjgyNzY5MjIsMTA2LjMzODQ2MSAwLDgyLjUxMDc2OTIgMCw1My4xNjkyMzA3IEMwLDUxLjAwMzA3NjkgMS43NzIzMDc3NSw0OS4yMzA3NjkyIDMuOTM4NDYxNSw0OS4yMzA3NjkyIEwzMy40NzY5MjMsNDkuMjMwNzY5MiBDMzUuNjQzMDc2OSw0OS4yMzA3NjkyIDM3LjQxNTM4NDUsNTEuMDAzMDc3IDM3LjQxNTM4NDYsNTMuMTY5MjMwNyBDMzcuNDE1Mzg0Niw2MS44MzM4NDYxIDQ0LjUwNDYxNTQsNjguOTIzMDc2OSA1My4xNjkyMzA3LDY4LjkyMzA3NjkgQzYxLjgzMzg0NjEsNjguOTIzMDc2OSA2OC45MjMwNzY5LDYxLjgzMzg0NjEgNjguOTIzMDc2OSw1My4xNjkyMzA3IEM2OC45MjMwNzY5LDUxLjAwMzA3NjkgNzAuNjk1Mzg0Niw0OS4yMzA3NjkyIDcyLjg2MTUzODUsNDkuMjMwNzY5MiBMMTAyLjQsNDkuMjMwNzY5MiBDMTA0LjU2NjE1NCw0OS4yMzA3NjkyIDEwNi4zMzg0NjEsNTEuMDAzMDc3IDEwNi4zMzg0NjEsNTMuMTY5MjMwNyBDMTA2LjMzODQ2MSw4Mi41MTA3NjkyIDgyLjUxMDc2OTIsMTA2LjMzODQ2MSA1My4xNjkyMzA3LDEwNi4zMzg0NjEgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iIzMzMzYzQSI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNOC4wNzM4NDYxMiw1Ny4xMDc2OTIyIEMxMC4wNDMwNzY5LDgwLjI0NjE1MzcgMjkuNTM4NDYxNSw5OC40NjE1Mzg1IDUzLjE2OTIzMDcsOTguNDYxNTM4NSBDNzYuOCw5OC40NjE1Mzg1IDk2LjI5NTM4NDYsODAuMjQ2MTUzOSA5OC4yNjQ2MTU0LDU3LjEwNzY5MjIgTDc2LjUwNDYxNTQsNTcuMTA3NjkyMiBDNzQuNjMzODQ2MSw2OC4yMzM4NDYxIDY0Ljg4NjE1MzksNzYuOCA1My4xNjkyMzA3LDc2LjggQzQxLjQ1MjMwNzYsNzYuOCAzMS43MDQ2MTU0LDY4LjIzMzg0NjEgMjkuODMzODQ2MSw1Ny4xMDc2OTIyIEw4LjA3Mzg0NjEyLDU3LjEwNzY5MjIgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNTMuMTY5MjMwOCwzLjkzODQ2MTUgQzI1Ljk5Mzg0NjEsMy45Mzg0NjE1IDMuOTM4NDYxNSwyNS45OTM4NDYxIDMuOTM4NDYxNSw1My4xNjkyMzA3IEwzMy40NzY5MjMsNTMuMTY5MjMwNyBDMzMuNDc2OTIzLDQyLjMzODQ2MTUgNDIuMzM4NDYxNSwzMy40NzY5MjMgNTMuMTY5MjMwOCwzMy40NzY5MjMgQzY0LDMzLjQ3NjkyMyA3Mi44NjE1Mzg1LDQyLjMzODQ2MTUgNzIuODYxNTM4NSw1My4xNjkyMzA3IEwxMDIuNCw1My4xNjkyMzA3IEMxMDIuNCwyNS45OTM4NDYxIDgwLjM0NDYxNTQsMy45Mzg0NjE1IDUzLjE2OTIzMDgsMy45Mzg0NjE1IFoiIGlkPSLot6/lvoQiIGZpbGw9IiNENjA5MDkiPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTEwMi40LDU3LjEwNzY5MjIgTDcyLjg2MTUzODUsNTcuMTA3NjkyMiBDNzAuNjk1Mzg0Niw1Ny4xMDc2OTIyIDY4LjkyMzA3Nyw1NS4zMzUzODQ1IDY4LjkyMzA3NjksNTMuMTY5MjMwNyBDNjguOTIzMDc2OSw0NC41MDQ2MTU0IDYxLjgzMzg0NjEsMzcuNDE1Mzg0NiA1My4xNjkyMzA3LDM3LjQxNTM4NDYgQzQ0LjUwNDYxNTQsMzcuNDE1Mzg0NiAzNy40MTUzODQ2LDQ0LjUwNDYxNTQgMzcuNDE1Mzg0Niw1My4xNjkyMzA3IEMzNy40MTUzODQ2LDU1LjMzNTM4NDYgMzUuNjQzMDc2OSw1Ny4xMDc2OTIyIDMzLjQ3NjkyMyw1Ny4xMDc2OTIyIEwzLjkzODQ2MTUsNTcuMTA3NjkyMiBDMS43NzIzMDc2Miw1Ny4xMDc2OTIyIDAsNTUuMzM1Mzg0NSAwLDUzLjE2OTIzMDcgQzAsMjMuODI3NjkyMiAyMy44Mjc2OTIzLDAgNTMuMTY5MjMwNywwIEM4Mi41MTA3NjkyLDAgMTA2LjMzODQ2MSwyMy44Mjc2OTIyIDEwNi4zMzg0NjEsNTMuMTY5MjMwNyBDMTA2LjMzODQ2MSw1NS4zMzUzODQ2IDEwNC41NjYxNTQsNTcuMTA3NjkyMiAxMDIuNCw1Ny4xMDc2OTIyIFoiIGlkPSLot6/lvoQiIGZpbGw9IiMzMzM2M0EiPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTc2LjUwNDYxNTQsNDkuMjMwNzY5MyBMOTguMzYzMDc2OSw0OS4yMzA3NjkzIEM5Ni4yOTUzODQ2LDI2LjA5MjMwNzYgNzYuOCw3Ljg3NjkyMyA1My4xNjkyMzA3LDcuODc2OTIzIEMyOS41Mzg0NjE1LDcuODc2OTIzIDEwLjA0MzA3NjksMjYuMDkyMzA3NiA4LjA3Mzg0NjEyLDQ5LjIzMDc2OTMgTDI5LjkzMjMwNzYsNDkuMjMwNzY5MyBDMzEuNzA0NjE1NCwzOC4xMDQ2MTU0IDQxLjQ1MjMwNzYsMjkuNTM4NDYxNSA1My4xNjkyMzA3LDI5LjUzODQ2MTUgQzY0Ljg4NjE1MzksMjkuNTM4NDYxNSA3NC42MzM4NDYxLDM4LjEwNDYxNTQgNzYuNTA0NjE1NCw0OS4yMzA3NjkzIEw3Ni41MDQ2MTU0LDQ5LjIzMDc2OTMgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0Q2MDkwOSI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNTMuMTY5MjMwNyw3Ni44IEM0MC4xNzIzMDc2LDc2LjggMjkuNTM4NDYxNSw2Ni4xNjYxNTM5IDI5LjUzODQ2MTUsNTMuMTY5MjMwNyBDMjkuNTM4NDYxNSw0MC4xNzIzMDc2IDQwLjE3MjMwNzYsMjkuNTM4NDYxNSA1My4xNjkyMzA3LDI5LjUzODQ2MTUgQzY2LjE2NjE1MzksMjkuNTM4NDYxNSA3Ni44LDQwLjE3MjMwNzYgNzYuOCw1My4xNjkyMzA3IEM3Ni44LDY2LjE2NjE1MzkgNjYuMTY2MTUzOSw3Ni44IDUzLjE2OTIzMDcsNzYuOCBaIiBpZD0i6Lev5b6EIiBmaWxsPSIjMzMzNjNBIj48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik01My4xNjkyMzA3LDM3LjQxNTM4NDYgQzQ0LjUwNDYxNTQsMzcuNDE1Mzg0NiAzNy40MTUzODQ2LDQ0LjUwNDYxNTQgMzcuNDE1Mzg0Niw1My4xNjkyMzA3IEMzNy40MTUzODQ2LDYxLjgzMzg0NjEgNDQuNTA0NjE1NCw2OC45MjMwNzY5IDUzLjE2OTIzMDcsNjguOTIzMDc2OSBDNjEuODMzODQ2MSw2OC45MjMwNzY5IDY4LjkyMzA3NjksNjEuODMzODQ2MSA2OC45MjMwNzY5LDUzLjE2OTIzMDcgQzY4LjkyMzA3NjksNDQuNTA0NjE1NCA2MS44MzM4NDYxLDM3LjQxNTM4NDYgNTMuMTY5MjMwNywzNy40MTUzODQ2IEw1My4xNjkyMzA3LDM3LjQxNTM4NDYgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNDMuMzIzMDc2OSw1My4xNjkyMzA3IEM0My4zMjMwNzY5LDU4LjYwNzExMTQgNDcuNzMxMzUwMSw2My4wMTUzODQ2IDUzLjE2OTIzMDcsNjMuMDE1Mzg0NiBDNTguNjA3MTExNCw2My4wMTUzODQ2IDYzLjAxNTM4NDYsNTguNjA3MTExNCA2My4wMTUzODQ2LDUzLjE2OTIzMDcgQzYzLjAxNTM4NDYsNDcuNzMxMzUwMSA1OC42MDcxMTE0LDQzLjMyMzA3NjkgNTMuMTY5MjMwNyw0My4zMjMwNzY5IEM0Ny43MzEzNTAxLDQzLjMyMzA3NjkgNDMuMzIzMDc2OSw0Ny43MzEzNTAxIDQzLjMyMzA3NjksNTMuMTY5MjMwNyBaIiBpZD0i6Lev5b6EIiBmaWxsPSIjMzMzNjNBIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=
-// @version      2025.09.17.02
+// @version      2025.10.30.01
 // @description  斗鱼直播间增强插件，功能：弹幕自动变色防检测循环发送 一键续牌 查看真实人数/查看主播数据 已播时长 一键签到(直播间/车队/鱼吧/客户端) 一键领取鱼粮(宝箱/气泡/任务) 一键寻宝 送出指定数量的礼物 一键清空背包 屏蔽广告 调节弹幕大小 自动更新 同屏画中画/多直播间小窗观看/可在斗鱼看多个平台直播(虎牙/b站) 获取真实直播流地址 自动抢礼物红包 背包信息扩展 简洁模式 夜间模式 开播提醒 幻神模式 关键词回复 关键词禁言 自动谢礼物 自动抢宝箱 弹幕右键信息扩展 防止下播自动跳转 影院模式 直播时间流控制 弹幕投票 直播滤镜 直播音频流 账号多开/切换 显示粉丝牌获取日期 月消费数据显示 弹幕时速 相机截图录制gif 全景播放器 斗鱼视频下载/弹幕ass下载 直播画面局部缩放 全站抽奖信息 直播音效增强 阻止P2P上传 显示贡献榜贡献值 恢复弹幕显示 斗鱼视频弹幕高能进度条 检测弹幕是否发送成功 查看主播配置信息 自动网页全屏 自动最高画质 弹幕无限收藏 收藏弹幕搜索 支持弹幕带图片 屏蔽弹幕背景 弹幕+1 房间VIP到期提醒 自动钓鱼 防止自动暂停直播 恢复已关闭鱼吧 弹幕小尾巴
 // @author       小淳
 // @match			*://*.douyu.com/0*
@@ -87,7 +87,8 @@ function initPkg() {
 	initPkg_Shield();
 	initPkg_BagInfo();
 	initPkg_Update();
-	initPkg_SyncJoy();
+	// initPkg_SyncJoy();
+	initPkg_Fkbuff();
 	initPkg_Monitor();
 	initPkg_Lottery();
 	// initPkg_MiniProgram();
@@ -442,12 +443,10 @@ function initStyles() {
 	bottom: 32px;
 	right: 0px;
 	background-color: rgba(255,255,255,0.9);
-	opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out; /* 给工具栏出现加一下过渡效果 */
 	border: 2px rgb(234,173,26) solid;
 	z-index: 1428;
 	user-select: none;
+	display: none;
 }
 .ex-panel__wrap {
 	display: flex;
@@ -1187,6 +1186,29 @@ function initStyles() {
 #ex-camera:active > svg > path {
     fill: rgb(253, 60, 60);
 }
+
+#ex-camera-close {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    background: rgba(0,0,0,0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    border: 1px solid rgba(255,255,255,0.3);
+    z-index: 11;
+}
+
+#ex-camera-close:hover {
+    background: rgba(253, 60, 60, 0.9);
+}
 #ex-cinema:hover > .cinema__wrap {
     display: block;
 }
@@ -1745,20 +1767,6 @@ var myName = "";
 var dyToken = getToken();
 // 功能条的显示定时器
 var exPanelTimer = null;
-
-function showExPanel() {
-	// 显示功能条
-	let a = document.getElementsByClassName("ex-panel")[0];
-	if (a.style.visibility !== 'visible') {
-        a.style.visibility = 'visible';
-        a.style.opacity = '1';
-        clearTimeout(exPanelTimer);
-    } else {
-        a.style.visibility = 'hidden';
-        a.style.opacity = '0';
-        clearTimeout(exPanelTimer);
-    }
-}
 
 function sleep(time) {
 	return new Promise((resolve) => setTimeout(resolve, time));
@@ -4984,11 +4992,11 @@ function ExIcon_showTip(a) {
 function initPkg_ExPanel() {
     initPkg_ExPanel_insertDom();
 
-    let exPanelDOM = document.querySelector('.ex-panel');
-    exPanelDOM.addEventListener('mouseenter', () => {
+    let exPanelDOM = document.querySelector(`.ex-panel`);
+    exPanelDOM.addEventListener(`mouseenter`, () => {
         clearTimeout(exPanelTimer);
     });
-    exPanelDOM.addEventListener('mouseleave', () => {
+    exPanelDOM.addEventListener(`mouseleave`, () => {
         clearTimeout(exPanelTimer);
         exPanelTimer = setTimeout(autoCloseExPanelHandle, 800);
     });
@@ -4996,7 +5004,7 @@ function initPkg_ExPanel() {
 function initPkg_ExPanel_insertDom() {
 	let a = document.createElement("div");
 	a.className = "ex-panel";
-	a.innerHTML = '<div class="ex-panel__wrap"></div>';
+	a.innerHTML = `<div class="ex-panel__wrap"></div>`;
 	
     let b = document.querySelector(".PlayerToolbar-ContentCell .PlayerToolbar-Wealth");
     if (!b) {
@@ -5007,12 +5015,22 @@ function initPkg_ExPanel_insertDom() {
 	
 }
 function autoCloseExPanelHandle() {
-    let exPanelDOM = document.querySelector('.ex-panel');
-    exPanelDOM.style.visibility = 'hidden';
-    exPanelDOM.style.opacity = '0';
+    let exPanelDOM = document.querySelector(`.ex-panel`);
     exPanelTimer = null;
+    exPanelDOM.style.display = `none`;
 }
 
+function showExPanel() {
+	// 显示功能条
+	let a = document.getElementsByClassName("ex-panel")[0];
+	if (a.style.display !== 'block') {
+        a.style.display = 'block';
+        clearTimeout(exPanelTimer);
+    } else {
+        a.style.display = 'none';
+        clearTimeout(exPanelTimer);
+    }
+}
 
 function initPkg_ExpandTool() {
 	initPkg_ExpandTool_Dom();
@@ -6515,6 +6533,31 @@ function initPkg_FirePower_Func() {
         }).catch(err => {
             console.log("请求失败!", err);
         })
+	});
+}
+
+
+function initPkg_Fkbuff() {
+	initPkg_Fkbuff_Dom();
+	initPkg_Fkbuff_Func();
+}
+
+function initPkg_Fkbuff_Dom() {
+	Fkbuff_insertIcon();
+}
+function Fkbuff_insertIcon() {
+	let a = document.createElement("div");
+	a.className = "ex-fkbuff";
+	a.innerHTML = `<a class="ex-panel__icon" title="FKBUFF - CS饰品议价交流工具"><img style="width:36px;height:36px;" src="data:image/png;base64,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"/></a>`;
+	
+	let b = document.getElementsByClassName("ex-panel__wrap")[0];
+	b.insertBefore(a, b.childNodes[0]);
+	
+}
+
+function initPkg_Fkbuff_Func() {
+	document.getElementsByClassName("ex-fkbuff")[0].addEventListener("click", function() {
+        openPage("https://fkbuff.com/");
 	});
 }
 
@@ -11488,7 +11531,7 @@ function initPkg_Refresh_Video_Func() {
             dom_toolbar.style.visibility = "hidden";
             dom_video.style = "bottom:0;z-index:25";
             dom_refresh2.style.display = "block";
-            dom_refresh.innerText = "√ 简洁模式";
+            dom_refresh.innerText = "✓ 简洁模式";
             refresh_Video_setStyle();
         }
         changeToolBarZIndex();
@@ -11510,7 +11553,7 @@ function initPkg_Refresh_Video_Func() {
             dom_toolbar.style.visibility = "hidden";
             dom_video.style = "bottom:0;z-index:25";
             dom_refresh2.style.display = "block";
-            dom_refresh.innerText = "√ 简洁模式";
+            dom_refresh.innerText = "✓ 简洁模式";
             refresh_Video_setStyle();
         }
         changeToolBarZIndex();
@@ -11554,7 +11597,7 @@ function initPkg_Refresh_Video_Set() {
             const isBeta = !!document.getElementsByClassName("live-next-body")[0];
             if (isBeta) dom_player_toolbar.parentElement.style = "z-index:20";
             dom_refresh2.style.display = "block";
-            dom_refresh.innerText = "√ 简洁模式";
+            dom_refresh.innerText = "✓ 简洁模式";
             refresh_Video_setStyle();
             resizeWindow();
         }
@@ -12204,7 +12247,7 @@ function initPkg_ShowDanmakuOriginAction() {
             // 加一按钮
             newContent = newContent.replace(`if(c&&c.isOpenFireFBComment)`, `if(true)`);
             // 回复按钮
-            newContent = newContent.replace(`if(W&&!this.isFireOpenRank(s))if(parseInt(W,10)&&U&&B>=z&&(!G||G&&M))`, `if(true)if(true) `);
+            newContent = newContent.replace(`if(W&&!this.isFireOpenRank(s))if(parseInt(W,10)&&z&&B>=U&&(!G||G&&M))`, `if(true)if(true) `);
             // 点赞按钮
             newContent = newContent.replace(`else if(1==+Object(r.A)("barrage_praise"))`, `if(true) `);
             return newContent;
@@ -13486,7 +13529,7 @@ function initPkg_SyncJoy_Func() {
 
 // 版本号
 // 格式 yyyy.MM.dd.**
-var curVersion = "2025.09.17.02"
+var curVersion = "2025.10.30.01"
 var isNeedUpdate = false
 var lastestVersion = ""
 function initPkg_Update() {
@@ -13718,27 +13761,52 @@ function Camera_insertIcon() {
     a.title = "单击截图 长按录制gif"
     a.innerHTML = `
     <svg t="1620266708389" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2080" width="38" height="38"><path d="M512 337.371136c-119.543808 0-216.800256 97.255424-216.800256 216.798208 0 119.543808 97.256448 216.800256 216.800256 216.800256s216.800256-97.256448 216.800256-216.800256C728.800256 434.625536 631.543808 337.371136 512 337.371136zM680.479744 554.16832c0 92.911616-75.579392 168.501248-168.479744 168.501248-92.900352 0-168.480768-75.589632-168.480768-168.501248 0-92.923904 75.579392-168.521728 168.480768-168.521728C604.899328 385.646592 680.479744 461.24544 680.479744 554.16832z" p-id="2081" fill="#ffffff"></path><path d="M831.209472 337.349632l-47.167488 0c-13.647872 0-24.751104 11.083776-24.751104 24.707072 0 13.635584 11.103232 24.7296 24.751104 24.7296l47.167488 0c13.646848 0 24.75008-11.094016 24.75008-24.7296C855.959552 348.433408 844.85632 337.349632 831.209472 337.349632z" p-id="2082" fill="#ffffff"></path><path d="M700.505088 171.497472c4.235264 0 6.403072 0.405504 7.232512 0.612352 1.47968 1.514496 4.790272 6.218752 11.717632 20.685824 2.83648 5.910528 8.6272 18.86208 15.888384 35.533824l11.788288 27.063296 29.518848 0 96.535552 0c35.122176 0 63.695872 28.535808 63.695872 63.609856l0 469.933056c0 35.05152-28.573696 63.567872-63.695872 63.567872L150.811648 852.503552c-35.121152 0-63.694848-28.516352-63.694848-63.567872L87.1168 319.0016c0-35.062784 28.573696-63.589376 63.694848-63.589376l99.35872 0 29.110272 0 11.964416-26.537984c4.698112-10.421248 8.416256-19.063808 11.058176-25.70752 9.86112-24.829952 15.207424-30.125056 16.239616-30.974976 0.52736-0.161792 2.64192-0.695296 7.673856-0.695296L700.505088 171.496448M700.505088 126.441472 326.216704 126.441472c-32.519168 0-47.275008 13.479936-65.787904 60.096512-3.180544 7.999488-7.689216 18.122752-10.257408 23.819264l-99.35872 0c-59.96544 0-108.750848 48.738304-108.750848 108.645376l0 469.933056c0 59.894784 48.785408 108.623872 108.750848 108.623872l722.37568 0c59.96544 0 108.751872-48.729088 108.751872-108.623872L981.940224 319.0016c0-59.91936-48.786432-108.665856-108.751872-108.665856l-96.535552 0c-4.458496-10.236928-12.420096-28.372992-16.574464-37.031936C744.823808 141.448192 733.973504 126.441472 700.505088 126.441472L700.505088 126.441472z" p-id="2083" fill="#ffffff"></path></svg>
+    <div id="ex-camera-close">×</div>
     `;
     let b = document.getElementById("js-player-dialog");
     b.insertBefore(a, b.childNodes[0]);
+}
+
+function Camera_isHidden() {
+    let saved = localStorage.getItem("ExSave_Camera_Hidden");
+    if (!saved) return false;
+    let time = parseInt(saved);
+    return Date.now() < time;
 }
 
 function initPkg_VideoTools_Camera_Func() {
     let dom = getValidDom([".layout-Player-video", ".layout-Player-videoEntity"]);
     let dom_video = document.getElementsByClassName("room-Player-Box")[0];
     let camera = document.getElementById("ex-camera");
+    let closeBtn = document.getElementById("ex-camera-close");
     let gif = null;
     let timer = 0;
     let downTime = 0;
     let imgBase64;
     let timer_timeout = 0;
+    let isClosed = false;
+    
+    closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (confirm("是否7天内不再显示？")) {
+            localStorage.setItem("ExSave_Camera_Hidden", Date.now() + 7 * 24 * 60 * 60 * 1000);
+        } else {
+            isClosed = true;
+        }
+        camera.style.display = "none";
+    });
+    
+    if (Camera_isHidden()) return;
+    
     dom.addEventListener("mouseenter", () => {
+        if (isClosed || Camera_isHidden()) return;
         camera.style.display = "flex";
         timer_timeout = setTimeout(() => {
             camera.style.display = "none";
         }, 2000);
     })
     dom_video.addEventListener("mousemove", () => {
+        if (isClosed || Camera_isHidden()) return;
         camera.style.display = "flex";
         clearTimeout(timer_timeout);
         timer_timeout = setTimeout(() => {
@@ -13746,6 +13814,7 @@ function initPkg_VideoTools_Camera_Func() {
         }, 2000);
     })
     camera.addEventListener("mouseenter", () => {
+        if (isClosed || Camera_isHidden()) return;
         camera.style.display = "flex";
         clearTimeout(timer_timeout);
     })
@@ -13753,6 +13822,7 @@ function initPkg_VideoTools_Camera_Func() {
         camera.style.display = "none";
     })
     camera.addEventListener("mousedown", (e) => {
+        if (e.target.id === "ex-camera-close") return;
         downTime = new Date().getTime();
         camera_canvas_img.getContext('2d').drawImage(liveVideoNode, 0, 0, camera_canvas_img.width, camera_canvas_img.height);
         imgBase64 = camera_canvas_img.toDataURL("image/png");
@@ -13768,6 +13838,7 @@ function initPkg_VideoTools_Camera_Func() {
         timer = setInterval(() => {cameraAddFrame(liveVideoNode, camera_canvas, gif, camera_fps)}, camera_fps);
     })
     camera.addEventListener("mouseup", (e) => {
+        if (e.target.id === "ex-camera-close") return;
         let upTime = new Date().getTime();
         clearInterval(timer);
         if (upTime - downTime >= 800) {
@@ -13828,26 +13899,51 @@ function Camera_Video_insertIcon() {
     a.title = "单击截图 长按录制gif"
     a.innerHTML = `
     <svg t="1620266708389" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2080" width="38" height="38"><path d="M512 337.371136c-119.543808 0-216.800256 97.255424-216.800256 216.798208 0 119.543808 97.256448 216.800256 216.800256 216.800256s216.800256-97.256448 216.800256-216.800256C728.800256 434.625536 631.543808 337.371136 512 337.371136zM680.479744 554.16832c0 92.911616-75.579392 168.501248-168.479744 168.501248-92.900352 0-168.480768-75.589632-168.480768-168.501248 0-92.923904 75.579392-168.521728 168.480768-168.521728C604.899328 385.646592 680.479744 461.24544 680.479744 554.16832z" p-id="2081" fill="#ffffff"></path><path d="M831.209472 337.349632l-47.167488 0c-13.647872 0-24.751104 11.083776-24.751104 24.707072 0 13.635584 11.103232 24.7296 24.751104 24.7296l47.167488 0c13.646848 0 24.75008-11.094016 24.75008-24.7296C855.959552 348.433408 844.85632 337.349632 831.209472 337.349632z" p-id="2082" fill="#ffffff"></path><path d="M700.505088 171.497472c4.235264 0 6.403072 0.405504 7.232512 0.612352 1.47968 1.514496 4.790272 6.218752 11.717632 20.685824 2.83648 5.910528 8.6272 18.86208 15.888384 35.533824l11.788288 27.063296 29.518848 0 96.535552 0c35.122176 0 63.695872 28.535808 63.695872 63.609856l0 469.933056c0 35.05152-28.573696 63.567872-63.695872 63.567872L150.811648 852.503552c-35.121152 0-63.694848-28.516352-63.694848-63.567872L87.1168 319.0016c0-35.062784 28.573696-63.589376 63.694848-63.589376l99.35872 0 29.110272 0 11.964416-26.537984c4.698112-10.421248 8.416256-19.063808 11.058176-25.70752 9.86112-24.829952 15.207424-30.125056 16.239616-30.974976 0.52736-0.161792 2.64192-0.695296 7.673856-0.695296L700.505088 171.496448M700.505088 126.441472 326.216704 126.441472c-32.519168 0-47.275008 13.479936-65.787904 60.096512-3.180544 7.999488-7.689216 18.122752-10.257408 23.819264l-99.35872 0c-59.96544 0-108.750848 48.738304-108.750848 108.645376l0 469.933056c0 59.894784 48.785408 108.623872 108.750848 108.623872l722.37568 0c59.96544 0 108.751872-48.729088 108.751872-108.623872L981.940224 319.0016c0-59.91936-48.786432-108.665856-108.751872-108.665856l-96.535552 0c-4.458496-10.236928-12.420096-28.372992-16.574464-37.031936C744.823808 141.448192 733.973504 126.441472 700.505088 126.441472L700.505088 126.441472z" p-id="2083" fill="#ffffff"></path></svg>
+    <div id="ex-camera-close">×</div>
     `;
     let b = document.getElementsByClassName("Video")[0];
     b.insertBefore(a, b.childNodes[0]);
 }
 
+function Camera_Video_isHidden() {
+    let saved = localStorage.getItem("ExSave_Camera_Hidden");
+    if (!saved) return false;
+    let time = parseInt(saved);
+    return Date.now() < time;
+}
+
 function initPkg_VideoTools_Camera_Video_Func() {
     let dom = document.getElementsByTagName("demand-video")[0];
     let camera = document.getElementById("ex-camera");
+    let closeBtn = document.getElementById("ex-camera-close");
     let gif = null;
     let timer = 0;
     let downTime = 0;
     let imgBase64;
     let timer_timeout = 0;
+    let isClosed = false;
+    
+    closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (confirm("是否7天内不再显示？")) {
+            localStorage.setItem("ExSave_Camera_Hidden", Date.now() + 7 * 24 * 60 * 60 * 1000);
+        } else {
+            isClosed = true;
+        }
+        camera.style.display = "none";
+    });
+    
+    if (Camera_Video_isHidden()) return;
+    
     dom.addEventListener("mouseenter", () => {
+        if (isClosed || Camera_Video_isHidden()) return;
         camera.style.display = "flex";
         timer_timeout = setTimeout(() => {
             camera.style.display = "none";
         }, 2000);
     })
     dom.addEventListener("mousemove", () => {
+        if (isClosed || Camera_Video_isHidden()) return;
         camera.style.display = "flex";
         clearTimeout(timer_timeout);
         timer_timeout = setTimeout(() => {
@@ -13855,6 +13951,7 @@ function initPkg_VideoTools_Camera_Video_Func() {
         }, 2000);
     })
     camera.addEventListener("mouseenter", () => {
+        if (isClosed || Camera_Video_isHidden()) return;
         camera.style.display = "flex";
         clearTimeout(timer_timeout);
     })
@@ -13862,6 +13959,7 @@ function initPkg_VideoTools_Camera_Video_Func() {
         camera.style.display = "none";
     })
     camera.addEventListener("mousedown", (e) => {
+        if (e.target.id === "ex-camera-close") return;
         downTime = new Date().getTime();
         camera_canvas_img.getContext('2d').drawImage(liveVideoNode, 0, 0, camera_canvas_img.width, camera_canvas_img.height);
         imgBase64 = camera_canvas_img.toDataURL("image/png");
@@ -13879,6 +13977,7 @@ function initPkg_VideoTools_Camera_Video_Func() {
         }, camera_fps);
     })
     camera.addEventListener("mouseup", (e) => {
+        if (e.target.id === "ex-camera-close") return;
         let upTime = new Date().getTime();
         clearInterval(timer);
         if (upTime - downTime >= 800) {
