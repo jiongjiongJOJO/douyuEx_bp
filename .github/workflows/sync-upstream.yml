@@ -140,31 +140,40 @@ jobs:
       - name: Commit and push changes
         if: steps.check-changes.outputs.changes_detected == 'true'
         run: |
-          # 拉取最新的远程更改
-          git pull --rebase origin master || {
-            echo "⚠️ 变基冲突，尝试解决..."
-            git rebase --abort
-            git pull --no-rebase origin master
-          }
-          
+          # 还原 dist 目录的变化，保持为上游版本
+          # 我们已经将构建产物复制到了 build-output，所以这里恢复 dist
+          # 以避免与上游 dist 产生冲突
+          echo "🔄 还原 dist 目录到上游版本..."
+          git checkout HEAD dist/
+          # 如果构建产生了新的未追踪文件，也清理掉
+          git clean -fd dist/
+
           # 添加所有更改
           git add -A
           
           # 检查是否有更改需要提交
           if git diff --staged --quiet; then
-            echo "没有需要提交的更改"
+            echo "没有构建产物变化需要提交"
           else
             # 提交更改
             git commit -m "🤖 自动同步上游代码并构建 ($(date '+%Y-%m-%d %H:%M:%S'))" || true
-          
-            # 推送到origin，如果失败则强制推送
-            git push origin master || {
-              echo "⚠️ 普通推送失败，尝试强制推送..."
-              git push --force-with-lease origin master
-            }
-          
-            echo "✅ 成功同步上游代码并提交构建结果"
           fi
+
+          # 拉取最新的远程更改 (先提交后拉取，避免unstaged changes错误)
+          # 无论是否有新构建提交，都需要推送合并的上游更改
+          git pull --rebase origin master || {
+            echo "⚠️ 变基冲突，尝试解决..."
+            git rebase --abort
+            git pull --no-rebase origin master
+          }
+
+          # 推送到origin，如果失败则强制推送
+          git push origin master || {
+            echo "⚠️ 普通推送失败，尝试强制推送..."
+            git push --force-with-lease origin master
+          }
+        
+          echo "✅ 成功同步上游代码并提交构建结果"
 
       - name: Create release info
         if: steps.check-changes.outputs.changes_detected == 'true'
