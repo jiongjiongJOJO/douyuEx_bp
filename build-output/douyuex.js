@@ -3,8 +3,8 @@
 // @name         DouyuEx-斗鱼直播间增强插件
 // @namespace    https://github.com/qianjiachun
 // @icon         data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTA4cHgiIGhlaWdodD0iMTA4cHgiIHZpZXdCb3g9IjAgMCAxMDggMTA4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHRpdGxlPueyvueBteeQgzwvdGl0bGU+CiAgICA8ZyBpZD0i6aG16Z2iLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLnsr7ngbXnkIMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuODMwNzY5LCAwLjgzMDc2OSkiIGZpbGwtcnVsZT0ibm9uemVybyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik01My4xNjkyMzA3LDEwNi4zMzg0NjEgQzIzLjgyNzY5MjIsMTA2LjMzODQ2MSAwLDgyLjUxMDc2OTIgMCw1My4xNjkyMzA3IEMwLDUxLjAwMzA3NjkgMS43NzIzMDc3NSw0OS4yMzA3NjkyIDMuOTM4NDYxNSw0OS4yMzA3NjkyIEwzMy40NzY5MjMsNDkuMjMwNzY5MiBDMzUuNjQzMDc2OSw0OS4yMzA3NjkyIDM3LjQxNTM4NDUsNTEuMDAzMDc3IDM3LjQxNTM4NDYsNTMuMTY5MjMwNyBDMzcuNDE1Mzg0Niw2MS44MzM4NDYxIDQ0LjUwNDYxNTQsNjguOTIzMDc2OSA1My4xNjkyMzA3LDY4LjkyMzA3NjkgQzYxLjgzMzg0NjEsNjguOTIzMDc2OSA2OC45MjMwNzY5LDYxLjgzMzg0NjEgNjguOTIzMDc2OSw1My4xNjkyMzA3IEM2OC45MjMwNzY5LDUxLjAwMzA3NjkgNzAuNjk1Mzg0Niw0OS4yMzA3NjkyIDcyLjg2MTUzODUsNDkuMjMwNzY5MiBMMTAyLjQsNDkuMjMwNzY5MiBDMTA0LjU2NjE1NCw0OS4yMzA3NjkyIDEwNi4zMzg0NjEsNTEuMDAzMDc3IDEwNi4zMzg0NjEsNTMuMTY5MjMwNyBDMTA2LjMzODQ2MSw4Mi41MTA3NjkyIDgyLjUxMDc2OTIsMTA2LjMzODQ2MSA1My4xNjkyMzA3LDEwNi4zMzg0NjEgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iIzMzMzYzQSI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNOC4wNzM4NDYxMiw1Ny4xMDc2OTIyIEMxMC4wNDMwNzY5LDgwLjI0NjE1MzcgMjkuNTM4NDYxNSw5OC40NjE1Mzg1IDUzLjE2OTIzMDcsOTguNDYxNTM4NSBDNzYuOCw5OC40NjE1Mzg1IDk2LjI5NTM4NDYsODAuMjQ2MTUzOSA5OC4yNjQ2MTU0LDU3LjEwNzY5MjIgTDc2LjUwNDYxNTQsNTcuMTA3NjkyMiBDNzQuNjMzODQ2MSw2OC4yMzM4NDYxIDY0Ljg4NjE1MzksNzYuOCA1My4xNjkyMzA3LDc2LjggQzQxLjQ1MjMwNzYsNzYuOCAzMS43MDQ2MTU0LDY4LjIzMzg0NjEgMjkuODMzODQ2MSw1Ny4xMDc2OTIyIEw4LjA3Mzg0NjEyLDU3LjEwNzY5MjIgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNTMuMTY5MjMwOCwzLjkzODQ2MTUgQzI1Ljk5Mzg0NjEsMy45Mzg0NjE1IDMuOTM4NDYxNSwyNS45OTM4NDYxIDMuOTM4NDYxNSw1My4xNjkyMzA3IEwzMy40NzY5MjMsNTMuMTY5MjMwNyBDMzMuNDc2OTIzLDQyLjMzODQ2MTUgNDIuMzM4NDYxNSwzMy40NzY5MjMgNTMuMTY5MjMwOCwzMy40NzY5MjMgQzY0LDMzLjQ3NjkyMyA3Mi44NjE1Mzg1LDQyLjMzODQ2MTUgNzIuODYxNTM4NSw1My4xNjkyMzA3IEwxMDIuNCw1My4xNjkyMzA3IEMxMDIuNCwyNS45OTM4NDYxIDgwLjM0NDYxNTQsMy45Mzg0NjE1IDUzLjE2OTIzMDgsMy45Mzg0NjE1IFoiIGlkPSLot6/lvoQiIGZpbGw9IiNENjA5MDkiPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTEwMi40LDU3LjEwNzY5MjIgTDcyLjg2MTUzODUsNTcuMTA3NjkyMiBDNzAuNjk1Mzg0Niw1Ny4xMDc2OTIyIDY4LjkyMzA3Nyw1NS4zMzUzODQ1IDY4LjkyMzA3NjksNTMuMTY5MjMwNyBDNjguOTIzMDc2OSw0NC41MDQ2MTU0IDYxLjgzMzg0NjEsMzcuNDE1Mzg0NiA1My4xNjkyMzA3LDM3LjQxNTM4NDYgQzQ0LjUwNDYxNTQsMzcuNDE1Mzg0NiAzNy40MTUzODQ2LDQ0LjUwNDYxNTQgMzcuNDE1Mzg0Niw1My4xNjkyMzA3IEMzNy40MTUzODQ2LDU1LjMzNTM4NDYgMzUuNjQzMDc2OSw1Ny4xMDc2OTIyIDMzLjQ3NjkyMyw1Ny4xMDc2OTIyIEwzLjkzODQ2MTUsNTcuMTA3NjkyMiBDMS43NzIzMDc2Miw1Ny4xMDc2OTIyIDAsNTUuMzM1Mzg0NSAwLDUzLjE2OTIzMDcgQzAsMjMuODI3NjkyMiAyMy44Mjc2OTIzLDAgNTMuMTY5MjMwNywwIEM4Mi41MTA3NjkyLDAgMTA2LjMzODQ2MSwyMy44Mjc2OTIyIDEwNi4zMzg0NjEsNTMuMTY5MjMwNyBDMTA2LjMzODQ2MSw1NS4zMzUzODQ2IDEwNC41NjYxNTQsNTcuMTA3NjkyMiAxMDIuNCw1Ny4xMDc2OTIyIFoiIGlkPSLot6/lvoQiIGZpbGw9IiMzMzM2M0EiPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTc2LjUwNDYxNTQsNDkuMjMwNzY5MyBMOTguMzYzMDc2OSw0OS4yMzA3NjkzIEM5Ni4yOTUzODQ2LDI2LjA5MjMwNzYgNzYuOCw3Ljg3NjkyMyA1My4xNjkyMzA3LDcuODc2OTIzIEMyOS41Mzg0NjE1LDcuODc2OTIzIDEwLjA0MzA3NjksMjYuMDkyMzA3NiA4LjA3Mzg0NjEyLDQ5LjIzMDc2OTMgTDI5LjkzMjMwNzYsNDkuMjMwNzY5MyBDMzEuNzA0NjE1NCwzOC4xMDQ2MTU0IDQxLjQ1MjMwNzYsMjkuNTM4NDYxNSA1My4xNjkyMzA3LDI5LjUzODQ2MTUgQzY0Ljg4NjE1MzksMjkuNTM4NDYxNSA3NC42MzM4NDYxLDM4LjEwNDYxNTQgNzYuNTA0NjE1NCw0OS4yMzA3NjkzIEw3Ni41MDQ2MTU0LDQ5LjIzMDc2OTMgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0Q2MDkwOSI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNTMuMTY5MjMwNyw3Ni44IEM0MC4xNzIzMDc2LDc2LjggMjkuNTM4NDYxNSw2Ni4xNjYxNTM5IDI5LjUzODQ2MTUsNTMuMTY5MjMwNyBDMjkuNTM4NDYxNSw0MC4xNzIzMDc2IDQwLjE3MjMwNzYsMjkuNTM4NDYxNSA1My4xNjkyMzA3LDI5LjUzODQ2MTUgQzY2LjE2NjE1MzksMjkuNTM4NDYxNSA3Ni44LDQwLjE3MjMwNzYgNzYuOCw1My4xNjkyMzA3IEM3Ni44LDY2LjE2NjE1MzkgNjYuMTY2MTUzOSw3Ni44IDUzLjE2OTIzMDcsNzYuOCBaIiBpZD0i6Lev5b6EIiBmaWxsPSIjMzMzNjNBIj48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik01My4xNjkyMzA3LDM3LjQxNTM4NDYgQzQ0LjUwNDYxNTQsMzcuNDE1Mzg0NiAzNy40MTUzODQ2LDQ0LjUwNDYxNTQgMzcuNDE1Mzg0Niw1My4xNjkyMzA3IEMzNy40MTUzODQ2LDYxLjgzMzg0NjEgNDQuNTA0NjE1NCw2OC45MjMwNzY5IDUzLjE2OTIzMDcsNjguOTIzMDc2OSBDNjEuODMzODQ2MSw2OC45MjMwNzY5IDY4LjkyMzA3NjksNjEuODMzODQ2MSA2OC45MjMwNzY5LDUzLjE2OTIzMDcgQzY4LjkyMzA3NjksNDQuNTA0NjE1NCA2MS44MzM4NDYxLDM3LjQxNTM4NDYgNTMuMTY5MjMwNywzNy40MTUzODQ2IEw1My4xNjkyMzA3LDM3LjQxNTM4NDYgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNDMuMzIzMDc2OSw1My4xNjkyMzA3IEM0My4zMjMwNzY5LDU4LjYwNzExMTQgNDcuNzMxMzUwMSw2My4wMTUzODQ2IDUzLjE2OTIzMDcsNjMuMDE1Mzg0NiBDNTguNjA3MTExNCw2My4wMTUzODQ2IDYzLjAxNTM4NDYsNTguNjA3MTExNCA2My4wMTUzODQ2LDUzLjE2OTIzMDcgQzYzLjAxNTM4NDYsNDcuNzMxMzUwMSA1OC42MDcxMTE0LDQzLjMyMzA3NjkgNTMuMTY5MjMwNyw0My4zMjMwNzY5IEM0Ny43MzEzNTAxLDQzLjMyMzA3NjkgNDMuMzIzMDc2OSw0Ny43MzEzNTAxIDQzLjMyMzA3NjksNTMuMTY5MjMwNyBaIiBpZD0i6Lev5b6EIiBmaWxsPSIjMzMzNjNBIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=
-// @version      2025.09.17.02
-// @description  斗鱼直播间增强插件，功能：弹幕自动变色防检测循环发送 一键续牌 查看真实人数/查看主播数据 已播时长 一键签到(直播间/车队/鱼吧/客户端) 一键领取鱼粮(宝箱/气泡/任务) 一键寻宝 送出指定数量的礼物 一键清空背包 屏蔽广告 调节弹幕大小 自动更新 同屏画中画/多直播间小窗观看/可在斗鱼看多个平台直播(虎牙/b站) 获取真实直播流地址 自动抢礼物红包 背包信息扩展 简洁模式 夜间模式 开播提醒 幻神模式 关键词回复 关键词禁言 自动谢礼物 自动抢宝箱 弹幕右键信息扩展 防止下播自动跳转 影院模式 直播时间流控制 弹幕投票 直播滤镜 直播音频流 账号多开/切换 显示粉丝牌获取日期 月消费数据显示 弹幕时速 相机截图录制gif 全景播放器 斗鱼视频下载/弹幕ass下载 直播画面局部缩放 全站抽奖信息 直播音效增强 阻止P2P上传 显示贡献榜贡献值 恢复弹幕显示 斗鱼视频弹幕高能进度条 检测弹幕是否发送成功 查看主播配置信息 自动网页全屏 自动最高画质 弹幕无限收藏 收藏弹幕搜索 支持弹幕带图片 屏蔽弹幕背景 弹幕+1 房间VIP到期提醒 自动钓鱼 防止自动暂停直播 恢复已关闭鱼吧 弹幕小尾巴
+// @version      2026.01.09.01
+// @description  斗鱼直播间增强插件，功能：弹幕自动变色防检测循环发送 一键续牌 查看真实人数/查看主播数据 已播时长 一键签到(直播间/车队/鱼吧/客户端) 一键领取鱼粮(宝箱/气泡/任务) 一键寻宝 送出指定数量的礼物 一键清空背包 屏蔽广告 调节弹幕大小 自动更新 同屏画中画/多直播间小窗观看/可在斗鱼看多个平台直播(虎牙/b站) 获取真实直播流地址 自动抢礼物红包 背包信息扩展 简洁模式 夜间模式 开播提醒 幻神模式 关键词回复 关键词禁言 自动谢礼物 自动抢宝箱 弹幕右键信息扩展 防止下播自动跳转 影院模式 直播时间流控制 弹幕投票 直播滤镜 直播音频流 账号多开/切换 显示粉丝牌获取日期 月消费数据显示 弹幕时速 相机截图录制gif 全景播放器 斗鱼视频下载/弹幕ass下载 直播画面局部缩放 全站抽奖信息 直播音效增强 阻止P2P上传 显示贡献榜贡献值 恢复弹幕显示 斗鱼视频弹幕高能进度条 检测弹幕是否发送成功 查看主播配置信息 自动网页全屏 自动最高画质 弹幕无限收藏 收藏弹幕搜索 支持弹幕带图片 屏蔽弹幕背景 弹幕+1 房间VIP到期提醒 自动钓鱼 防止自动暂停直播 恢复已关闭鱼吧 弹幕小尾巴 屏蔽重复弹幕 画质增强
 // @author       小淳
 // @match			*://*.douyu.com/0*
 // @match			*://*.douyu.com/1*
@@ -44,7 +44,6 @@
 // @connect      douyu.com
 // @connect      122.51.5.63
 // @connect      qq.com
-// @connect      rrocr.com
 // @connect      douyuex.com
 // @connect      bojianger.com
 // @connect      greasyfork.org
@@ -59,72 +58,76 @@
 // @antifeature  tracking
 // ==/UserScript==
 function init() {
-	initPkg_ShowDanmakuOriginAction();
-	initScriptHook();
-	initPkg_Night_Set_Fast();
-	initResponseHook();
-	initPkg_ShowDanmaku();
-	initKillP2P();
-	initFullScreen();
-	initHighestVideoQuality();
-	removeAD();
-	initPkg_Statistics();
-	initPkg_Console();
-	initPkg_Menu();
-	initPkg_FollowList();
+  initPkg_ShowDanmakuOriginAction();
+  initPkg_Shield_RemoveRepeatedDanmaku_ScriptHook();
+  initScriptHook();
+  initPkg_Night_Set_Fast();
+  initResponseHook();
+  initPkg_ShowDanmaku();
+  Update_checkVersion();
+  initKillP2P();
+  initFullScreen();
+  initHighestVideoQuality();
+  removeAD();
+  initPkg_Statistics();
+  initPkg_Console();
+  initPkg_Menu();
+  initPkg_FollowList();
 }
 function initPkg() {
-	Update_checkVersion();
-	initPkg_DanmakuTail();
-	initPkg_ReturnOldWeb();
-	initPkg_Night();
-	initPkg_ExIcon();
-	initPkg_ExPanel();
-	initPkg_RealAudience();
-	initPkg_CopyRealLive();
-	initPkg_AudioLine();
-	initPkg_RemoveAD();
-	initPkg_Shield();
-	initPkg_BagInfo();
-	initPkg_Update();
-	initPkg_SyncJoy();
-	initPkg_Monitor();
-	initPkg_Lottery();
-	// initPkg_MiniProgram();
-	initPkg_PopupPlayer();
-	initPkg_LiveTool();
-	initPkg_VideoTools();
-	initPkg_ExpandTool();
-	initPkg_Refresh();
-	initPkg_BarrageLoop();
-	initPkg_FansContinue();
-	// initPkg_FishFood();
-	initPkg_Sign();
-	initPkg_BarragePanel();
-	// initPkg_AdVideo();
-	initPkg_AccountList();
-	initPkg_ChatTools();
-	initPkg_MonthCost();
-	initPkg_RoomVip();
-	initPkg_WeeklyPanel();
-	initPkg_DanmakuCollect();
-	initPkg_RestoreYuba();
-	initPkg_ChangeDanmakuLengthLimit();
-	initPkg_CheckAnchorPocket();
+  initPkg_DanmakuTail();
+  initPkg_Night();
+  initPkg_ExIcon();
+  initPkg_ExPanel();
+  initPkg_RealAudience();
+  initPkg_CopyRealLive();
+  initPkg_AudioLine();
+  initPkg_RemoveAD();
+  initPkg_Shield();
+  initPkg_BagInfo();
+  initPkg_Update();
+  // initPkg_SyncJoy();
+  initPkg_Fkbuff();
+  initPkg_Monitor();
+  initPkg_Lottery();
+  // initPkg_MiniProgram();
+  initPkg_PopupPlayer();
+  initPkg_LiveTool();
+  initPkg_VideoTools();
+  initPkg_ExpandTool();
+  initPkg_Refresh();
+  initPkg_BarrageLoop();
+  initPkg_FansContinue();
+  // initPkg_FishFood();
+  initPkg_Sign();
+  initPkg_BarragePanel();
+  // initPkg_AdVideo();
+  initPkg_AccountList();
+  initPkg_ChatTools();
+  initPkg_MonthCost();
+  initPkg_RoomVip();
+  initPkg_WeeklyPanel();
+  initPkg_DanmakuCollect();
+  initPkg_RestoreYuba();
+  initPkg_ChangeDanmakuLengthLimit();
+  initPkg_CheckAnchorPocket();
 }
 function initPkg_Timer() {
-	// initPkg_FishPond_Timer();
-	initPkg_LevelTask_Timer();
-	initPkg_Sign_OPFOY_Timer();
-	initPkg_DisableCloseJump_Timer();
+  // initPkg_FishPond_Timer();
+  initPkg_LevelTask_Timer();
+  initPkg_Sign_OPFOY_Timer();
+  initPkg_DisableCloseJump_Timer();
 }
 function initTimer() {
-	initPkg_Timer();
+  initPkg_Timer();
 }
 
 function initStyles() {
-	let style = document.createElement("style");
-	style.appendChild(document.createTextNode(`#ex-accountList-wrap {
+  let style = document.createElement("style");
+  style.appendChild(
+    document.createTextNode(`
+		body{position:relative;}
+		#ex-accountList-wrap {
     left: -152px;
     top: -16px;
     /* max-height: 330px;
@@ -442,12 +445,10 @@ function initStyles() {
 	bottom: 32px;
 	right: 0px;
 	background-color: rgba(255,255,255,0.9);
-	opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease-in-out; /* 给工具栏出现加一下过渡效果 */
 	border: 2px rgb(234,173,26) solid;
 	z-index: 1428;
 	user-select: none;
+	display: none;
 }
 .ex-panel__wrap {
 	display: flex;
@@ -483,12 +484,131 @@ function initStyles() {
 }.extool {
 	background-color: rgba(255,255,255,0.9);
 	width: 100%;
-	height: 200px;
+	max-height: 320px;
 	position: relative;
 	bottom: 200px;
 	display: none;
 	z-index: 1428;
 	color: #333;
+	box-sizing: border-box;
+	padding: 8px 10px;
+	overflow: auto;
+	font-size: 13px;
+	line-height: 22px;
+}
+
+.extool[style*="display: block"] {
+	display: flex !important;
+	flex-wrap: wrap;
+	gap: 8px 10px;
+	align-items: flex-start;
+}
+
+.extool > div:not(.ex_giftAnimation) {
+	background: rgba(255,255,255,0.82);
+	border: 1px solid rgba(0,0,0,0.10);
+	border-radius: 10px;
+	padding: 10px 12px 12px;
+	box-sizing: border-box;
+	box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px 10px;
+	align-items: center;
+	min-width: 220px;
+}
+
+.extool__treasure,
+.extool__sendgift {
+	flex: 1 1 720px;
+}
+.extool__autofish {
+	flex: 1 1 520px;
+}
+.extool__redpacket_room,
+.extool__gold,
+.extool__clearbag,
+.extool__tabswitch,
+.extool__p2p,
+.extool__fullscreen {
+	flex: 1 1 260px;
+}
+
+.extool__treasure::before,
+.extool__sendgift::before,
+.extool__autofish::before,
+.extool__redpacket_room::before,
+.extool__gold::before,
+.extool__clearbag::before,
+.extool__tabswitch::before,
+.extool__p2p::before,
+.extool__fullscreen::before {
+	display: block;
+	width: 100%;
+	content: "";
+	font-weight: 700;
+	font-size: 12px;
+	letter-spacing: .4px;
+	color: rgba(0,0,0,0.72);
+	padding-bottom: 6px;
+	margin-bottom: 2px;
+	border-bottom: 1px dashed rgba(0,0,0,0.12);
+}
+.extool__treasure::before { content: "宝箱"; }
+.extool__sendgift::before { content: "送礼"; }
+.extool__autofish::before { content: "钓鱼"; }
+.extool__redpacket_room::before { content: "礼物红包"; }
+.extool__gold::before { content: "幻神/礼物"; }
+.extool__clearbag::before { content: "背包"; }
+.extool__tabswitch::before { content: "标签/切换"; }
+.extool__p2p::before { content: "网络"; }
+.extool__fullscreen::before { content: "播放器"; }
+
+.extool label {
+	white-space: nowrap;
+	margin-right: 8px;
+	line-height: 22px;
+}
+.extool input[type="text"] {
+	padding: 2px 6px;
+	border: 1px solid rgba(0,0,0,0.18);
+	border-radius: 6px;
+	outline: none;
+	background: rgba(255,255,255,0.95);
+	color: black;
+}
+.extool input[type="checkbox"], .extool input[type="radio"] {
+	vertical-align: middle;
+	margin-right: 4px;
+}
+.extool input[type="button"] {
+	border: 1px solid rgba(0,0,0,0.18);
+	border-radius: 8px;
+	padding: 2px 10px;
+	background: linear-gradient(#ffffff, #f4f6f8);
+	cursor: pointer;
+	color: black;
+}
+.extool input[type="button"]:hover {
+	background: linear-gradient(#ffffff, #e9eef3);
+}
+.extool input[type="button"]:active {
+	transform: translateY(1px);
+}
+.extool a {
+	text-decoration: none;
+}
+.extool .extool__hint {
+	margin-top: 6px;
+	color: #666;
+	font-size: 12px;
+}
+
+/* 兼容某些模块里使用 br 分行的写法，让它在 flex 下表现更一致 */
+.extool br {
+	flex-basis: 100%;
+	width: 0;
+	height: 0;
 }
 
 .extool__switch {
@@ -499,17 +619,13 @@ function initStyles() {
 .extool__bsize,.extool__sendgift {
 	margin-bottom: 5px;
 }
-.extool__redpacket_room,.extool__gold,.extool__autofish {
-	display: inline-block;
-}
+/* 卡片内部已改为 flex，这里不再强制 inline-block */
 .ex_giftAnimation {
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	z-index: 50;
 	pointer-events: none;
-}#refreshFollowList {
-    color: grey;position: absolute;right: 5px;top:0px;cursor: default;
 }.text-879f3e {
   height: auto !important;
   max-height: 48px !important;
@@ -1150,8 +1266,6 @@ function initStyles() {
 
 .top-0-important {
     top: 0 !important;
-}.icon__jumpoldweb>img:hover {
-    opacity: .8 !important;
 }.room-vip {
   -moz-user-select:none;/*火狐*/
   -webkit-user-select:none;/*webkit浏览器*/
@@ -1160,6 +1274,18 @@ function initStyles() {
   user-select:none;
   vertical-align: middle;
   float: left;
+}.repeated-danmaku {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  visibility: hidden !important;
+}
+
+.danmu-fbb2a3 > div {
+  transition: font-size 0.5s ease !important;
+}
+
+.comment-dzjy-container > div {
+  z-index: 99 !important;
 }#ex-camera {
     background: rgba(0,0,0,0.7);
     position: absolute;
@@ -1186,6 +1312,29 @@ function initStyles() {
 
 #ex-camera:active > svg > path {
     fill: rgb(253, 60, 60);
+}
+
+#ex-camera-close {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    background: rgba(0,0,0,0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    border: 1px solid rgba(255,255,255,0.3);
+    z-index: 11;
+}
+
+#ex-camera-close:hover {
+    background: rgba(253, 60, 60, 0.9);
 }
 #ex-cinema:hover > .cinema__wrap {
     display: block;
@@ -1367,6 +1516,35 @@ function initStyles() {
     margin-right: 2px;
 }
 
+.filter__enhance {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter__switch {
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filter__switch-slider {
+    width: 18px;
+    height: 18px;
+    background: #fff;
+    position: absolute;
+    top: 1px;
+    left: 0px;
+    border-radius: 50%;
+    transition: left 0.3s;
+}
+
 #filter__select {
     width: 100%;
     float: right;
@@ -1374,6 +1552,64 @@ function initStyles() {
 
 .filter__filter {
     margin-top: 5px;
+}
+
+/* 增强画质提示弹窗样式 */
+.enhance-modal__panel-wrap {
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.enhance-modal__panel {
+    height: 550px;
+    width: 600px;
+    background-color: white;
+    border-radius: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    color: #333;
+}
+
+.enhance-modal__content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.enhance-modal__text {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.enhance-modal__img {
+    width: 720px;
+    margin-top: 20px;
+}
+
+.enhance-modal__close {
+    font-size: 30px;
+    font-weight: bold;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.enhance-modal__close:hover {
+    color: #ff7700;
 }
 #ex-videospeed:hover > .videospeed__wrap {
     display: block;
@@ -1425,7 +1661,7 @@ function initStyles() {
 }.weeklypanel__panel-wrap {
     width: 100%;
     height: 100%;
-    z-index: 999;
+    z-index: 1000;
     background-color: rgba(0, 0, 0, 0.9);
     position: absolute;
     top: 0;
@@ -1711,8 +1947,10 @@ hr {
 
 .layui-timeline-title {
     position: relative;
-}`));
-	document.head.appendChild(style);
+}
+		`)
+  );
+  document.head.appendChild(style);
 }
 
 // 全局变量及公共函数
@@ -1745,20 +1983,6 @@ var myName = "";
 var dyToken = getToken();
 // 功能条的显示定时器
 var exPanelTimer = null;
-
-function showExPanel() {
-	// 显示功能条
-	let a = document.getElementsByClassName("ex-panel")[0];
-	if (a.style.visibility !== 'visible') {
-        a.style.visibility = 'visible';
-        a.style.opacity = '1';
-        clearTimeout(exPanelTimer);
-    } else {
-        a.style.visibility = 'hidden';
-        a.style.opacity = '0';
-        clearTimeout(exPanelTimer);
-    }
-}
 
 function sleep(time) {
 	return new Promise((resolve) => setTimeout(resolve, time));
@@ -3214,7 +3438,7 @@ function initPkg_BagInfo() {
 }
 
 function initPkg_BagInfo_Func() {
-    let backpackDom = getValidDom([".BackpackButton", ".ToolbarGiftArea-backpack--content"])
+    let backpackDom = getValidDom([".BackpackButton", "#js-backpack-enter"])
     if (!backpackDom) {
         return;
     }
@@ -3331,8 +3555,8 @@ function BarrageLoop_insertModal() {
 	html += `
 	<span style="float:right;margin-right:15px;">
 		<select id="bloop__select"></select>
-		<input style="width:40px;margin-left:10px;" type="button" id="bloop__save" value="保存"/>
-		<input style="width:40px;margin-left:10px;" type="button" id="bloop__delete" value="删除"/>
+		<input style="margin-left:10px;" type="button" id="bloop__save" value="保存"/>
+		<input style="margin-left:10px;" type="button" id="bloop__delete" value="删除"/>
 	</span>
 	`;
 	html += '<textarea placeholder="一行一个，开启舔狗模式后此处不需要输入" id="bloop__textarea" rows="5" cols="50"></textarea>';
@@ -4984,11 +5208,11 @@ function ExIcon_showTip(a) {
 function initPkg_ExPanel() {
     initPkg_ExPanel_insertDom();
 
-    let exPanelDOM = document.querySelector('.ex-panel');
-    exPanelDOM.addEventListener('mouseenter', () => {
+    let exPanelDOM = document.querySelector(`.ex-panel`);
+    exPanelDOM.addEventListener(`mouseenter`, () => {
         clearTimeout(exPanelTimer);
     });
-    exPanelDOM.addEventListener('mouseleave', () => {
+    exPanelDOM.addEventListener(`mouseleave`, () => {
         clearTimeout(exPanelTimer);
         exPanelTimer = setTimeout(autoCloseExPanelHandle, 800);
     });
@@ -4996,23 +5220,39 @@ function initPkg_ExPanel() {
 function initPkg_ExPanel_insertDom() {
 	let a = document.createElement("div");
 	a.className = "ex-panel";
-	a.innerHTML = '<div class="ex-panel__wrap"></div>';
+	a.innerHTML = `<div class="ex-panel__wrap"></div>`;
 	
     let b = document.querySelector(".PlayerToolbar-ContentCell .PlayerToolbar-Wealth");
     if (!b) {
         b = document.querySelector(".PlayerToolbar-ContentRow");
-        a.style.bottom = "76px";
+        const domPlayerToolbar = document.querySelector(".PlayerToolbar");
+        // 获取PlayerToolbar的高度作为bottom
+        if (domPlayerToolbar) {
+            a.style.bottom = domPlayerToolbar.offsetHeight + "px";
+        } else {
+            a.style.bottom = "76px";
+        }
     }
     b.insertBefore(a, b.childNodes[0]);
 	
 }
 function autoCloseExPanelHandle() {
-    let exPanelDOM = document.querySelector('.ex-panel');
-    exPanelDOM.style.visibility = 'hidden';
-    exPanelDOM.style.opacity = '0';
+    let exPanelDOM = document.querySelector(`.ex-panel`);
     exPanelTimer = null;
+    exPanelDOM.style.display = `none`;
 }
 
+function showExPanel() {
+	// 显示功能条
+	let a = document.getElementsByClassName("ex-panel")[0];
+	if (a.style.display !== 'block') {
+        a.style.display = 'block';
+        clearTimeout(exPanelTimer);
+    } else {
+        a.style.display = 'none';
+        clearTimeout(exPanelTimer);
+    }
+}
 
 function initPkg_ExpandTool() {
 	initPkg_ExpandTool_Dom();
@@ -5081,7 +5321,9 @@ function initPkg_ExpandTool_AutoFish() {
 
 function ExpandTool_AutoFish_insertDom() {
   let html = "";
-  html += '<label><input style="margin-top:5px;" id="extool__autofish_start" type="checkbox">自动钓鱼</label>';
+  html += '<label><input id="extool__autofish_start" type="checkbox">自动钓鱼</label><br>';
+  html += '<label><input name="autofish_mode" type="radio" value="all" checked>全天</label>';
+  html += '<label style="margin-left:5px;"><input name="autofish_mode" type="radio" value="contest">钓鱼大赛</label>';
 
   let a = document.createElement("div");
   a.className = "extool__autofish";
@@ -5090,17 +5332,26 @@ function ExpandTool_AutoFish_insertDom() {
   b.insertBefore(a, b.childNodes[0]);
 }
 function ExpandTool_AutoFish_insertFunc() {
+  document.querySelectorAll('input[name="autofish_mode"]').forEach(radio => {
+    radio.addEventListener("change", saveData_AutoFish);
+  });
+  
   document.getElementById("extool__autofish_start").addEventListener("click", async () => {
     saveData_AutoFish();
     const isStart = document.getElementById("extool__autofish_start").checked;
-    if (!isStart) return clearInterval(timerAutoFish);
+    AutoFish_lockMode(isStart);
+    if (!isStart) {
+      clearInterval(timerAutoFish);
+      return;
+    }
     showMessage("【自动钓鱼】开始自动钓鱼", "info");
     autoFishInfo = await AutoFish_getFishInfo();
     const homepageRes = await AutoFish_getHomepageData();
     if (homepageRes.data) {
-      baitData = homepageRes.data.baits.find((item) => item.inUse);
+      let baitData = homepageRes.data.baits.find((item) => item.inUse);
       if (!baitData) {
         document.getElementById("extool__autofish_start").checked = false;
+        AutoFish_lockMode(false);
         return showMessage("【自动钓鱼】请设置鱼饵", "error");
       }
       baitId = baitData.id;
@@ -5108,10 +5359,12 @@ function ExpandTool_AutoFish_insertFunc() {
       const myCh = homepageRes.data.myCh;
       if (!myCh) {
         document.getElementById("extool__autofish_start").checked = false;
+        AutoFish_lockMode(false);
         return showMessage("【自动钓鱼】请设置形象", "error");
       }
     } else {
       document.getElementById("extool__autofish_start").checked = false;
+      AutoFish_lockMode(false);
       return showMessage("【自动钓鱼】未能获取活动信息", "error");
     }
     saveData_AutoFish();
@@ -5135,6 +5388,9 @@ function ExpandTool_AutoFish_insertFunc() {
     }
 
     timerAutoFish = setInterval(async () => {
+      // 检查是否在钓鱼大赛时间内
+      if (!isInFishingTime()) return;
+      
       if (isFishing) {
         // 正在钓鱼中，检测是否到时间收杆
         const now = new Date().getTime();
@@ -5190,42 +5446,56 @@ async function endFish() {
   isFishing = false;
 }
 
-function saveData_AutoFish() {
-  let value = document.getElementById("extool__autofish_start").checked;
-  let rids = AutoFish_getRids() || [];
-  // 判断value是否为true，如果为true，则将当前rid添加到rids中，如果为false，则从rids中移除当前rid 
-  if (value) {
-    if (!rids.includes(rid)) {
-      rids.push(rid);
-    }
-  } else {
-    rids = rids.filter((item) => item !== rid);
+function AutoFish_getSave() {
+  let data;
+  try {
+    data = JSON.parse(localStorage.getItem("ExSave_AutoFish"));
+  } catch (e) {
+    data = null;
   }
-  let data = {
-    rids: rids
-  };
-  localStorage.setItem("ExSave_AutoFish", JSON.stringify(data)); // 存储弹幕列表
+  if (!data || typeof data !== "object") data = {};
+  if (!Array.isArray(data.rids)) data.rids = [];
+  if (!data.modes || typeof data.modes !== "object") data.modes = {};
+  return data;
+}
+
+function AutoFish_lockMode(lock) {
+  document.querySelectorAll('input[name="autofish_mode"]').forEach((r) => (r.disabled = lock));
+}
+
+function saveData_AutoFish() {
+  let checkbox = document.getElementById("extool__autofish_start");
+  let modeRadio = document.querySelector('input[name="autofish_mode"]:checked');
+  if (!checkbox || !modeRadio) return;
+
+  let value = checkbox.checked;
+  let mode = modeRadio.value;
+  let data = AutoFish_getSave();
+  
+  if (value) {
+    if (!data.rids.includes(rid)) data.rids.push(rid);
+    data.modes[rid] = mode;
+  } else {
+    data.rids = data.rids.filter((item) => item !== rid);
+    delete data.modes[rid];
+  }
+  
+  localStorage.setItem("ExSave_AutoFish", JSON.stringify(data));
 }
 
 function AutoFish_getRids() {
-  const ret = localStorage.getItem("ExSave_AutoFish");
-  if (ret != null) {
-    let retJson = JSON.parse(ret);
-    return retJson ? retJson.rids : [];
-  } else {
-    return [];
-  }
+  return AutoFish_getSave().rids;
 }
 
 function ExpandTool_AutoFish_Set() {
-  // 设置初始化
-  let ret = localStorage.getItem("ExSave_AutoFish");
-  if (ret != null) {
-    let retJson = JSON.parse(ret);
-    if (!retJson.rids) return;
-    if (!retJson.rids.includes(rid)) return;
-    document.getElementById("extool__autofish_start").click();
-  }
+  let data = AutoFish_getSave();
+  if (!data.rids.includes(rid)) return;
+  
+  // 设置模式（兼容旧版本，默认全天）
+  let mode = data.modes && data.modes[rid] ? data.modes[rid] : "all";
+  document.querySelector(`input[name="autofish_mode"][value="${mode}"]`).checked = true;
+  
+  document.getElementById("extool__autofish_start").click();
 }
 
 function AutoFish_getFishInfo() {
@@ -5314,6 +5584,19 @@ function AutoFish_endFish() {
   });
 }
 
+function isInFishingTime() {
+  let modeRadio = document.querySelector('input[name="autofish_mode"]:checked');
+  let mode = modeRadio ? modeRadio.value : "all";
+  if (mode === "all") return true;
+  
+  let now = new Date();
+  let hour = now.getHours();
+  let minute = now.getMinutes();
+  
+  // 钓鱼大赛：12:00-24:00，每个整点的前半小时（包括00:00-00:30）
+  return (hour >= 12 && minute < 30) || (hour === 0 && minute < 30);
+}
+
 function initPkg_ExpandTool_BarrageSize() {
     ExpandTool_BarrageSize_insertDom();
     ExpandTool_BarrageSize_insertFunc();
@@ -5326,7 +5609,7 @@ function initPkg_ExpandTool_BarrageSize() {
 function ExpandTool_BarrageSize_insertDom() {
     let a = document.createElement("div");
     a.className = "extool__bsize";
-    a.innerHTML = '<label>弹幕大小(默认24px)：</label><input id="extool__bsize_value" type="text" style="width:50px;text-align:center;" value="24" /><input style="width:40px;margin-left:10px;" type="button" id="extool__bsize_btn" value="确认" />';
+    a.innerHTML = '<label>弹幕大小(默认24px)：</label><input id="extool__bsize_value" type="text" style="width:50px;text-align:center;" value="24" /><input style="margin-left:10px;" type="button" id="extool__bsize_btn" value="确认" />';
     
     let b = document.getElementsByClassName("extool")[0];
     b.insertBefore(a, b.childNodes[0]);
@@ -5334,7 +5617,7 @@ function ExpandTool_BarrageSize_insertDom() {
 
 function setBarrageSize(s) {
     cancelBarrageSize();
-    StyleHook_set("Ex_Style_DanmuSize", ".danmuItem-31f924{font-size:" + s + "px !important;}");
+    StyleHook_set("Ex_Style_DanmuSize", ".danmuItem-a8616a{font-size:" + s + "px !important;}");
 }
 
 function cancelBarrageSize() {
@@ -5375,7 +5658,7 @@ function ExpandTool_ClearBag_insertDom() {
     html += '<label>背包送礼：[速度并不快,间隔>0.1s]</label><a id="extool__clearbag_showid" style="margin-left:10px;color:blue;" href="javascript:void(0);">礼物id示例</a><br />';
     html += '<label>礼物ID：</label><input id="extool__clearbag_id" type="text" style="width:50px;text-align:center;margin-right:10px;" value="268" />';
     html += '<label>数量：</label><input id="extool__clearbag_cnt" type="text" style="width:30px;text-align:center;" value="1" />';
-    html += '<input style="width:40px;margin-left:10px;" type="button" id="extool__clearbag_sendbtn" value="送出" />';
+    html += '<input style="margin-left:10px;" type="button" id="extool__clearbag_sendbtn" value="送出" />';
     // html += '<input style="width:60px;margin-left:10px;" type="button" id="extool__clearbag_clearbtn" value="清空背包" />';
     let a = document.createElement("div");
     a.className = "extool__clearbag";
@@ -5460,7 +5743,7 @@ function initPkg_ExpandTool_FullScreen() {
 function ExpandTool_FullScreen_insertDom() {
     let a = document.createElement("span");
     // a.className = "extool__bsize";
-    a.innerHTML = '<label title="自动网页全屏"><input style="margin-top:5px;" id="extool__fullscreen" type="checkbox">自动网页全屏</label><label title="自动最高画质"><input id="extool__highestvideoquality" type="checkbox">自动最高画质</label>';
+    a.innerHTML = '<label title="自动网页全屏"><input id="extool__fullscreen" type="checkbox">自动网页全屏</label><label title="自动最高画质"><input id="extool__highestvideoquality" type="checkbox">自动最高画质</label>';
     
     let b = document.getElementsByClassName("extool")[0];
     b.insertBefore(a, b.childNodes[0]);
@@ -5572,13 +5855,13 @@ function highestVideoQuality() {
     let intID1 = setInterval(() => {
         count++;
         if (count > 100) clearInterval(intID1);
-        if (getValidDom([".tipItem-898596", ".tip-cd016b"])) {
+        const qualityContainer = document.querySelector('[class^="tipItem-"]:has([value^="画质"])') || document.querySelector('[class^="tip-"]:has([value^="画质"])');
+        if (qualityContainer) {
             clearInterval(intID1);
-            let dom = document.querySelector(".tipItem-898596");
-            if (dom) {
-                document.querySelectorAll(".tipItem-898596 > ul > li")[0].click();
-            } else {
-                document.querySelectorAll(".tip-cd016b ul li")[0].click();
+            const highestQualityOption = qualityContainer.querySelector('ul > li:first-child');
+            if (highestQualityOption) {
+                const isAlreadySelected = highestQualityOption.matches('[class^="selected-"]');
+                if (!isAlreadySelected) highestQualityOption.click(); 
             }
         }
     }, 1000);
@@ -5599,8 +5882,8 @@ function initPkg_ExpandTool_Gold() {
 
 function ExpandTool_Gold_insertDom() {
     let html = "";
-    html += '<label><input style="margin-top:5px;" id="extool__gold_start" type="checkbox">幻神模式</label>';
-    html += '<label><input style="margin-top:5px;" id="extool__goldGift_start" type="checkbox">荧光棒变超火</label>';
+    html += '<label><input id="extool__gold_start" type="checkbox">幻神模式</label>';
+    html += '<label><input id="extool__goldGift_start" type="checkbox">荧光棒变超火</label>';
     
     let a = document.createElement("div");
     a.className = "extool__gold";
@@ -5620,7 +5903,7 @@ function ExpandTool_Gold_insertFunc() {
     document.getElementById("extool__gold_start").addEventListener("click", async function() {
         let ischecked = document.getElementById("extool__gold_start").checked;
         if (ischecked == true) {
-            // 开启幻神模式  danmu-6e95c1
+            // 开启幻神模式  danmu-fbb2a3
             goldBarrageHook = new DomHook(".danmu-e7f029", true, goldBarrage);
             goldBarrageListHook = new DomHook(".Barrage-list", true, goldBarrageList);
             goldFansMedal();
@@ -5789,9 +6072,9 @@ function goldBarrage(m) {
         return;
     }
     let itemNode = m[0].addedNodes[0];
-    if(itemNode.className.indexOf("noble-f439ef")==-1 && itemNode.innerHTML.indexOf("border: 2px solid rgb(2, 255, 255)")!=-1){//find self and remove redupliction
+    if(itemNode.className.indexOf("noble-d35c82")==-1 && itemNode.innerHTML.indexOf("border: 2px solid rgb(2, 255, 255)")!=-1){//find self and remove redupliction
         itemNode.style.zIndex = "30";
-        itemNode.className = "danmuItem-f8e204 noble-f439ef";
+        itemNode.className = "danmuItem-f8e204 noble-d35c82";
         // itemNode.setAttribute("style",characterStyle);
         //noble icon without redupliction remove
         let nobleImgTag = document.createElement("img");
@@ -5886,7 +6169,7 @@ function initPkg_ExpandTool_P2P() {
 function ExpandTool_P2P_insertDom() {
     let a = document.createElement("span");
     // a.className = "extool__bsize";
-    a.innerHTML = '<label title="阻止p2p在后台占用网速，开启后直播画面会在刚进入页面时卡一下"><input style="margin-top:5px;" id="extool__p2p" type="checkbox">阻止p2p上传</label>';
+    a.innerHTML = '<label title="阻止p2p在后台占用网速，开启后直播画面会在刚进入页面时卡一下"><input id="extool__p2p" type="checkbox">阻止p2p上传</label>';
     
     let b = document.getElementsByClassName("extool")[0];
     b.insertBefore(a, b.childNodes[0]);
@@ -5960,7 +6243,7 @@ function initPkg_ExpandTool_RedPacket_Room() {
 
 function ExpandTool_RedPacket_Room_insertDom() {
     let html = "";
-    html += '<label><input style="margin-top:5px;" id="extool__redpacekt_room_start" type="checkbox">自动抢礼物红包</label>';
+    html += '<label><input id="extool__redpacekt_room_start" type="checkbox">自动抢礼物红包</label>';
     
     let a = document.createElement("div");
     a.className = "extool__redpacket_room";
@@ -6092,8 +6375,8 @@ function ExpandTool_SendGift_insertDom() {
     html += '<label>送礼：[用于打榜,例如送出999个飞机]</label><a style="margin-left:10px;color:blue;" href="http://open.douyucdn.cn/api/RoomApi/room/' + rid + '" target="_blank">礼物id示例</a><br />';
     html += '<label>礼物ID：</label><input id="extool__sendgift_id" type="text" style="width:50px;text-align:center;margin-right:10px;" value="20000" />';
     html += '<label>数量：</label><input id="extool__sendgift_cnt" type="text" style="width:30px;text-align:center;margin-right:10px;" value="1" />';
-    html += '<label>间隔ms：</label><input id="extool__sendgift_delay" type="text" style="width:30px;text-align:center;" value="0" />';
-    html += '<input style="width:40px;margin-left:10px;" type="button" id="extool__sendgift_btn" value="送出" />';
+    html += '<br/><label>间隔ms：</label><input id="extool__sendgift_delay" type="text" style="width:30px;text-align:center;" value="0" />';
+    html += '<input style="margin-left:10px;" type="button" id="extool__sendgift_btn" value="送出" />';
     let a = document.createElement("div");
     a.className = "extool__sendgift";
     a.innerHTML = html;
@@ -6163,7 +6446,7 @@ function initPkg_ExpandTool_TabSwitch() {
 function ExpandTool_TabSwitch_insertDom() {
   let a = document.createElement("span");
   // a.className = "extool__bsize";
-  a.innerHTML = '<label title="阻止浏览器页签冻结"><input style="margin-top:5px;" id="extool__tabSwitch" type="checkbox">防页签冻结</label>';
+  a.innerHTML = '<label title="阻止浏览器页签冻结"><input id="extool__tabSwitch" type="checkbox">防页签冻结</label>';
   
   let b = document.getElementsByClassName("extool")[0];
   b.insertBefore(a, b.childNodes[0]);
@@ -6229,9 +6512,9 @@ function initPkg_ExpandTool_Treasure() {
 
 function ExpandTool_Treasure_insertDom() {
     let html = "";
-    html += '<label><input style="margin-top:5px" id="extool__treasure_start" type="checkbox">自动抢宝箱</label>';
+    html += '<label><input style="margin-top:5px" id="extool__treasure_start" type="checkbox">半自动抢宝箱</label>';
     html += '<label style="margin-left:10px;">延迟(抢得过快请调高)：</label><input id="extool__treasure_delay" type="text" style="width:50px;text-align:center;" value="3200" />ms'
-    html += '<div><a href="https://www.rrocr.com/" target="_blank" style="color:blue" title="点击进入rrocr官网，将账号用户中心的appkey填入右边然后开启功能即可">rrocr秘钥：</a><input id="extool__treasure_skey" type="text" style="width:200px;text-align:center;" placeholder="填写则会自动完成宝箱领取验证"></div>';
+    html += '<div class="extool__hint">说明：遇到验证码会自动弹出验证框，需要手动完成后才能领取。</div>';
     
     let a = document.createElement("div");
     a.className = "extool__treasure";
@@ -6260,20 +6543,15 @@ function ExpandTool_Treasure_insertFunc() {
             }
         })
 	});
-    document.getElementById("extool__treasure_skey").addEventListener("change", () => {
-        saveData_Treasure();
-    })
 }
 
 
 function saveData_Treasure() {
     isGetTreasure = document.getElementById("extool__treasure_start").checked;
     let delay = document.getElementById("extool__treasure_delay").value;
-    let skey = document.getElementById("extool__treasure_skey").value;
 	let data = {
         isGetTreasure: isGetTreasure,
         treasureDelay: delay,
-        skey: skey,
 	}
 	localStorage.setItem("ExSave_Treasure", JSON.stringify(data)); // 存储弹幕列表
 }
@@ -6287,9 +6565,6 @@ function ExpandTool_Treasure_Set() {
             document.getElementById("extool__treasure_delay").value = retJson.treasureDelay;
         } else {
             document.getElementById("extool__treasure_delay").value = "3200";
-        }
-        if ("skey" in retJson == true) {
-            document.getElementById("extool__treasure_skey").value = retJson.skey;
         }
         if (retJson.isGetTreasure == true) {
             verifyFans("5189167", 9).then(r => {
@@ -6311,11 +6586,6 @@ function ExpandTool_Treasure_Set() {
 function getTreasureDelay() {
     let ret = document.getElementById("extool__treasure_delay").value;
     return Number(ret);
-}
-
-function getTreasureSkey() {
-    let ret = document.getElementById("extool__treasure_skey").value;
-    return ret;
 }
 
 function getTreasure_Existing() {
@@ -6519,6 +6789,31 @@ function initPkg_FirePower_Func() {
 }
 
 
+function initPkg_Fkbuff() {
+	initPkg_Fkbuff_Dom();
+	initPkg_Fkbuff_Func();
+}
+
+function initPkg_Fkbuff_Dom() {
+	Fkbuff_insertIcon();
+}
+function Fkbuff_insertIcon() {
+	let a = document.createElement("div");
+	a.className = "ex-fkbuff";
+	a.innerHTML = `<a class="ex-panel__icon" title="FKBUFF - CS饰品议价交流工具"><img style="width:36px;height:36px;" src="data:image/png;base64,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"/></a>`;
+	
+	let b = document.getElementsByClassName("ex-panel__wrap")[0];
+	b.insertBefore(a, b.childNodes[0]);
+	
+}
+
+function initPkg_Fkbuff_Func() {
+	document.getElementsByClassName("ex-fkbuff")[0].addEventListener("click", function() {
+        openPage("https://fkbuff.com/");
+	});
+}
+
+
 let followListHook;
 function initPkg_FollowList() {
     let intID = setInterval(() => {
@@ -6543,13 +6838,22 @@ function handleFollowList(m) {
     setNewFollowList(panel[0]);
 }
 async function setNewFollowList(panel) {
+    let loadInCurrentPage = await GM_getValue("Ex_LoadInCurrentPage", false);
     let followList = await getFollowList();
     if (followList.error != "0") {
         return;
     }
     const FOLLOWLIST_LIMIT = 10; // 关注列表最多显示个数
     let limit = 0;
-    let html = `<div id="refreshFollowList"><span style="margin-left:3px">长按弹出同屏播放</span></div>`;
+    let html = `
+        <div id="refreshFollowList" style="color: grey; position: absolute; top: 0px; cursor: default; display: flex; align-items: center; justify-content: space-between; width: calc(100% - 10px); padding: 0 5px;">
+            <label style="display: flex; align-items: center; cursor: pointer; color: inherit;">
+                <input type="checkbox" id="loadInCurrentPageCheckbox" ${loadInCurrentPage ? 'checked' : ''} style="margin-right: 5px;">
+                在当前页面加载
+            </label>
+            <span>长按弹出同屏播放</span>
+        </div>
+    `;
     let nowTime = Math.floor(Date.now()/1000);
     for (let i = 0; i < followList.data.list.length; i++) {
         let item = followList.data.list[i];
@@ -6565,6 +6869,14 @@ async function setNewFollowList(panel) {
     }
     panel.innerHTML += html;
 
+    const loadInCurrentPageCheckbox = panel.querySelector('#loadInCurrentPageCheckbox');
+    if (loadInCurrentPageCheckbox) {
+        loadInCurrentPageCheckbox.addEventListener("change", async (e) => {
+            const isChecked = e.target.checked;
+            await GM_setValue("Ex_LoadInCurrentPage", isChecked);
+            showMessage(`【关注列表】已${isChecked ? "开启" : "关闭"}当前页加载功能（${isChecked ? "当前页面直接加载关注的直播间" : "使用新网页打开关注的直播间"}）`, "info");
+        });
+    }
 
     let followListItems = document.getElementsByClassName("ExFollowListItem");
     for (let i = 0; i < followListItems.length; i++) {
@@ -6573,8 +6885,15 @@ async function setNewFollowList(panel) {
             createNewVideo(videoPlayerArr.length, followListItems[i].getAttribute("rid"), "Douyu");
             document.querySelector(".Follow .public-DropMenu").className = "public-DropMenu";
         });
-        cclick.click(() => {
-            openPage("https://www.douyu.com/" + followListItems[i].getAttribute("rid"), true);
+        cclick.click(async (event) => {
+            event.preventDefault();
+            const shouldLoadInCurrentPage = await GM_getValue("Ex_LoadInCurrentPage", false);
+            const targetUrl = "https://www.douyu.com/" + followListItems[i].getAttribute("rid");
+            if (shouldLoadInCurrentPage) {
+                window.location.href = targetUrl; // 在当前页加载
+            } else {
+                openPage(targetUrl, true); // 在新页面打开
+            }
         });
         followListItems[i].addEventListener("mousedown", (event) => {
             if (event.button == 1) {
@@ -6651,9 +6970,9 @@ function initPkg_ImageDanmaku_Func() {
   }, 1000);
 
   let timer2 = setInterval(() => {
-    if (typeof document.getElementsByClassName("danmu-6e95c1")[0] != "undefined") {
+    if (typeof document.getElementsByClassName("danmu-fbb2a3")[0] != "undefined") {
       clearInterval(timer2);
-      new DomHook(".danmu-6e95c1", false, (m) => {
+      new DomHook(".danmu-fbb2a3", false, (m) => {
         if (m.length <= 0) return;
         if (m[0].addedNodes.length <= 0) return;
         let dom = m[0].addedNodes[0];
@@ -8837,15 +9156,6 @@ function getTreasure(roomid, rpid, deviceid, idName) {
                 let challenge = v.challenge;
                 let gt = v.gt;
 
-
-                let skey = getTreasureSkey();
-                if (skey != "") {
-                    let url = window.location.href;
-                    getTreasure_Auto(skey, gt, challenge, url, deviceid, rpid, roomid);
-                    return;
-                }
-                
-
                 let handler = (e) => {
                     // 2021-3-18 09:51:47 免打扰
                     // showMessageWindow(rid, "【宝箱】请手动验证领取宝箱", () => {
@@ -8894,7 +9204,7 @@ function getTreasure(roomid, rpid, deviceid, idName) {
                         product: "float",
                     }, handler);
                 } else {
-                    showMessage("自动抢宝箱初始化失败", "error");
+                    showMessage("宝箱验证初始化失败", "error");
                 }
             } else if(ret.data.msg != "领取失败" && ret.data.msg != "验证码不正确") {
                 let msg = "";
@@ -8934,57 +9244,6 @@ function getTreasure_Verify(challenge, validate, seccode, divId) {
     });
 }
 
-function getTreasure_Auto(skey, gt, challenge, referer, deviceid, rpid, roomid) {
-    // let wtype = "geetest";
-    // let data = "wtype=" + wtype + "&secretkey=" + skey + "&gt=" + gt + "&referer=" + referer + "&challenge=" + challenge + "&supporttype=3";
-    let data = `appkey=${String(skey).trim()}&gt=${gt}&challenge=${challenge}&referer=${referer}&ip=&host=&sharecode=6fb45916efd144e592f3dbd905b618a5`
-    GM_xmlhttpRequest({
-        method: "POST",
-        // url: "http://api.ddocr.com/api/gateway.jsonp",
-        url: "http://api.rrocr.com/api/recognize.html",
-        data: data,
-        timeout: 60000,
-        responseType: "json",
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        onload: function(response) {
-            let ret = response.response;
-            if (ret.status == "-1") {
-                showMessage("【宝箱】自动识别失败", "error");
-                return;
-            }
-            
-            let data = "room_id=" + roomid + "&package_room_id=" + roomid + "&device_id=" + deviceid + "&packerid=" + rpid + "&version=1";
-            data = data + "&geetest_challenge=" + ret.data.challenge + "&geetest_validate=" + ret.data.validate + "&geetest_seccode=" + ret.data.validate + "%7Cjordan";
-            GM_xmlhttpRequest({
-                method: "POST",
-                url: "https://pcapi.douyucdn.cn/h5nc/member/getRedPacket?token=" + dyToken,
-                data: data,
-                responseType: "json",
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                onload: function(response) {
-                    let ret = response.response;
-                    if (ret.data.code == "-1") {
-                        showMessage("【宝箱】验证码不正确", "error")
-                        return;
-                    }
-                    let msg = "";
-                    if (ret.data.prop_id == "") {
-                        msg = "鱼丸x" + ret.data.silver;
-                    } else {
-                        msg = ret.data.prop_name + "x" + ret.data.prop_count;
-                    }
-                    if (msg != "") {
-                        showMessage("【宝箱】获得" + msg, "success");
-                    }
-                }
-            });
-        }
-    });
-}
 let isVoteOn = false;
 let voteList = {};
 let voteNameList = {};
@@ -11442,16 +11701,33 @@ function initPkg_Refresh_Video_Func() {
     new DomHook(".right-17e251", true, () => {
         changeToolBarZIndex();
     });
+    new DomHook(".video__VfhVg", true, (m) => {
+        for (const record of m) {
+            if(record.target.className.includes("toggle__P8TKM")){
+                changeToolBarZIndex();
+            }
+        }
+    });
+
 
     function changeToolBarZIndex() {
         let video_fullPage = false;
+        let video_fullScreen = !!(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement);
+        let chatPanel_isHidden = false;
         if (document.querySelector(".wfs-2a8e83.removed-9d4c42")) {
             video_fullPage = true;
         } else if (document.querySelector(".toggle__P8TKM")) {
             video_fullPage = true;
         }
+        if(document.querySelector(".shrink__Sd0uK")){
+            chatPanel_isHidden = true;
+        }
         const dom_player_toolbar = document.getElementById("js-player-toolbar");
         dom_player_toolbar.style = video_fullPage? "z-index:20" : "z-index:30";
+        const dom_casebar = document.getElementsByClassName("case__f4yex")[0];
+        if(dom_casebar){
+            dom_casebar.style = (video_fullScreen || (video_fullPage && chatPanel_isHidden)) && refresh_Video_getStatus() ? "bottom: -84px;" : "bottom: 0;";
+        }
         const isBeta = !!document.getElementsByClassName("live-next-body")[0];
         if (isBeta) dom_player_toolbar.parentElement.style = "z-index:20";
     }
@@ -11471,7 +11747,7 @@ function initPkg_Refresh_Video_Func() {
             dom_toolbar.style.visibility = "hidden";
             dom_video.style = "bottom:0;z-index:25";
             dom_refresh2.style.display = "block";
-            dom_refresh.innerText = "√ 简洁模式";
+            dom_refresh.innerText = "✓ 简洁模式";
             refresh_Video_setStyle();
         }
         changeToolBarZIndex();
@@ -11493,7 +11769,7 @@ function initPkg_Refresh_Video_Func() {
             dom_toolbar.style.visibility = "hidden";
             dom_video.style = "bottom:0;z-index:25";
             dom_refresh2.style.display = "block";
-            dom_refresh.innerText = "√ 简洁模式";
+            dom_refresh.innerText = "✓ 简洁模式";
             refresh_Video_setStyle();
         }
         changeToolBarZIndex();
@@ -11537,7 +11813,7 @@ function initPkg_Refresh_Video_Set() {
             const isBeta = !!document.getElementsByClassName("live-next-body")[0];
             if (isBeta) dom_player_toolbar.parentElement.style = "z-index:20";
             dom_refresh2.style.display = "block";
-            dom_refresh.innerText = "√ 简洁模式";
+            dom_refresh.innerText = "✓ 简洁模式";
             refresh_Video_setStyle();
             resizeWindow();
         }
@@ -11641,12 +11917,6 @@ function removeAD() {
         display: none!important;
     }
 
-    .activeItem__d6uUm:nth-child(1){display: none !important;}
-    .activeItem__d6uUm:nth-child(2){right: 0 !important;}
-    .activeItem__d6uUm:nth-child(3){right: 75px !important;}
-    .activeItem__d6uUm:nth-child(4){right: 150px !important;}
-    .activeItem__d6uUm:nth-child(5){right: 225px !important;}
-    .activeItem__d6uUm:nth-child(6){right: 300px !important;}
     .werbungContainer__2sv7h{display:none !important;}
     #js-player-asideTopSuspension{display:none !important;}
     .Search-Panel-Advert{display:none !important;}
@@ -11943,28 +12213,6 @@ function getYubaStatus(groupId) {
   });
 }
 
-function initPkg_ReturnOldWeb() {
-    initPkg_JumpOldweb_insertDom();
-}
-function initPkg_JumpOldweb_insertDom() {
-    const jump_old_img = "data:image/png;base64,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";
-
-
-    let a = document.createElement("div");
-    a.className = "snapbarMenuItem__ide1O";
-    a.innerHTML = `<a href="#" class="icon__jumpoldweb"><img src="${jump_old_img}" alt="返回旧版"></a>`;
-
-    let b = document.getElementById("js-room-snapbar");
-    if (b) {
-        b.insertBefore(a, b.childNodes[0]);
-        document.getElementsByClassName("icon__jumpoldweb")[0].addEventListener("click", ReturnOldWeb);
-    }
-}
-
-function ReturnOldWeb() {
-    localStorage.setItem("newWebLive", "A");
-    window.location.href = window.location.href.replace("/beta", "");
-}
 const roomVipExpireDayLimit = 3;
 function initPkg_RoomVip() {
   setRoomVipExpireDays();
@@ -12016,26 +12264,37 @@ function setRoomVipExpireDays() {
 }
 
 let isRemoveDanmakuBackground = getLocalIsRemoveDanmakuBackground();
+if (isRemoveDanmakuBackground) removeDanmakuBackground();
 function initPkg_Shield_RemoveDanmakuBackground() {
-  const shieldTool = document.getElementsByClassName("ShieldTool-list")[0];
+  const shieldTool = document.getElementsByClassName("FilterKeywords")[0];
   shieldTool.insertAdjacentHTML(
-    "beforeend",
-    `
-      <div class="ShieldTool-listItem ${isRemoveDanmakuBackground ? "is-checked" : "is-noChecked"}" id="ex-removeDanmakuBackground">
-          <span class="ShieldTool-checkIcon"></span>
-          <h5 class="ShieldTool-checkText">屏蔽弹幕背景</h5>
-      </div>`
+    "afterbegin",
+    `<div class="FilterSwitchStatus" id="ex-removeDanmakuBackground">
+    <h3>屏蔽弹幕背景</h3>
+    <div>
+      <span class="FilterSwitchStatus-status ${isRemoveDanmakuBackground ? "is-checked" : "is-noChecked"}">${isRemoveDanmakuBackground ? "已开启" : "未开启"}</span>
+      <span class="FilterSwitchStatus-switch ${isRemoveDanmakuBackground ? "is-checked" : "is-noChecked"}">
+        <span class="FilterSwitchStatus-switch-inner"></span>
+      </span>
+    </div>
+  </div>`
   );
-  if (isRemoveDanmakuBackground) removeDanmakuBackground();
+  
   const dom = document.getElementById("ex-removeDanmakuBackground");
+  const statusSpan = dom.querySelector(".FilterSwitchStatus-status");
+  const switchSpan = dom.querySelector(".FilterSwitchStatus-switch");
   dom.addEventListener("click", () => {
     isRemoveDanmakuBackground = !isRemoveDanmakuBackground;
     if (isRemoveDanmakuBackground) {
       removeDanmakuBackground();
-      dom.className = dom.className.replace("is-noChecked", "is-checked");
+      statusSpan.className = statusSpan.className.replace("is-noChecked", "is-checked");
+      statusSpan.textContent = "已开启";
+      switchSpan.className = switchSpan.className.replace("is-noChecked", "is-checked");
     } else {
       StyleHook_remove("Ex_Style_RemoveDanmakuBackground");
-      dom.className = dom.className.replace("is-checked", "is-noChecked");
+      statusSpan.className = statusSpan.className.replace("is-checked", "is-noChecked");
+      statusSpan.textContent = "未开启";
+      switchSpan.className = switchSpan.className.replace("is-checked", "is-noChecked");
     }
     saveRemoveDanmakuBackground();
   });
@@ -12054,22 +12313,22 @@ function removeDanmakuBackground() {
   StyleHook_set(
     "Ex_Style_RemoveDanmakuBackground",
     `
-      .danmuItem-31f924 {
+      .danmuItem-a8616a {
         background: none !important;
       }
-      .danmuItem-31f924 div{
+      .danmuItem-a8616a div{
         background: none;
       }
-      .danmuItem-31f924 > img {
+      .danmuItem-a8616a > img {
         display: none;
       }
-      .danmuItem-31f924 div > img {
+      .danmuItem-a8616a div > img {
         display: none;
       }
-      .super-text-0281ca {
+      .super-text-f60bfa {
         background: none !important;
       }
-      .danmuItem-31f924 .noble-f439ef {
+      .danmuItem-a8616a .noble-d35c82 {
         background: none !important;
       }
       .customBarrage {
@@ -12124,52 +12383,443 @@ function removeDanmakuImage() {
   StyleHook_set(
     "Ex_Style_RemoveDanmakuImage",
     `
-    .danmuItem-31f924 a {
+    .danmuItem-a8616a a {
       display: none !important;
     }
   `
   );
 }
 
+let isRemoveEnterBarrage = getLocalIsRemoveEnterBarrage();
 function initPkg_Shield_RemoveEnter() {
-  let shieldTool = document.getElementsByClassName("ShieldTool-list")[0];
-  let isRemoveEnterBarrage = localStorage.getItem("ExSave_isRemoveEnterBarrage"); // '1'移除check
-  let isChecked = (isRemoveEnterBarrage == null || isRemoveEnterBarrage == '1') ? true : false;
+  const shieldTool = document.getElementsByClassName("FilterKeywords")[0];
   let isSupported = window.CSS && window.CSS.supports && window.CSS.supports('--enter-display', 'none'); //CSS变量兼容性检测
   let barrageExtendContainer = document.getElementById("js-barrage-extend-container");
-  barrageExtendContainer && barrageExtendContainer.style.setProperty("--enter-display", isChecked ? "none" : "block", "important");
-
+  
   if (shieldTool == undefined || !isSupported)
       return;
-  if (isRemoveEnterBarrage == null)
-      isRemoveEnterBarrage = '1';
-
-  shieldTool.insertAdjacentHTML("beforeend", `
-      <div class="ShieldTool-listItem ${ isChecked ? 'is-checked' : 'is-noChecked'}" id="ex-enter-shield">
-          <span class="ShieldTool-checkIcon"></span>
-          <h5 class="ShieldTool-checkText">屏蔽进场弹幕</h5>
-      </div>`);
-  document.getElementById("ex-enter-shield").addEventListener("click", (e) => {
-      let classList = e.currentTarget.classList;
-      let noChecked = classList.toggle("is-noChecked");
-      let chceked = classList.toggle("is-checked");
-      let enterDisplay = (noChecked && !chceked) ? "block": "none";
-      barrageExtendContainer && barrageExtendContainer.style.setProperty("--enter-display", enterDisplay, "important");
-      localStorage.setItem("ExSave_isRemoveEnterBarrage", (noChecked && !chceked) ? "0" : "1"); // '1'移除check
-      
+  
+  shieldTool.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="FilterSwitchStatus" id="ex-removeEnterBarrage">
+    <h3>屏蔽进场弹幕</h3>
+    <div>
+      <span class="FilterSwitchStatus-status ${isRemoveEnterBarrage ? "is-checked" : "is-noChecked"}">${isRemoveEnterBarrage ? "已开启" : "未开启"}</span>
+      <span class="FilterSwitchStatus-switch ${isRemoveEnterBarrage ? "is-checked" : "is-noChecked"}">
+        <span class="FilterSwitchStatus-switch-inner"></span>
+      </span>
+    </div>
+  </div>`
+  );
+  
+  if (isRemoveEnterBarrage) {
+    barrageExtendContainer && barrageExtendContainer.style.setProperty("--enter-display", "none", "important");
+  } else {
+    barrageExtendContainer && barrageExtendContainer.style.setProperty("--enter-display", "block", "important");
+  }
+  const dom = document.getElementById("ex-removeEnterBarrage");
+  const statusSpan = dom.querySelector(".FilterSwitchStatus-status");
+  const switchSpan = dom.querySelector(".FilterSwitchStatus-switch");
+  dom.addEventListener("click", () => {
+    isRemoveEnterBarrage = !isRemoveEnterBarrage;
+    if (isRemoveEnterBarrage) {
+      barrageExtendContainer && barrageExtendContainer.style.setProperty("--enter-display", "none", "important");
+      statusSpan.className = statusSpan.className.replace("is-noChecked", "is-checked");
+      statusSpan.textContent = "已开启";
+      switchSpan.className = switchSpan.className.replace("is-noChecked", "is-checked");
+    } else {
+      barrageExtendContainer && barrageExtendContainer.style.setProperty("--enter-display", "block", "important");
+      statusSpan.className = statusSpan.className.replace("is-checked", "is-noChecked");
+      statusSpan.textContent = "未开启";
+      switchSpan.className = switchSpan.className.replace("is-checked", "is-noChecked");
+    }
+    saveRemoveEnterBarrage();
   });
 }
-function initPkg_Shield() {
-  let t = setInterval(() => {
-      if (typeof document.getElementsByClassName("ShieldTool-list")[0] !== "undefined") {
-          clearInterval(t);
-          initPkg_Shield_RemoveEnter();
-          initPkg_Shield_RemoveDanmakuBackground();
+
+function getLocalIsRemoveEnterBarrage() {
+  const ret = localStorage.getItem("ExSave_isRemoveEnterBarrage");
+  return ret ? Number(ret) === 1 : false; // 默认为false（不屏蔽进场弹幕）
+}
+
+function saveRemoveEnterBarrage() {
+  localStorage.setItem("ExSave_isRemoveEnterBarrage", isRemoveEnterBarrage ? 1 : 0);
+}
+let isRemoveRepeatedDanmaku = getLocalIsRemoveRepeatedDanmaku();
+let repeatedDanmakuSeconds = getLocalRepeatedDanmakuSeconds();
+let isEnlargeDanmaku = getLocalIsEnlargeDanmaku();
+// 对象存储弹幕文本和过期时间戳
+let repeatedDanmakuMap = {};
+let repeatedDanmakuUuidMap = {};
+// 存储弹幕文本到首次出现的DOM元素的映射
+let repeatedDanmakuDomMap = {};
+// 存储弹幕文本的重复次数
+let repeatedDanmakuCountMap = {};
+// 存储弹幕DOM元素的原始fontSize
+let repeatedDanmakuOriginalFontSizeMap = new WeakMap();
+// 清理定时器
+let repeatedDanmakuCleanupTimer = null;
+let repeatedDanmakuDomHook = null;
+
+if (isRemoveRepeatedDanmaku) removeRepeatedDanmaku();
+
+function initPkg_Shield_RemoveRepeatedDanmaku() {
+  const shieldTool = document.getElementsByClassName("FilterKeywords")[0];
+  shieldTool.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="FilterSwitchStatus" id="ex-removeRepeatedDanmaku">
+    <h3>屏蔽重复弹幕</h3>
+    <div>
+      <span class="FilterSwitchStatus-status ${isRemoveRepeatedDanmaku ? "is-checked" : "is-noChecked"}">${isRemoveRepeatedDanmaku ? "已开启" : "未开启"}</span>
+      <span class="FilterSwitchStatus-switch ${isRemoveRepeatedDanmaku ? "is-checked" : "is-noChecked"}">
+        <span class="FilterSwitchStatus-switch-inner"></span>
+      </span>
+    </div>
+  </div>
+  <p class="FilterKeywords-intelligentText" style="display: flex; align-items: center;justify-content: space-between;">
+    <span>
+      <input type="number" id="ex-repeatedDanmakuSeconds" min="1" max="300" value="${repeatedDanmakuSeconds}" style="width: 38px; height: 14px; text-align: center;" />
+      <span>秒内重复的弹幕只显示一次</span>
+    </span>
+    <label style="margin-left: 10px;display: inline-flex; align-items: center;">
+      <input type="checkbox" id="ex-enlargeDanmaku" ${isEnlargeDanmaku ? "checked" : ""} style="margin-right: 4px;" />
+      放大重复弹幕
+    </label>
+  </p>`
+  );
+
+  const dom = document.getElementById("ex-removeRepeatedDanmaku");
+  const statusSpan = dom.querySelector(".FilterSwitchStatus-status");
+  const switchSpan = dom.querySelector(".FilterSwitchStatus-switch");
+  const secondsInput = document.getElementById("ex-repeatedDanmakuSeconds");
+  const enlargeCheckbox = document.getElementById("ex-enlargeDanmaku");
+
+  // 阻止输入框和checkbox点击事件冒泡
+  secondsInput.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+  enlargeCheckbox.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+  // 输入框值改变事件
+  secondsInput.addEventListener("input", () => {
+    let value = parseInt(secondsInput.value);
+    if (isNaN(value) || value < 1) {
+      value = 1;
+      secondsInput.value = 1;
+    } else if (value > 300) {
+      value = 300;
+      secondsInput.value = 300;
+    }
+    repeatedDanmakuSeconds = value;
+    setLocalRepeatedDanmakuSeconds(value);
+
+    // 如果功能已开启，需要重启以应用新设置
+    if (isRemoveRepeatedDanmaku) {
+      if (repeatedDanmakuDomHook) {
+        repeatedDanmakuDomHook.closeHook();
+        repeatedDanmakuDomHook = null;
       }
+      stopRepeatedDanmakuCleanupTimer();
+      removeRepeatedDanmaku();
+    }
+  });
+
+  // checkbox改变事件
+  enlargeCheckbox.addEventListener("change", () => {
+    isEnlargeDanmaku = enlargeCheckbox.checked;
+    setLocalIsEnlargeDanmaku(isEnlargeDanmaku);
+  });
+
+  dom.addEventListener("click", () => {
+    isRemoveRepeatedDanmaku = !isRemoveRepeatedDanmaku;
+    if (isRemoveRepeatedDanmaku) {
+      removeRepeatedDanmaku();
+      statusSpan.className = statusSpan.className.replace("is-noChecked", "is-checked");
+      statusSpan.textContent = "已开启";
+      switchSpan.className = switchSpan.className.replace("is-noChecked", "is-checked");
+    } else {
+      if (repeatedDanmakuDomHook) {
+        repeatedDanmakuDomHook.closeHook();
+        repeatedDanmakuDomHook = null;
+      }
+      stopRepeatedDanmakuCleanupTimer();
+      StyleHook_remove("Ex_Style_RemoveRepeatedDanmaku");
+      StyleHook_remove("Ex_Style_RemoveRepeatedDanmaku_Count");
+      statusSpan.className = statusSpan.className.replace("is-checked", "is-noChecked");
+      statusSpan.textContent = "未开启";
+      switchSpan.className = switchSpan.className.replace("is-checked", "is-noChecked");
+    }
+    saveRemoveRepeatedDanmaku();
+  });
+}
+
+function initPkg_Shield_RemoveRepeatedDanmaku_ScriptHook() {
+  scriptHook({
+    url: "/firstqueue",
+    callback: (content) => {
+      let newContent = content;
+      // 给弹幕飘屏添加属性
+      newContent = newContent.replace(`e.display=new e.renderer(e);`, `e.display=new e.renderer(e);e.display.raw.comment=e;`);
+      return newContent;
+    }
+  });
+}
+
+function removeRepeatedDanmaku() {
+  // 添加计数显示和动画的样式
+  StyleHook_set(
+    "Ex_Style_RemoveRepeatedDanmaku_Count",
+    `
+    /* 弹幕计数显示样式 */
+    [data-repeat-count]::before {
+      content: "x" attr(data-repeat-count);
+      font-weight: bold;
+      display: inline-block;
+      position: absolute;
+      right: -18px;
+      bottom: 0;
+      font-size: 16px;
+      font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+      color: inherit;
+    }
+    
+    /* 计数跳动动画 */
+    @keyframes danmaku-combo-bounce {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.5);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    
+    /* 应用动画的类 */
+    .danmaku-combo-animation::before {
+      animation: danmaku-combo-bounce 0.2s ease-out;
+    }
+    `
+  );
+
+  let timer = setInterval(() => {
+    const dom = document.querySelector(".danmu-fbb2a3");
+    if (dom) {
+      clearInterval(timer);
+      // 开启定期清理定时器
+      startRepeatedDanmakuCleanupTimer();
+
+      repeatedDanmakuDomHook = new DomHook(".danmu-fbb2a3", false, (m) => {
+        if (m.length <= 0) return;
+        if (!isRemoveRepeatedDanmaku) return;
+        if (m[0].addedNodes.length <= 0 && m[0].removedNodes.length > 0) {
+          const removedDom = m[0].removedNodes[0];
+          const uuid = removedDom.comment.uuid;
+          const endTime = removedDom.comment.startTime + removedDom.comment.duration;
+          const now = Date.now();
+          if (now > endTime) return;
+          // 存储过期时间戳
+          repeatedDanmakuUuidMap[uuid] = now + repeatedDanmakuSeconds * 1000;
+
+          // 清理与该弹幕相关的DOM映射，防止内存泄露
+          const danmakuText = removedDom.textContent ? removedDom.textContent.trim() : "";
+          if (danmakuText && repeatedDanmakuDomMap[danmakuText] === removedDom) {
+            // 移除DOM引用，避免内存泄露
+            delete repeatedDanmakuDomMap[danmakuText];
+            delete repeatedDanmakuCountMap[danmakuText];
+            // 同时清理过期时间，因为首条弹幕已经被移除了
+            delete repeatedDanmakuMap[danmakuText];
+          }
+          return;
+        }
+
+        if (m[0].addedNodes.length <= 0) return;
+        const dom = m[0].addedNodes[0];
+        if (!dom) return;
+        const now = Date.now();
+        const uuid = dom.comment.uuid;
+        // 检查 UUID 是否存在且未过期
+        const uuidExpireTime = repeatedDanmakuUuidMap[uuid];
+        if (uuidExpireTime && now <= uuidExpireTime) return;
+
+        const danmakuText = dom.textContent ? dom.textContent.trim() : "";
+        if (!danmakuText || danmakuText.length === 0) return;
+
+        // 检查弹幕是否在指定秒数内出现过
+        const expireTime = repeatedDanmakuMap[danmakuText];
+
+        if (expireTime && now <= expireTime) {
+          // 这是重复弹幕，隐藏它
+          dom.className += " repeated-danmaku";
+
+          // 增加重复次数
+          repeatedDanmakuCountMap[danmakuText] = (repeatedDanmakuCountMap[danmakuText] || 1) + 1;
+
+          // 如果开启了放大重复弹幕功能，找到首次出现的弹幕DOM并增加fontSize
+          if (isEnlargeDanmaku) {
+            const firstDom = repeatedDanmakuDomMap[danmakuText];
+            if (firstDom && firstDom.parentNode) {
+              // 如果还没有保存原始fontSize，先保存
+              if (!repeatedDanmakuOriginalFontSizeMap.has(firstDom)) {
+                const computedStyle = window.getComputedStyle(firstDom);
+                const originalFontSize = computedStyle.fontSize;
+                repeatedDanmakuOriginalFontSizeMap.set(firstDom, originalFontSize);
+              }
+
+              // 获取原始fontSize的数值
+              const originalFontSize = repeatedDanmakuOriginalFontSizeMap.get(firstDom);
+              const baseFontSize = parseFloat(originalFontSize);
+
+              // 计算新的fontSize：每多一条重复就+2，最大40
+              const repeatCount = repeatedDanmakuCountMap[danmakuText];
+              const newFontSize = Math.min(baseFontSize + (repeatCount - 1) * 2, 40);
+              firstDom.style.fontSize = newFontSize + "px";
+
+              // 更新计数显示
+              firstDom.setAttribute("data-repeat-count", repeatCount);
+
+              // 触发跳动动画
+              firstDom.classList.remove("danmaku-combo-animation");
+              // 强制重排以重新触发动画
+              void firstDom.offsetWidth;
+              firstDom.classList.add("danmaku-combo-animation");
+            } else if (!firstDom || !firstDom.parentNode) {
+              // 如果首条弹幕的DOM已经不存在了，清理相关数据，防止内存泄露
+              delete repeatedDanmakuDomMap[danmakuText];
+              delete repeatedDanmakuCountMap[danmakuText];
+            }
+          }
+        } else {
+          // 首次出现的弹幕
+          repeatedDanmakuMap[danmakuText] = now + repeatedDanmakuSeconds * 1000;
+          repeatedDanmakuDomMap[danmakuText] = dom;
+          repeatedDanmakuCountMap[danmakuText] = 1;
+        }
+      });
+    }
   }, 1000);
 }
 
+// 定期清理过期的弹幕记录
+function cleanupExpiredRepeatedDanmaku() {
+  const now = Date.now();
+  // 删除过期的条目，清理Map防止内存泄露
+  for (const [key, expireTime] of Object.entries(repeatedDanmakuMap)) {
+    if (expireTime <= now) {
+      delete repeatedDanmakuMap[key];
+      // 同时清理相关的DOM映射和计数，防止内存泄露
+      // 不恢复fontSize，让弹幕保持放大的效果
+      delete repeatedDanmakuDomMap[key];
+      delete repeatedDanmakuCountMap[key];
+    }
+  }
+  // 清理过期的 UUID 记录
+  for (const [uuid, expireTime] of Object.entries(repeatedDanmakuUuidMap)) {
+    if (expireTime <= now) {
+      delete repeatedDanmakuUuidMap[uuid];
+    }
+  }
+}
 
+// 启动清理定时器
+function startRepeatedDanmakuCleanupTimer() {
+  if (repeatedDanmakuCleanupTimer) return; // 避免重复启动
+  repeatedDanmakuCleanupTimer = setInterval(cleanupExpiredRepeatedDanmaku, 20000);
+}
+
+// 停止清理定时器
+function stopRepeatedDanmakuCleanupTimer() {
+  if (repeatedDanmakuCleanupTimer) {
+    clearInterval(repeatedDanmakuCleanupTimer);
+    repeatedDanmakuCleanupTimer = null;
+  }
+  // 清空对象释放内存
+  repeatedDanmakuMap = {};
+  repeatedDanmakuUuidMap = {};
+  repeatedDanmakuDomMap = {};
+  repeatedDanmakuCountMap = {};
+}
+
+function saveRemoveRepeatedDanmaku() {
+  setLocalIsRemoveRepeatedDanmaku(isRemoveRepeatedDanmaku);
+}
+
+function getLocalIsRemoveRepeatedDanmaku() {
+  return localStorage.getItem("ExSave_isRemoveRepeatedDanmaku") === "1";
+}
+
+function setLocalIsRemoveRepeatedDanmaku(value) {
+  localStorage.setItem("ExSave_isRemoveRepeatedDanmaku", value ? "1" : "0");
+}
+
+function getLocalRepeatedDanmakuSeconds() {
+  const saved = localStorage.getItem("ExSave_repeatedDanmakuSeconds");
+  if (saved) {
+    const value = parseInt(saved);
+    if (!isNaN(value) && value >= 1 && value <= 60) {
+      return value;
+    }
+  }
+  return 5; // 默认5秒
+}
+
+function setLocalRepeatedDanmakuSeconds(value) {
+  localStorage.setItem("ExSave_repeatedDanmakuSeconds", value.toString());
+}
+
+function getLocalIsEnlargeDanmaku() {
+  const saved = localStorage.getItem("ExSave_isEnlargeDanmaku");
+  if (saved === null) {
+    return false; // 默认不开启放大功能
+  }
+  return saved === "1";
+}
+
+function setLocalIsEnlargeDanmaku(value) {
+  localStorage.setItem("ExSave_isEnlargeDanmaku", value ? "1" : "0");
+}
+
+function initPkg_Shield() {
+  // let t = setInterval(() => {
+  //     if (typeof document.getElementsByClassName("ShieldTool-list")[0] !== "undefined") {
+  //         clearInterval(t);
+  //         initPkg_Shield_RemoveEnter();
+  //         initPkg_Shield_RemoveDanmakuBackground();
+  //     }
+  // }, 1000);
+
+  let t = setInterval(() => {
+    if (typeof document.getElementsByClassName("BarrageFilter")[0] !== "undefined") {
+      clearInterval(t);
+      new DomHook(".BarrageFilter", false, (m) => {
+        if (m.length === 0) return;
+        if (m[0].addedNodes.length > 0 && m[0].removedNodes.length === 0) {
+          const domFilterKeywords = document.getElementsByClassName("FilterKeywords")[0];
+          if (domFilterKeywords) {
+            initPkg_Shield_Enable();
+          } else {
+            let t2 = setInterval(() => {
+              const domFilterKeywords = document.getElementsByClassName("FilterKeywords")[0];
+              if (domFilterKeywords) {
+                clearInterval(t2);
+                initPkg_Shield_Enable();
+              }
+            }, 50);
+          }
+        }
+      });
+    }
+  }, 1000);
+}
+
+function initPkg_Shield_Enable() {
+  initPkg_Shield_RemoveRepeatedDanmaku();
+  initPkg_Shield_RemoveEnter();
+  initPkg_Shield_RemoveDanmakuBackground();
+}
 function initPkg_ShowDanmaku() {
     responseHook((url, text) => {
         if (url.indexOf("/betard") !== -1) {
@@ -12187,7 +12837,7 @@ function initPkg_ShowDanmakuOriginAction() {
             // 加一按钮
             newContent = newContent.replace(`if(c&&c.isOpenFireFBComment)`, `if(true)`);
             // 回复按钮
-            newContent = newContent.replace(`if(W&&!this.isFireOpenRank(s))if(parseInt(W,10)&&U&&B>=z&&(!G||G&&M))`, `if(true)if(true) `);
+            newContent = newContent.replace(`if(z&&!this.isFireOpenRank(s))if(parseInt(z,10)&&W&&M>=U&&(!G||G&&B))`, `if(true)if(true) `);
             // 点赞按钮
             newContent = newContent.replace(`else if(1==+Object(r.A)("barrage_praise"))`, `if(true) `);
             return newContent;
@@ -13469,7 +14119,7 @@ function initPkg_SyncJoy_Func() {
 
 // 版本号
 // 格式 yyyy.MM.dd.**
-var curVersion = "2025.09.17.02"
+var curVersion = "2026.01.09.01"
 var isNeedUpdate = false
 var lastestVersion = ""
 function initPkg_Update() {
@@ -13488,7 +14138,7 @@ function initPkg_Update_Dom() {
 function Update_insertIcon() {
 	let a = document.createElement("div");
 	a.className = "ex-update";
-	a.innerHTML = '<a class="ex-panel__icon" title="版本更新"><svg t="1578767541873" style="display:block;" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="23715" width="32" height="32"><path d="M768 810.7H512c-23.6 0-42.7-19.1-42.7-42.7s19.1-42.7 42.7-42.7h256c94.1 0 170.7-76.6 170.7-170.7 0-89.6-70.1-164.3-159.5-170.1L754 383l-10.7-22.7c-42.2-89.3-133-147-231.3-147s-189.1 57.7-231.3 147L270 383l-25.1 1.6c-89.5 5.8-159.5 80.5-159.5 170.1 0 94.1 76.6 170.7 170.7 170.7 23.6 0 42.7 19.1 42.7 42.7s-19.1 42.7-42.7 42.7c-141.2 0-256-114.8-256-256 0-126.1 92.5-232.5 214.7-252.4C274.8 195.7 388.9 128 512 128s237.2 67.7 297.3 174.2C931.5 322.1 1024 428.6 1024 554.7c0 141.1-114.8 256-256 256z" fill="#3688FF" p-id="23716"></path><path d="M554.7 938.7c-10.9 0-21.8-4.2-30.2-12.5l-128-128c-16.7-16.7-16.7-43.7 0-60.3l128-128c16.6-16.7 43.7-16.7 60.3 0 16.7 16.7 16.7 43.7 0 60.3L487 768l97.8 97.8c16.7 16.7 16.7 43.7 0 60.3-8.3 8.4-19.2 12.6-30.1 12.6z" fill="#5F6379" p-id="23717"></path></svg><i id="ex-update__tip" class="ex-panel__tip"></i></a>';
+	a.innerHTML = '<a class="ex-panel__icon" title="版本更新，当前版本' + curVersion + '"><svg t="1578767541873" style="display:block;" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="23715" width="32" height="32"><path d="M768 810.7H512c-23.6 0-42.7-19.1-42.7-42.7s19.1-42.7 42.7-42.7h256c94.1 0 170.7-76.6 170.7-170.7 0-89.6-70.1-164.3-159.5-170.1L754 383l-10.7-22.7c-42.2-89.3-133-147-231.3-147s-189.1 57.7-231.3 147L270 383l-25.1 1.6c-89.5 5.8-159.5 80.5-159.5 170.1 0 94.1 76.6 170.7 170.7 170.7 23.6 0 42.7 19.1 42.7 42.7s-19.1 42.7-42.7 42.7c-141.2 0-256-114.8-256-256 0-126.1 92.5-232.5 214.7-252.4C274.8 195.7 388.9 128 512 128s237.2 67.7 297.3 174.2C931.5 322.1 1024 428.6 1024 554.7c0 141.1-114.8 256-256 256z" fill="#3688FF" p-id="23716"></path><path d="M554.7 938.7c-10.9 0-21.8-4.2-30.2-12.5l-128-128c-16.7-16.7-16.7-43.7 0-60.3l128-128c16.6-16.7 43.7-16.7 60.3 0 16.7 16.7 16.7 43.7 0 60.3L487 768l97.8 97.8c16.7 16.7 16.7 43.7 0 60.3-8.3 8.4-19.2 12.6-30.1 12.6z" fill="#5F6379" p-id="23717"></path></svg><i id="ex-update__tip" class="ex-panel__tip"></i></a>';
 	
 	let b = document.getElementsByClassName("ex-panel__wrap")[0];
 	b.insertBefore(a, b.childNodes[0]);
@@ -13582,17 +14232,22 @@ function Update_openUpdatePage() {
 }
 
 function Update_showTip(a) {
-	let d = document.getElementById("ex-update__tip");
-	if (d) {
-		if (a) {
-			if (d.style.display != "block") {
-				d.style.display = "block";
+	let count = 0;
+	let timer = setInterval(() => {
+		let d = document.getElementById("ex-update__tip");
+		count++;
+		if (count > 60) return clearInterval(timer);
+		if (d) {
+			clearInterval(timer);
+			if (a) {
+				if (d.style.display != "block") {
+					d.style.display = "block";
+				}
+			} else {
+				d.style.display = "none";
 			}
-		} else {
-			d.style.display = "none";
 		}
-	}
-	
+	}, 1000);
 }
 function Update_showMessage() {
 	let msg = `【版本更新】最新版本：${lastestVersion}，点击<a href="https://html.douyuex.com/install/web.html" target="_blank">官方源</a>或者<a href="https://greasyfork.org/zh-CN/scripts/394497" target="_blank">GreasyFork源</a>更新，<a href="https://html.douyuex.com/update/" target="_blank">点击查看更新内容</a>`
@@ -13701,27 +14356,52 @@ function Camera_insertIcon() {
     a.title = "单击截图 长按录制gif"
     a.innerHTML = `
     <svg t="1620266708389" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2080" width="38" height="38"><path d="M512 337.371136c-119.543808 0-216.800256 97.255424-216.800256 216.798208 0 119.543808 97.256448 216.800256 216.800256 216.800256s216.800256-97.256448 216.800256-216.800256C728.800256 434.625536 631.543808 337.371136 512 337.371136zM680.479744 554.16832c0 92.911616-75.579392 168.501248-168.479744 168.501248-92.900352 0-168.480768-75.589632-168.480768-168.501248 0-92.923904 75.579392-168.521728 168.480768-168.521728C604.899328 385.646592 680.479744 461.24544 680.479744 554.16832z" p-id="2081" fill="#ffffff"></path><path d="M831.209472 337.349632l-47.167488 0c-13.647872 0-24.751104 11.083776-24.751104 24.707072 0 13.635584 11.103232 24.7296 24.751104 24.7296l47.167488 0c13.646848 0 24.75008-11.094016 24.75008-24.7296C855.959552 348.433408 844.85632 337.349632 831.209472 337.349632z" p-id="2082" fill="#ffffff"></path><path d="M700.505088 171.497472c4.235264 0 6.403072 0.405504 7.232512 0.612352 1.47968 1.514496 4.790272 6.218752 11.717632 20.685824 2.83648 5.910528 8.6272 18.86208 15.888384 35.533824l11.788288 27.063296 29.518848 0 96.535552 0c35.122176 0 63.695872 28.535808 63.695872 63.609856l0 469.933056c0 35.05152-28.573696 63.567872-63.695872 63.567872L150.811648 852.503552c-35.121152 0-63.694848-28.516352-63.694848-63.567872L87.1168 319.0016c0-35.062784 28.573696-63.589376 63.694848-63.589376l99.35872 0 29.110272 0 11.964416-26.537984c4.698112-10.421248 8.416256-19.063808 11.058176-25.70752 9.86112-24.829952 15.207424-30.125056 16.239616-30.974976 0.52736-0.161792 2.64192-0.695296 7.673856-0.695296L700.505088 171.496448M700.505088 126.441472 326.216704 126.441472c-32.519168 0-47.275008 13.479936-65.787904 60.096512-3.180544 7.999488-7.689216 18.122752-10.257408 23.819264l-99.35872 0c-59.96544 0-108.750848 48.738304-108.750848 108.645376l0 469.933056c0 59.894784 48.785408 108.623872 108.750848 108.623872l722.37568 0c59.96544 0 108.751872-48.729088 108.751872-108.623872L981.940224 319.0016c0-59.91936-48.786432-108.665856-108.751872-108.665856l-96.535552 0c-4.458496-10.236928-12.420096-28.372992-16.574464-37.031936C744.823808 141.448192 733.973504 126.441472 700.505088 126.441472L700.505088 126.441472z" p-id="2083" fill="#ffffff"></path></svg>
+    <div id="ex-camera-close">×</div>
     `;
     let b = document.getElementById("js-player-dialog");
     b.insertBefore(a, b.childNodes[0]);
+}
+
+function Camera_isHidden() {
+    let saved = localStorage.getItem("ExSave_Camera_Hidden");
+    if (!saved) return false;
+    let time = parseInt(saved);
+    return Date.now() < time;
 }
 
 function initPkg_VideoTools_Camera_Func() {
     let dom = getValidDom([".layout-Player-video", ".layout-Player-videoEntity"]);
     let dom_video = document.getElementsByClassName("room-Player-Box")[0];
     let camera = document.getElementById("ex-camera");
+    let closeBtn = document.getElementById("ex-camera-close");
     let gif = null;
     let timer = 0;
     let downTime = 0;
     let imgBase64;
     let timer_timeout = 0;
+    let isClosed = false;
+    
+    closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (confirm("是否7天内不再显示？")) {
+            localStorage.setItem("ExSave_Camera_Hidden", Date.now() + 7 * 24 * 60 * 60 * 1000);
+        } else {
+            isClosed = true;
+        }
+        camera.style.display = "none";
+    });
+    
+    if (Camera_isHidden()) return;
+    
     dom.addEventListener("mouseenter", () => {
+        if (isClosed || Camera_isHidden()) return;
         camera.style.display = "flex";
         timer_timeout = setTimeout(() => {
             camera.style.display = "none";
         }, 2000);
     })
     dom_video.addEventListener("mousemove", () => {
+        if (isClosed || Camera_isHidden()) return;
         camera.style.display = "flex";
         clearTimeout(timer_timeout);
         timer_timeout = setTimeout(() => {
@@ -13729,6 +14409,7 @@ function initPkg_VideoTools_Camera_Func() {
         }, 2000);
     })
     camera.addEventListener("mouseenter", () => {
+        if (isClosed || Camera_isHidden()) return;
         camera.style.display = "flex";
         clearTimeout(timer_timeout);
     })
@@ -13736,7 +14417,11 @@ function initPkg_VideoTools_Camera_Func() {
         camera.style.display = "none";
     })
     camera.addEventListener("mousedown", (e) => {
+        if (e.target.id === "ex-camera-close") return;
         downTime = new Date().getTime();
+        // 动态获取当前视频的真实分辨率
+        camera_canvas_img.width = liveVideoNode.videoWidth;
+        camera_canvas_img.height = liveVideoNode.videoHeight;
         camera_canvas_img.getContext('2d').drawImage(liveVideoNode, 0, 0, camera_canvas_img.width, camera_canvas_img.height);
         imgBase64 = camera_canvas_img.toDataURL("image/png");
 
@@ -13751,6 +14436,7 @@ function initPkg_VideoTools_Camera_Func() {
         timer = setInterval(() => {cameraAddFrame(liveVideoNode, camera_canvas, gif, camera_fps)}, camera_fps);
     })
     camera.addEventListener("mouseup", (e) => {
+        if (e.target.id === "ex-camera-close") return;
         let upTime = new Date().getTime();
         clearInterval(timer);
         if (upTime - downTime >= 800) {
@@ -13811,26 +14497,51 @@ function Camera_Video_insertIcon() {
     a.title = "单击截图 长按录制gif"
     a.innerHTML = `
     <svg t="1620266708389" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2080" width="38" height="38"><path d="M512 337.371136c-119.543808 0-216.800256 97.255424-216.800256 216.798208 0 119.543808 97.256448 216.800256 216.800256 216.800256s216.800256-97.256448 216.800256-216.800256C728.800256 434.625536 631.543808 337.371136 512 337.371136zM680.479744 554.16832c0 92.911616-75.579392 168.501248-168.479744 168.501248-92.900352 0-168.480768-75.589632-168.480768-168.501248 0-92.923904 75.579392-168.521728 168.480768-168.521728C604.899328 385.646592 680.479744 461.24544 680.479744 554.16832z" p-id="2081" fill="#ffffff"></path><path d="M831.209472 337.349632l-47.167488 0c-13.647872 0-24.751104 11.083776-24.751104 24.707072 0 13.635584 11.103232 24.7296 24.751104 24.7296l47.167488 0c13.646848 0 24.75008-11.094016 24.75008-24.7296C855.959552 348.433408 844.85632 337.349632 831.209472 337.349632z" p-id="2082" fill="#ffffff"></path><path d="M700.505088 171.497472c4.235264 0 6.403072 0.405504 7.232512 0.612352 1.47968 1.514496 4.790272 6.218752 11.717632 20.685824 2.83648 5.910528 8.6272 18.86208 15.888384 35.533824l11.788288 27.063296 29.518848 0 96.535552 0c35.122176 0 63.695872 28.535808 63.695872 63.609856l0 469.933056c0 35.05152-28.573696 63.567872-63.695872 63.567872L150.811648 852.503552c-35.121152 0-63.694848-28.516352-63.694848-63.567872L87.1168 319.0016c0-35.062784 28.573696-63.589376 63.694848-63.589376l99.35872 0 29.110272 0 11.964416-26.537984c4.698112-10.421248 8.416256-19.063808 11.058176-25.70752 9.86112-24.829952 15.207424-30.125056 16.239616-30.974976 0.52736-0.161792 2.64192-0.695296 7.673856-0.695296L700.505088 171.496448M700.505088 126.441472 326.216704 126.441472c-32.519168 0-47.275008 13.479936-65.787904 60.096512-3.180544 7.999488-7.689216 18.122752-10.257408 23.819264l-99.35872 0c-59.96544 0-108.750848 48.738304-108.750848 108.645376l0 469.933056c0 59.894784 48.785408 108.623872 108.750848 108.623872l722.37568 0c59.96544 0 108.751872-48.729088 108.751872-108.623872L981.940224 319.0016c0-59.91936-48.786432-108.665856-108.751872-108.665856l-96.535552 0c-4.458496-10.236928-12.420096-28.372992-16.574464-37.031936C744.823808 141.448192 733.973504 126.441472 700.505088 126.441472L700.505088 126.441472z" p-id="2083" fill="#ffffff"></path></svg>
+    <div id="ex-camera-close">×</div>
     `;
     let b = document.getElementsByClassName("Video")[0];
     b.insertBefore(a, b.childNodes[0]);
 }
 
+function Camera_Video_isHidden() {
+    let saved = localStorage.getItem("ExSave_Camera_Hidden");
+    if (!saved) return false;
+    let time = parseInt(saved);
+    return Date.now() < time;
+}
+
 function initPkg_VideoTools_Camera_Video_Func() {
     let dom = document.getElementsByTagName("demand-video")[0];
     let camera = document.getElementById("ex-camera");
+    let closeBtn = document.getElementById("ex-camera-close");
     let gif = null;
     let timer = 0;
     let downTime = 0;
     let imgBase64;
     let timer_timeout = 0;
+    let isClosed = false;
+    
+    closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (confirm("是否7天内不再显示？")) {
+            localStorage.setItem("ExSave_Camera_Hidden", Date.now() + 7 * 24 * 60 * 60 * 1000);
+        } else {
+            isClosed = true;
+        }
+        camera.style.display = "none";
+    });
+    
+    if (Camera_Video_isHidden()) return;
+    
     dom.addEventListener("mouseenter", () => {
+        if (isClosed || Camera_Video_isHidden()) return;
         camera.style.display = "flex";
         timer_timeout = setTimeout(() => {
             camera.style.display = "none";
         }, 2000);
     })
     dom.addEventListener("mousemove", () => {
+        if (isClosed || Camera_Video_isHidden()) return;
         camera.style.display = "flex";
         clearTimeout(timer_timeout);
         timer_timeout = setTimeout(() => {
@@ -13838,6 +14549,7 @@ function initPkg_VideoTools_Camera_Video_Func() {
         }, 2000);
     })
     camera.addEventListener("mouseenter", () => {
+        if (isClosed || Camera_Video_isHidden()) return;
         camera.style.display = "flex";
         clearTimeout(timer_timeout);
     })
@@ -13845,7 +14557,11 @@ function initPkg_VideoTools_Camera_Video_Func() {
         camera.style.display = "none";
     })
     camera.addEventListener("mousedown", (e) => {
+        if (e.target.id === "ex-camera-close") return;
         downTime = new Date().getTime();
+        // 动态获取当前视频的真实分辨率
+        camera_canvas_img.width = liveVideoNode.videoWidth;
+        camera_canvas_img.height = liveVideoNode.videoHeight;
         camera_canvas_img.getContext('2d').drawImage(liveVideoNode, 0, 0, camera_canvas_img.width, camera_canvas_img.height);
         imgBase64 = camera_canvas_img.toDataURL("image/png");
 
@@ -13862,6 +14578,7 @@ function initPkg_VideoTools_Camera_Video_Func() {
         }, camera_fps);
     })
     camera.addEventListener("mouseup", (e) => {
+        if (e.target.id === "ex-camera-close") return;
         let upTime = new Date().getTime();
         clearInterval(timer);
         if (upTime - downTime >= 800) {
@@ -14245,12 +14962,18 @@ let currentSaturate = "";
 let liveVideoParentClassName = "";
 let isMirror = false;
 let rotateAngle = 0;
+let isEnhanceQuality = false;
 let transformCss = {
     rotateY: "",
     rotate: "",
     scale: "",
 }
 let panorama = null;
+
+// 检测是否是 Edge 浏览器
+function isEdgeBrowser() {
+    return /Edg/i.test(navigator.userAgent);
+}
 
 function initPkg_VideoTools_Filter() {
     liveVideoParentClassName = liveVideoNode.parentNode.className;
@@ -14260,6 +14983,10 @@ function initPkg_VideoTools_Filter() {
 
 function initPkg_VideoTools_Filter_Dom() {
     Filter_insertIcon();
+    // 只在 Edge 浏览器中插入画质增强 modal
+    if (isEdgeBrowser()) {
+        Filter_insertEnhanceModal();
+    }
 }
 
 function Filter_insertIcon() {
@@ -14268,6 +14995,12 @@ function Filter_insertIcon() {
     a.innerHTML = `
     <div class="filter__wrap">
         <div class="filter__panel">
+            ${isEdgeBrowser() ? `<div class="filter__enhance">
+                <span class="filter__title">画质增强（不掉帧）</span>
+                <div class="filter__switch" id="switch__enhance">
+                    <div class="filter__switch-slider" id="slider__enhance"></div>
+                </div>
+            </div>` : ''}
             <div class="filter__bright">
                 <span class="filter__title">明亮度</span>
                 <div class="filter__scroll" id="scroll__bright">
@@ -14351,9 +15084,68 @@ function Filter_insertIcon() {
     b.insertBefore(domDivider, b.childNodes[1]);
 }
 
+function Filter_insertEnhanceModal() {
+    let modal = document.createElement("div");
+    modal.className = "enhance-modal__panel-wrap";
+    modal.innerHTML = `
+        <div class="enhance-modal__panel">
+            <div class="enhance-modal__close">×</div>
+            <div class="enhance-modal__content">
+                <img class="enhance-modal__img" src="https://c-yuba.douyucdn.cn/yubavod/b/zEqAvQaXrd5L/c16fdac3db1903db3a39a6557c2b5ab5.gif" alt=""/>
+                <div class="enhance-modal__text">
+                    开启后，弹幕飘屏会被遮挡，请将鼠标移入到直播画面中并点击<img style="width:32px;" src="https://c-yuba.douyucdn.cn/yubavod/b/zEqAvQaXrd5L/2dd9e0d70e39a532a2675717eb054129.png" alt="">
+                    <br />
+                    完成后，再<b>刷新</b>以恢复弹幕飘屏，该功能会<b>自动保存</b>
+                    <br />
+                    <a style="color: #ff7700;" href="https://www.microsoft.com/zh-cn/edge/features/enhance-video?form=MT0160" target="_blank">没有增强图标？</a>
+                </div>
+            </div>
+        </div>
+    `;
+
+    let root = document.querySelector("body");
+    root.insertBefore(modal, root.childNodes[0]);
+
+    // 添加关闭事件
+    modal.getElementsByClassName("enhance-modal__close")[0].addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+}
+
 function initPkg_VideoTools_Filter_Func() {
     document.onmouseup = function () {
         document.onmousemove = null; //弹起鼠标不做任何操作
+    }
+    // 只在 Edge 浏览器中添加画质增强功能的事件监听
+    if (isEdgeBrowser()) {
+        const switchEnhance = document.getElementById("switch__enhance");
+        if (switchEnhance) {
+            switchEnhance.addEventListener("click", () => {
+        isEnhanceQuality = !isEnhanceQuality;
+        const switchElement = document.getElementById("switch__enhance");
+        const slider = document.getElementById("slider__enhance");
+        const enhanceModal = document.getElementsByClassName("enhance-modal__panel-wrap")[0];
+        const videoDom = document.querySelector("video");
+        if (isEnhanceQuality) {
+            slider.style.left = "20px";
+            switchElement.style.background = "#369";
+            liveVideoNode.style.imageRendering = "crisp-edges";
+            liveVideoNode.style.imageRendering = "-webkit-optimize-contrast";
+            liveVideoNode.style.imageRendering = "optimize-contrast";
+            // 显示增强画质提示弹窗
+            enhanceModal.style.display = "flex";
+            videoDom.style.zIndex = "10";
+            videoDom.style.cursor = "auto";
+        } else {
+            slider.style.left = "0px";
+            switchElement.style.background = "#ccc";
+            liveVideoNode.style.imageRendering = "";
+            // 隐藏增强画质提示弹窗
+            enhanceModal.style.display = "none";
+            videoDom.style.zIndex = "0";
+        }
+            });
+        }
     }
     setScrollFunc(document.getElementById("scroll__bright"), document.getElementById("bar__bright"), document.getElementById("mask__bright"), (data) => {
         currentBrightness = `brightness(${ data }%)`;
@@ -14531,6 +15323,25 @@ function resetVideoFilter() {
     document.getElementById("mask__bright").style.width = "100px";
     document.getElementById("mask__contrast").style.width = "100px";
     document.getElementById("mask__saturate").style.width = "100px";
+
+    // 重置增强画质（只在 Edge 浏览器中执行）
+    if (isEdgeBrowser()) {
+        isEnhanceQuality = false;
+        const sliderEnhance = document.getElementById("slider__enhance");
+        const switchEnhance = document.getElementById("switch__enhance");
+        if (sliderEnhance) {
+            sliderEnhance.style.left = "0px";
+        }
+        if (switchEnhance) {
+            switchEnhance.style.background = "#ccc";
+        }
+        liveVideoNode.style.imageRendering = "";
+        // 隐藏增强画质提示弹窗
+        const enhanceModal = document.getElementsByClassName("enhance-modal__panel-wrap")[0];
+        if (enhanceModal) {
+            enhanceModal.style.display = "none";
+        }
+    }
 
     // 重置全景
     let domPanorama = document.getElementById("ex-panorama");
@@ -14844,7 +15655,7 @@ function initPkg_WeeklyPanel_Dom() {
 		</div>
 	`;
 	
-	let b = document.getElementById("root");
+	let b = document.querySelector("body");
 	b.insertBefore(a, b.childNodes[0]);
 }
 
@@ -15285,6 +16096,7 @@ class DomHook {
     closeHook() {
         if (this.observer) {
             this.observer.disconnect();
+            this.observer = null;
         }
     }
 }
@@ -16031,154 +16843,52 @@ function getRealRid_Bilibili(url, realrid_callback) {
     By: 小淳
 */
 function getRealLive_Douyu(room_id, is_video, is_https, qn, reallive_callback) {
-    // 第一个参数传入string,表示房间号（注意是真实房间号）
-    // 第二个参数传入bool,表示是视频还是音频
-    // 第三个参数传入bool,表示是否返回https地址。注意https地址只能使用一次，使用过以后需要再次获取；http地址无限制
-    // 第四个参数传入string(1,2,3,4),表示清晰度 流畅_550p(rate:1) 高清_1200p(rate:2) 超清_2000p(rate:3) 蓝光4M_4000p(rate:0) 填写1428则返回默认清晰度
-    // 第五个参数传入回调函数，最好是箭头函数，用于处理返回的地址，例: (url) => {console.log(url)}
-    let tt0 = Math.round(new Date().getTime()/1000).toString();
-    if (is_video) {
-        // 由于pc获取的流没办法通过在后缀增加&only-audio=1来实现音频流，所以分开来实现
-        GM_xmlhttpRequest({
-            method: "GET",
-            url: 'https://www.douyu.com/' + room_id,
-            responseType: "text",
-            onload: function(response) {
-                let a = response.response.match(/(vdwdae325w_64we[\s\S]*?function ub98484234[\s\S]*?)function/i);
-                let ub9_ex = String(a[1]).replace("ub98484234", "ub98484234_ex_pc");
-                eval1(ub9_ex, "exScript2");
-                // RealLive_get_sign_url(room_id, tt0, is_https, qn, reallive_callback, is_video);
-                RealLive_get_sign_url_pc(room_id, tt0, true, qn, reallive_callback, is_video);
-            }
-        });
-    } else {
-        GM_xmlhttpRequest({
-            method: "GET",
-            url: 'https://m.douyu.com/' + room_id,
-            responseType: "text",
-            onload: function(response) {
-                let a = response.response.match(/(function ub9.*)[\s\S](var.*)/i);
-                let ub9_ex = String(a[0]).replace("ub98484234", "ub98484234_ex");
-                eval1(ub9_ex, "exScript1");
-                // RealLive_get_sign_url(room_id, tt0, is_https, qn, reallive_callback, is_video);
-                RealLive_get_sign_url(room_id, tt0, true, qn, reallive_callback, is_video);
-            }
-        });
-    }
-}
+  // 第一个参数传入string,表示房间号（注意是真实房间号）
+  // 第二个参数传入bool,表示是视频还是音频
+  // 第三个参数传入bool,表示是否返回https地址。注意https地址只能使用一次，使用过以后需要再次获取；http地址无限制
+  // 第四个参数传入string(1,2,3,4),表示清晰度 流畅_550p(rate:1) 高清_1200p(rate:2) 超清_2000p(rate:3) 蓝光4M_4000p(rate:0) 填写1428则返回默认清晰度
+  // 第五个参数传入回调函数，最好是箭头函数，用于处理返回的地址，例: (url) => {console.log(url)}
 
-function RealLive_get_sign_url(r, tt, is_https, qn, reallive_callback, is_video) {
-    let param1 = ub98484234_ex(r, getDyDid(), tt);
-    let postData;
-    if (qn == "1428") {
-        postData = param1 + "&ver=219032101&rid=" + r + "&rate=1";
-    } else {
-        postData = param1 + "&ver=219032101&rid=" + r + "&rate=" + qn;
-    }
-    
-    document.getElementById("exScript1").remove();
-    GM_xmlhttpRequest({
+  let did = getCookieValue("dy_did") || "10000000000000000000000000001501";
+
+  GM_xmlhttpRequest({
+    method: "GET",
+    url: `https://www.douyu.com/wgapi/livenc/liveweb/websec/getEncryption?did=${did}`,
+    responseType: "json",
+    onload: function (res) {
+      if (res.response.error !== 0) return reallive_callback("None");
+
+      let d = res.response.data;
+      let ts = Math.round(Date.now() / 1000);
+      let auth = getDouyuRealLiveAuth(room_id, did, ts, d.key, d.rand_str, d.enc_time, d.is_special);
+      let rate = qn == "1428" ? "-1" : qn;
+      let postData = `enc_data=${d.enc_data}&tt=${ts}&did=${did}&auth=${auth}&cdn=&rate=${rate}&hevc=0&fa=0&ive=0`;
+
+      GM_xmlhttpRequest({
         method: "POST",
-        url: "https://m.douyu.com/api/room/ratestream",
+        url: `https://www.douyu.com/lapi/live/getH5PlayV1/${room_id}`,
         data: postData,
         responseType: "json",
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        onload: function(response) {
-            let ret = response.response;
-            let result = "";
-            if (ret.code == "0") {
-                let url = ret.data.url;
-                if (String(url).indexOf("mix=1") != -1) {
-                    result = "PKing"
-                } else {
-                    let p = /^[0-9a-zA-Z]*/;
-                    let tmpArr = String(ret.data.url).split("/");
-                    result = String(tmpArr[tmpArr.length - 1]).match(p)[0];
-                }
-            } else {
-                result = "0";
-            }
-            let cl = "";
-            switch (qn) {
-                case "1":
-                    cl = "550p"
-                    break;
-                case "2":
-                    cl = "1200p"
-                    break;
-                case "3":
-                    cl = "2000p"
-                    break;    
-                case "4":
-                    cl = "4000p"
-                    break;              
-                default:
-                    cl = ""
-                    break;
-            }
-            let realLive = "";
-            if (result == "0") {
-                realLive = "None";
-            } else {
-                if (is_https == true) {
-                    realLive = String(ret.data.url).replace("m3u8", "flv");
-                    realLive = realLive.replace("http:", "https:");
-                } else {
-                    if (qn == "1428" || cl == "") {
-                        // qn写1428则不返回清晰度，即默认
-                        // realLive = "http://tx2play1.douyucdn.cn/live/" + result + ".xs";
-                        // realLive = "http://dyscdnali1.douyucdn.cn/live/" + result + ".flv?uuid=";
-                        realLive = "https://openflv-huos.douyucdn2.cn/dyliveflv1/" + result + ".flv?uuid=";
-                    } else {
-                        realLive = "https://openflv-huos.douyucdn2.cn/dyliveflv1/" + result + "_" + cl + ".flv?uuid=";
-                        // realLive = "http://tx2play1.douyucdn.cn/live/" + result + "_" + cl + ".xs";
-                    }
-                }
-                realLive = is_video ? realLive : realLive + "&only-audio=1";
-            }
-            reallive_callback(realLive);
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        onload: function (res) {
+          let ret = res.response;
+          if (ret.error === 0) {
+            let url = `${ret.data.rtmp_url}/${ret.data.rtmp_live}`;
+            reallive_callback(is_video ? url : url + "&only-audio=1");
+          } else {
+            reallive_callback("None");
+          }
         }
-    });
-}
-
-function RealLive_get_sign_url_pc(r, tt, is_https, qn, reallive_callback) {
-    let param1 = ub98484234_ex_pc(r, getDyDid(), tt);
-    let postData;
-    if (qn == "1428") {
-        postData = param1 + "&ver=219032101&cdn=hs-h5&rid=" + r + "&rate=0";
-    } else {
-        postData = param1 + "&ver=219032101&cdn=hs-h5&rid=" + r + "&rate=" + qn;
+      });
     }
-    document.getElementById("exScript2").remove();
-    GM_xmlhttpRequest({
-        method: "POST",
-        url: "https://www.douyu.com/lapi/live/getH5Play/" + r,
-        data: postData,
-        responseType: "json",
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        onload: function(response) {
-            let ret = response.response;
-            let realLive = "";
-            if (ret.error === 0) {
-                realLive = `${ret.data.rtmp_url}/${ret.data.rtmp_live}`
-            }
-            reallive_callback(realLive);
-        }
-    });
+  });
 }
 
-
-
-function eval1(str, iid) {
-    let sc = document.createElement("script");
-    sc.id = iid
-    sc.setAttribute("type","text\/javascript");
-    sc.appendChild(document.createTextNode(str));
-    document.body.appendChild(sc);
+function getDouyuRealLiveAuth(rid, did, ts, key, rand_str, enc_time, is_special) {
+  let i = is_special === 1 ? "" : `${rid}${ts}`;
+  let f = rand_str;
+  for (let p = 0; p < enc_time; p++) f = hex_md5(f + key);
+  return hex_md5(f + key + i);
 }
 
 /* 
@@ -16361,29 +17071,69 @@ function stt_deserialize(raw) {
  * [
  *  { url: "", callback: (content: string) => string }
  * ]
+ * 支持多个 callback，会按注册顺序依次执行，前一个 callback 的输出作为下一个 callback 的输入
  */
 let scriptHookCallbackList = [];
 
 function initScriptHook() {
-  new DomHook("head", true, function (mutations) {
-    mutations.forEach((mutation) => {
-      mutation.addedNodes.forEach((node) => {
-        if (node.tagName !== "SCRIPT") return;
-        const src = node.getAttribute("src");
-        if (!src) return;
-        const callback = scriptHookCallbackList.find((item) => src.includes(item.url));
-        if (!callback) return;
-        fetch(node.src)
-          .then((response) => response.text())
-          .then((content) => {
-            const modifiedContent = callback.callback(content);
-            const newScript = document.createElement("script");
-            newScript.textContent = modifiedContent;
-            node.parentNode.replaceChild(newScript, node);
-          })
-          .catch((err) => console.error("Error loading script:", err));
-      });
-    });
+  const originalAppendChild = Node.prototype.appendChild;
+
+  // 覆盖原生的 appendChild 方法
+  Node.prototype.appendChild = function (node) {
+    // 1. 检查节点是否是 SCRIPT 标签
+    if (node.tagName === "SCRIPT" && node.src) {
+      const src = node.src;
+
+      // 找到所有匹配的 callback
+      const callbacks = [];
+      for (let k = 0; k < scriptHookCallbackList.length; k++) {
+        const item = scriptHookCallbackList[k];
+        // 检查是否包含目标 URL
+        if (src.includes(item.url)) callbacks.push(item);
+      }
+
+      if (callbacks.length > 0) {
+        fetchAndReplace(src, callbacks, this);
+        // 返回一个空节点，防止网站报错，且不插入原脚本
+        return document.createDocumentFragment();
+      }
+    }
+
+    // 如果不是目标脚本，或者没有 src (例如内联脚本或样式)，则执行原始方法
+    return originalAppendChild.call(this, node);
+  };
+}
+
+/**
+ * 获取源码、修改并注入的函数
+ * @param {string} url - 脚本URL
+ * @param {Array} callbacks - 匹配到的回调函数列表
+ * @param {Node} targetNode - 原始脚本应该插入的父节点
+ */
+function fetchAndReplace(url, callbacks, targetNode) {
+  GM_xmlhttpRequest({
+    method: "GET",
+    url: url,
+    onload: function (response) {
+      let modifiedContent = response.responseText;
+
+      // 依次执行所有匹配的 callback
+      for (let m = 0; m < callbacks.length; m++) {
+        const callback = callbacks[m];
+        modifiedContent = callback.callback(modifiedContent);
+      }
+
+      // 创建新的可执行脚本
+      const newScript = document.createElement("script");
+      newScript.type = "text/javascript";
+      newScript.textContent = modifiedContent;
+
+      // 注入回原始目标节点
+      targetNode.appendChild(newScript);
+    },
+    onerror: function (err) {
+      console.error("Error loading script via GM_xmlhttpRequest:", err);
+    }
   });
 }
 
@@ -16669,7 +17419,7 @@ function initRouter_DouyuRoom_Main() {
     let intID = setInterval(() => {
         let dom1 = document.getElementsByClassName("BackpackButton")[0];
         let dom2 = document.getElementsByClassName("Barrage-main")[0];
-        let dom3 = document.getElementsByClassName("ToolbarGiftArea-backpack")[0];
+        let dom3 = document.querySelector("#js-backpack-enter")
         if (!dom2 || (!dom1 && !dom3)) {
             return;
         }
@@ -16771,6 +17521,6 @@ function initRouter_FansBadgeList() {
 }
 
 
-(async function() {
-	initRouter(window.location.href);
+(async function () {
+  initRouter(window.location.href);
 })();
