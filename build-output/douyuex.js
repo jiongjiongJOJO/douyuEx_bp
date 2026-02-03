@@ -3,7 +3,7 @@
 // @name         DouyuEx-斗鱼直播间增强插件
 // @namespace    https://github.com/qianjiachun
 // @icon         data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTA4cHgiIGhlaWdodD0iMTA4cHgiIHZpZXdCb3g9IjAgMCAxMDggMTA4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHRpdGxlPueyvueBteeQgzwvdGl0bGU+CiAgICA8ZyBpZD0i6aG16Z2iLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLnsr7ngbXnkIMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuODMwNzY5LCAwLjgzMDc2OSkiIGZpbGwtcnVsZT0ibm9uemVybyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik01My4xNjkyMzA3LDEwNi4zMzg0NjEgQzIzLjgyNzY5MjIsMTA2LjMzODQ2MSAwLDgyLjUxMDc2OTIgMCw1My4xNjkyMzA3IEMwLDUxLjAwMzA3NjkgMS43NzIzMDc3NSw0OS4yMzA3NjkyIDMuOTM4NDYxNSw0OS4yMzA3NjkyIEwzMy40NzY5MjMsNDkuMjMwNzY5MiBDMzUuNjQzMDc2OSw0OS4yMzA3NjkyIDM3LjQxNTM4NDUsNTEuMDAzMDc3IDM3LjQxNTM4NDYsNTMuMTY5MjMwNyBDMzcuNDE1Mzg0Niw2MS44MzM4NDYxIDQ0LjUwNDYxNTQsNjguOTIzMDc2OSA1My4xNjkyMzA3LDY4LjkyMzA3NjkgQzYxLjgzMzg0NjEsNjguOTIzMDc2OSA2OC45MjMwNzY5LDYxLjgzMzg0NjEgNjguOTIzMDc2OSw1My4xNjkyMzA3IEM2OC45MjMwNzY5LDUxLjAwMzA3NjkgNzAuNjk1Mzg0Niw0OS4yMzA3NjkyIDcyLjg2MTUzODUsNDkuMjMwNzY5MiBMMTAyLjQsNDkuMjMwNzY5MiBDMTA0LjU2NjE1NCw0OS4yMzA3NjkyIDEwNi4zMzg0NjEsNTEuMDAzMDc3IDEwNi4zMzg0NjEsNTMuMTY5MjMwNyBDMTA2LjMzODQ2MSw4Mi41MTA3NjkyIDgyLjUxMDc2OTIsMTA2LjMzODQ2MSA1My4xNjkyMzA3LDEwNi4zMzg0NjEgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iIzMzMzYzQSI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNOC4wNzM4NDYxMiw1Ny4xMDc2OTIyIEMxMC4wNDMwNzY5LDgwLjI0NjE1MzcgMjkuNTM4NDYxNSw5OC40NjE1Mzg1IDUzLjE2OTIzMDcsOTguNDYxNTM4NSBDNzYuOCw5OC40NjE1Mzg1IDk2LjI5NTM4NDYsODAuMjQ2MTUzOSA5OC4yNjQ2MTU0LDU3LjEwNzY5MjIgTDc2LjUwNDYxNTQsNTcuMTA3NjkyMiBDNzQuNjMzODQ2MSw2OC4yMzM4NDYxIDY0Ljg4NjE1MzksNzYuOCA1My4xNjkyMzA3LDc2LjggQzQxLjQ1MjMwNzYsNzYuOCAzMS43MDQ2MTU0LDY4LjIzMzg0NjEgMjkuODMzODQ2MSw1Ny4xMDc2OTIyIEw4LjA3Mzg0NjEyLDU3LjEwNzY5MjIgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNTMuMTY5MjMwOCwzLjkzODQ2MTUgQzI1Ljk5Mzg0NjEsMy45Mzg0NjE1IDMuOTM4NDYxNSwyNS45OTM4NDYxIDMuOTM4NDYxNSw1My4xNjkyMzA3IEwzMy40NzY5MjMsNTMuMTY5MjMwNyBDMzMuNDc2OTIzLDQyLjMzODQ2MTUgNDIuMzM4NDYxNSwzMy40NzY5MjMgNTMuMTY5MjMwOCwzMy40NzY5MjMgQzY0LDMzLjQ3NjkyMyA3Mi44NjE1Mzg1LDQyLjMzODQ2MTUgNzIuODYxNTM4NSw1My4xNjkyMzA3IEwxMDIuNCw1My4xNjkyMzA3IEMxMDIuNCwyNS45OTM4NDYxIDgwLjM0NDYxNTQsMy45Mzg0NjE1IDUzLjE2OTIzMDgsMy45Mzg0NjE1IFoiIGlkPSLot6/lvoQiIGZpbGw9IiNENjA5MDkiPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTEwMi40LDU3LjEwNzY5MjIgTDcyLjg2MTUzODUsNTcuMTA3NjkyMiBDNzAuNjk1Mzg0Niw1Ny4xMDc2OTIyIDY4LjkyMzA3Nyw1NS4zMzUzODQ1IDY4LjkyMzA3NjksNTMuMTY5MjMwNyBDNjguOTIzMDc2OSw0NC41MDQ2MTU0IDYxLjgzMzg0NjEsMzcuNDE1Mzg0NiA1My4xNjkyMzA3LDM3LjQxNTM4NDYgQzQ0LjUwNDYxNTQsMzcuNDE1Mzg0NiAzNy40MTUzODQ2LDQ0LjUwNDYxNTQgMzcuNDE1Mzg0Niw1My4xNjkyMzA3IEMzNy40MTUzODQ2LDU1LjMzNTM4NDYgMzUuNjQzMDc2OSw1Ny4xMDc2OTIyIDMzLjQ3NjkyMyw1Ny4xMDc2OTIyIEwzLjkzODQ2MTUsNTcuMTA3NjkyMiBDMS43NzIzMDc2Miw1Ny4xMDc2OTIyIDAsNTUuMzM1Mzg0NSAwLDUzLjE2OTIzMDcgQzAsMjMuODI3NjkyMiAyMy44Mjc2OTIzLDAgNTMuMTY5MjMwNywwIEM4Mi41MTA3NjkyLDAgMTA2LjMzODQ2MSwyMy44Mjc2OTIyIDEwNi4zMzg0NjEsNTMuMTY5MjMwNyBDMTA2LjMzODQ2MSw1NS4zMzUzODQ2IDEwNC41NjYxNTQsNTcuMTA3NjkyMiAxMDIuNCw1Ny4xMDc2OTIyIFoiIGlkPSLot6/lvoQiIGZpbGw9IiMzMzM2M0EiPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTc2LjUwNDYxNTQsNDkuMjMwNzY5MyBMOTguMzYzMDc2OSw0OS4yMzA3NjkzIEM5Ni4yOTUzODQ2LDI2LjA5MjMwNzYgNzYuOCw3Ljg3NjkyMyA1My4xNjkyMzA3LDcuODc2OTIzIEMyOS41Mzg0NjE1LDcuODc2OTIzIDEwLjA0MzA3NjksMjYuMDkyMzA3NiA4LjA3Mzg0NjEyLDQ5LjIzMDc2OTMgTDI5LjkzMjMwNzYsNDkuMjMwNzY5MyBDMzEuNzA0NjE1NCwzOC4xMDQ2MTU0IDQxLjQ1MjMwNzYsMjkuNTM4NDYxNSA1My4xNjkyMzA3LDI5LjUzODQ2MTUgQzY0Ljg4NjE1MzksMjkuNTM4NDYxNSA3NC42MzM4NDYxLDM4LjEwNDYxNTQgNzYuNTA0NjE1NCw0OS4yMzA3NjkzIEw3Ni41MDQ2MTU0LDQ5LjIzMDc2OTMgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0Q2MDkwOSI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNTMuMTY5MjMwNyw3Ni44IEM0MC4xNzIzMDc2LDc2LjggMjkuNTM4NDYxNSw2Ni4xNjYxNTM5IDI5LjUzODQ2MTUsNTMuMTY5MjMwNyBDMjkuNTM4NDYxNSw0MC4xNzIzMDc2IDQwLjE3MjMwNzYsMjkuNTM4NDYxNSA1My4xNjkyMzA3LDI5LjUzODQ2MTUgQzY2LjE2NjE1MzksMjkuNTM4NDYxNSA3Ni44LDQwLjE3MjMwNzYgNzYuOCw1My4xNjkyMzA3IEM3Ni44LDY2LjE2NjE1MzkgNjYuMTY2MTUzOSw3Ni44IDUzLjE2OTIzMDcsNzYuOCBaIiBpZD0i6Lev5b6EIiBmaWxsPSIjMzMzNjNBIj48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik01My4xNjkyMzA3LDM3LjQxNTM4NDYgQzQ0LjUwNDYxNTQsMzcuNDE1Mzg0NiAzNy40MTUzODQ2LDQ0LjUwNDYxNTQgMzcuNDE1Mzg0Niw1My4xNjkyMzA3IEMzNy40MTUzODQ2LDYxLjgzMzg0NjEgNDQuNTA0NjE1NCw2OC45MjMwNzY5IDUzLjE2OTIzMDcsNjguOTIzMDc2OSBDNjEuODMzODQ2MSw2OC45MjMwNzY5IDY4LjkyMzA3NjksNjEuODMzODQ2MSA2OC45MjMwNzY5LDUzLjE2OTIzMDcgQzY4LjkyMzA3NjksNDQuNTA0NjE1NCA2MS44MzM4NDYxLDM3LjQxNTM4NDYgNTMuMTY5MjMwNywzNy40MTUzODQ2IEw1My4xNjkyMzA3LDM3LjQxNTM4NDYgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNDMuMzIzMDc2OSw1My4xNjkyMzA3IEM0My4zMjMwNzY5LDU4LjYwNzExMTQgNDcuNzMxMzUwMSw2My4wMTUzODQ2IDUzLjE2OTIzMDcsNjMuMDE1Mzg0NiBDNTguNjA3MTExNCw2My4wMTUzODQ2IDYzLjAxNTM4NDYsNTguNjA3MTExNCA2My4wMTUzODQ2LDUzLjE2OTIzMDcgQzYzLjAxNTM4NDYsNDcuNzMxMzUwMSA1OC42MDcxMTE0LDQzLjMyMzA3NjkgNTMuMTY5MjMwNyw0My4zMjMwNzY5IEM0Ny43MzEzNTAxLDQzLjMyMzA3NjkgNDMuMzIzMDc2OSw0Ny43MzEzNTAxIDQzLjMyMzA3NjksNTMuMTY5MjMwNyBaIiBpZD0i6Lev5b6EIiBmaWxsPSIjMzMzNjNBIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=
-// @version      2026.01.09.01
+// @version      2026.02.02.01
 // @description  斗鱼直播间增强插件，功能：弹幕自动变色防检测循环发送 一键续牌 查看真实人数/查看主播数据 已播时长 一键签到(直播间/车队/鱼吧/客户端) 一键领取鱼粮(宝箱/气泡/任务) 一键寻宝 送出指定数量的礼物 一键清空背包 屏蔽广告 调节弹幕大小 自动更新 同屏画中画/多直播间小窗观看/可在斗鱼看多个平台直播(虎牙/b站) 获取真实直播流地址 自动抢礼物红包 背包信息扩展 简洁模式 夜间模式 开播提醒 幻神模式 关键词回复 关键词禁言 自动谢礼物 自动抢宝箱 弹幕右键信息扩展 防止下播自动跳转 影院模式 直播时间流控制 弹幕投票 直播滤镜 直播音频流 账号多开/切换 显示粉丝牌获取日期 月消费数据显示 弹幕时速 相机截图录制gif 全景播放器 斗鱼视频下载/弹幕ass下载 直播画面局部缩放 全站抽奖信息 直播音效增强 阻止P2P上传 显示贡献榜贡献值 恢复弹幕显示 斗鱼视频弹幕高能进度条 检测弹幕是否发送成功 查看主播配置信息 自动网页全屏 自动最高画质 弹幕无限收藏 收藏弹幕搜索 支持弹幕带图片 屏蔽弹幕背景 弹幕+1 房间VIP到期提醒 自动钓鱼 防止自动暂停直播 恢复已关闭鱼吧 弹幕小尾巴 屏蔽重复弹幕 画质增强
 // @author       小淳
 // @match			*://*.douyu.com/0*
@@ -58,7 +58,6 @@
 // @antifeature  tracking
 // ==/UserScript==
 function init() {
-  initPkg_ShowDanmakuOriginAction();
   initPkg_Shield_RemoveRepeatedDanmaku_ScriptHook();
   initScriptHook();
   initPkg_Night_Set_Fast();
@@ -1406,6 +1405,7 @@ function initStyles() {
   min-width: 100px;
   top: 0px;
   white-space: nowrap;
+  color: black;
 }
 
 
@@ -4650,89 +4650,64 @@ function initPkg_DanmakuTail_HandleFunc(checkboxSelector, inputSelector) {
 
     // 开启
     function enable(content, type_value) {
-        if (window.location.href.includes("/beta")) {
-            let textarea = document.querySelector("div.ChatSend-txt");
-            const button = document.querySelector(".ChatSend-button");
-            if (!textarea || !button) return;
+        // 优先查找 textarea，如果没有则查找 div
+        let textarea = document.querySelector("textarea.ChatSend-txt") || document.querySelector("div.ChatSend-txt");
+        const button = document.querySelector(".ChatSend-button");
+        if (!textarea || !button) return;
 
-            disable(); // 防止重复绑定
+        disable(); // 防止重复绑定
 
-            keydownHandler = function (e) {
-                if (!e.isTrusted) return;
-                if (e.key === "Enter" && !e.shiftKey) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    button.click();
-                }
-            };
+        // 判断元素类型，div 使用 innerText，textarea 使用 value
+        const isDiv = textarea.tagName.toLowerCase() === "div";
+        const getText = () => isDiv ? textarea.innerText : textarea.value;
+        const setText = (text) => {
+            if (isDiv) {
+                textarea.innerText = text;
+            } else {
+                textarea.value = text;
+            }
+        };
 
-            clickHandler = function (e) {
-                if (textarea.innerText.trim() == "") return;
-                let shouldAdd = false;
+        keydownHandler = function (e) {
+            if (!e.isTrusted) return;
+            if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
+                e.stopPropagation();
+                button.click();
+            }
+        };
+
+        clickHandler = function (e) {
+            const currentText = getText();
+            if (currentText.trim() == "") return;
+            
+            let shouldAdd = false;
+            if (type_value === "1") {
+                // 前缀模式：检查是否以内容开头
+                shouldAdd = !currentText.startsWith(content);
+            } else {
+                // 后缀模式：检查是否以内容结尾
+                shouldAdd = !currentText.endsWith(content);
+            }
+            
+            if (shouldAdd) {
                 if (type_value === "1") {
-                    // 前缀模式：检查是否以内容开头
-                    shouldAdd = !textarea.innerText.startsWith(content);
+                    setText(content + currentText);
                 } else {
-                    // 后缀模式：检查是否以内容结尾
-                    shouldAdd = !textarea.innerText.endsWith(content);
+                    setText(currentText + content);
                 }
-                
-                if (shouldAdd) {
-                    if (type_value === "1") {
-                        textarea.innerText = content + textarea.innerText;
-                    } else {
-                        textarea.innerText = textarea.innerText + content;
-                    }
-                    textarea.dispatchEvent(new Event("input", { bubbles: true }));
-                }
-            };
-            textarea.addEventListener("keydown", keydownHandler, true);
-            button.addEventListener("click", clickHandler, true);
-        } else {
-            let textarea = document.querySelector("textarea.ChatSend-txt");
-            const button = document.querySelector(".ChatSend-button");
-            if (!textarea || !button) return;
+                textarea.dispatchEvent(new Event("input", { bubbles: true }));
+            }
+        };
 
-            disable(); // 防止重复绑定
-
-            keydownHandler = function (e) {
-                if (!e.isTrusted) return;
-                if (e.key === "Enter" && !e.shiftKey) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    button.click();
-                }
-            };
-
-            clickHandler = function (e) {
-                if (textarea.value.trim() == "") return;
-                let shouldAdd = false;
-                if (type_value === "1") {
-                    // 前缀模式：检查是否以内容开头
-                    shouldAdd = !textarea.value.startsWith(content);
-                } else {
-                    // 后缀模式：检查是否以内容结尾
-                    shouldAdd = !textarea.value.endsWith(content);
-                }
-                
-                if (shouldAdd) {
-                    if (type_value === "1") {
-                        textarea.value = content + textarea.value;
-                    } else {
-                        textarea.value = textarea.value + content;
-                    }
-                    textarea.dispatchEvent(new Event("input", { bubbles: true }));
-                }
-            };
-
-            textarea.addEventListener("keydown", keydownHandler, true);
-            button.addEventListener("click", clickHandler, true);
-        }
+        textarea.addEventListener("keydown", keydownHandler, true);
+        button.addEventListener("click", clickHandler, true);
     }
 
     // 关闭
     function disable() {
-        const textarea = document.querySelector("textarea.ChatSend-txt");
+        // 优先查找 textarea，如果没有则查找 div
+        const textarea = document.querySelector("textarea.ChatSend-txt") || document.querySelector("div.ChatSend-txt");
         const button = document.querySelector(".ChatSend-button");
         if (textarea && keydownHandler) {
             textarea.removeEventListener("keydown", keydownHandler, true);
@@ -11692,6 +11667,16 @@ function Refresh_Video_insertIcon() {
     a.innerHTML = '<svg t="1587295753406" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6410" width="22" height="22"><path d="M218.88 64l73.728 23.168c-9.792 20.608-18.432 41.216-25.792 61.824h224.896v73.408H362.688c19.648 25.728 39.36 54.08 59.008 84.992l-77.44 42.496a1235.456 1235.456 0 0 0-66.368-127.552h-47.936L189.376 288c-14.72 20.608-34.432 43.776-59.008 69.504L64 307.328C135.296 235.2 186.944 154.112 218.88 64z m383.488 0l70.08 23.168c-7.36 20.608-16 41.216-25.792 61.824h261.824v73.408h-151.168c19.648 25.728 36.864 52.8 51.648 81.088l-66.368 42.496a1440.32 1440.32 0 0 0-70.08-123.584h-59.072a594.816 594.816 0 0 1-95.872 131.264L451.2 303.424C520 231.36 570.432 151.552 602.368 64zM259.456 334.336a491.52 491.52 0 0 1 84.8 108.16l-70.08 38.592c-17.216-36.032-43.008-72.064-77.44-108.16l62.72-38.592z m125.376 48.832H832v472.576c0 33.472-7.36 59.2-22.144 77.248-14.72 17.984-36.864 27.008-66.368 27.008-24.576 0-44.352-1.28-78.784-3.84l-18.432-64c39.36 2.56 71.296 3.84 95.872 3.84 17.216 0 25.792-18.048 25.792-54.08V448.832H384.832V383.168zM128 448h64v512H128V448z m512 64.448V832H320V512.448h320zM576 640V576H384.832v64H576z m-191.168 64v64H576v-64H384.832z" p-id="6411" id="refresh-video2-svg"></path></svg>';
     b = document.getElementsByClassName("PlayerToolbar")[0];
     b.insertBefore(a, b.childNodes[0]);
+
+    if (!document.getElementById("refresh-video3")) {
+        a = document.createElement("div");
+        a.id = "refresh-video3";
+        a.title = "关闭简洁模式";
+        a.innerText = "简";
+        a.style = "position:absolute;right:18px;bottom:58px;width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.55);color:#fff;z-index:9999;cursor:pointer;user-select:none;font-size:18px;line-height:32px;opacity:0;transform:scale(.9);transition:opacity .15s ease,transform .15s ease,background-color .15s ease;pointer-events:none;";
+        b = document.getElementById("js-player-dialog");
+        if (b) b.insertBefore(a, b.childNodes[0]);
+    }
 }
 
 function initPkg_Refresh_Video_Func() {
@@ -11732,15 +11717,68 @@ function initPkg_Refresh_Video_Func() {
         if (isBeta) dom_player_toolbar.parentElement.style = "z-index:20";
     }
 
+    let dom = getValidDom([".layout-Player-video", ".stream__T55I3"]);
+    let dom_video = document.getElementsByClassName("room-Player-Box")[0];
+    let refresh_video3 = document.getElementById("refresh-video3");
+    let timer_timeout = 0;
+
+    function hideRefreshVideo3() {
+        if (!refresh_video3) return;
+        refresh_video3.style.opacity = "0";
+        refresh_video3.style.transform = "scale(.9)";
+        refresh_video3.style.pointerEvents = "none";
+        clearTimeout(timer_timeout);
+    }
+
+    function setRefreshVideo3Show() {
+        if (!refresh_video3 || !refresh_Video_getStatus()) return;
+        refresh_video3.style.opacity = "1";
+        refresh_video3.style.transform = "scale(1)";
+        refresh_video3.style.pointerEvents = "auto";
+        clearTimeout(timer_timeout);
+        timer_timeout = setTimeout(() => {
+            hideRefreshVideo3();
+        }, 2000);
+    }
+
+    if (dom && refresh_video3) {
+        dom.addEventListener("mouseenter", () => { setRefreshVideo3Show(); });
+        dom.addEventListener("mouseleave", () => { hideRefreshVideo3(); });
+    }
+    if (dom_video && refresh_video3) {
+        dom_video.addEventListener("mousemove", () => { setRefreshVideo3Show(); });
+    }
+    if (refresh_video3) {
+        refresh_video3.addEventListener("mouseenter", () => {
+            if (!refresh_Video_getStatus()) return;
+            refresh_video3.style.opacity = "1";
+            refresh_video3.style.transform = "scale(1.08)";
+            refresh_video3.style.pointerEvents = "auto";
+            refresh_video3.style.backgroundColor = "rgba(0,0,0,.7)";
+            clearTimeout(timer_timeout);
+        });
+        refresh_video3.addEventListener("mouseleave", () => {
+            if (!refresh_Video_getStatus()) return;
+            refresh_video3.style.transform = "scale(1)";
+            refresh_video3.style.backgroundColor = "rgba(0,0,0,.55)";
+        });
+    }
+
 	document.getElementById("refresh-video").addEventListener("click", (e) => {
         let dom_toolbar = document.getElementsByClassName("PlayerToolbar-ContentRow")[0];
         let dom_video = getValidDom([".layout-Player-video", ".stream__T55I3"]);
         let dom_refresh = document.getElementById("refresh-video");
         let dom_refresh2 = document.getElementById("refresh-video2");
+        let dom_refresh3 = document.getElementById("refresh-video3");
         if (dom_toolbar.style.visibility == "hidden") {
             dom_toolbar.style.visibility = "visible";
             dom_video.style = "";
             dom_refresh2.style.display = "none";
+            if (dom_refresh3) {
+                dom_refresh3.style.opacity = "0";
+                dom_refresh3.style.transform = "scale(.9)";
+                dom_refresh3.style.pointerEvents = "none";
+            }
             dom_refresh.innerText = "简洁模式";
             refresh_Video_removeStyle();
         } else {
@@ -11759,10 +11797,16 @@ function initPkg_Refresh_Video_Func() {
         let dom_video = getValidDom([".layout-Player-video", ".stream__T55I3"]);
         let dom_refresh = document.getElementById("refresh-video");
         let dom_refresh2 = document.getElementById("refresh-video2");
+        let dom_refresh3 = document.getElementById("refresh-video3");
         if (dom_toolbar.style.visibility == "hidden") {
             dom_toolbar.style.visibility = "visible";
             dom_video.style = "";
             dom_refresh2.style.display = "none";
+            if (dom_refresh3) {
+                dom_refresh3.style.opacity = "0";
+                dom_refresh3.style.transform = "scale(.9)";
+                dom_refresh3.style.pointerEvents = "none";
+            }
             dom_refresh.innerText = "简洁模式";
             refresh_Video_removeStyle();
         } else {
@@ -11776,6 +11820,15 @@ function initPkg_Refresh_Video_Func() {
         saveData_Refresh();
         resizeWindow();
     });
+
+    if (refresh_video3) {
+        refresh_video3.addEventListener("click", (e) => {
+            e.stopPropagation();
+            if (!refresh_Video_getStatus()) return;
+            let dom_refresh2 = document.getElementById("refresh-video2");
+            if (dom_refresh2) dom_refresh2.click();
+        });
+    }
 }
 
 function refresh_Video_getStatus() {
@@ -11799,6 +11852,7 @@ function initPkg_Refresh_Video_Set() {
             let dom_video = getValidDom([".layout-Player-video", ".stream__T55I3"]);
             let dom_refresh2 = document.getElementById("refresh-video2");
             let dom_refresh = document.getElementById("refresh-video");
+            let dom_refresh3 = document.getElementById("refresh-video3");
             let dom_player_toolbar = document.getElementById("js-player-toolbar");
             dom_toolbar.style.visibility = "hidden";
             dom_video.style = "bottom:0;z-index:25";
@@ -11813,6 +11867,11 @@ function initPkg_Refresh_Video_Set() {
             const isBeta = !!document.getElementsByClassName("live-next-body")[0];
             if (isBeta) dom_player_toolbar.parentElement.style = "z-index:20";
             dom_refresh2.style.display = "block";
+            if (dom_refresh3) {
+                dom_refresh3.style.opacity = "0";
+                dom_refresh3.style.transform = "scale(.9)";
+                dom_refresh3.style.pointerEvents = "none";
+            }
             dom_refresh.innerText = "✓ 简洁模式";
             refresh_Video_setStyle();
             resizeWindow();
@@ -11829,6 +11888,7 @@ function refresh_Video_setStyle() {
 function refresh_Video_removeStyle() {
     StyleHook_remove("Ex_Style_VideoRefresh");
 }
+
 function initPkg_RemoveAD() {
     let t = setInterval(() => {
         let a = getValidDom([".PlayerToolbar-ContentCell .PlayerToolbar-Wealth", "#js-backpack-enter"]);
@@ -12826,22 +12886,6 @@ function initPkg_ShowDanmaku() {
             return text.replace('player_barrage\":0', 'player_barrage\":1');
         }
         return text;
-    });
-}
-
-function initPkg_ShowDanmakuOriginAction() {
-    scriptHook({
-        url: "/firstqueue",
-        callback: (content) => {
-            let newContent = content;
-            // 加一按钮
-            newContent = newContent.replace(`if(c&&c.isOpenFireFBComment)`, `if(true)`);
-            // 回复按钮
-            newContent = newContent.replace(`if(z&&!this.isFireOpenRank(s))if(parseInt(z,10)&&W&&M>=U&&(!G||G&&B))`, `if(true)if(true) `);
-            // 点赞按钮
-            newContent = newContent.replace(`else if(1==+Object(r.A)("barrage_praise"))`, `if(true) `);
-            return newContent;
-        }
     });
 }
 function initPkg_Sign() {
@@ -14119,7 +14163,7 @@ function initPkg_SyncJoy_Func() {
 
 // 版本号
 // 格式 yyyy.MM.dd.**
-var curVersion = "2026.01.09.01"
+var curVersion = "2026.02.02.01"
 var isNeedUpdate = false
 var lastestVersion = ""
 function initPkg_Update() {
@@ -14415,6 +14459,11 @@ function initPkg_VideoTools_Camera_Func() {
     })
     dom.addEventListener("mouseleave", () => {
         camera.style.display = "none";
+        clearTimeout(timer_timeout);
+    })
+    dom_video.addEventListener("mouseleave", () => {
+        camera.style.display = "none";
+        clearTimeout(timer_timeout);
     })
     camera.addEventListener("mousedown", (e) => {
         if (e.target.id === "ex-camera-close") return;
@@ -14465,6 +14514,7 @@ function initPkg_VideoTools_Camera_Func() {
 
     })
 }
+
 function initPkg_VideoTools_Camera_Video() {
     let timer = setInterval(() => {
         liveVideoNode = document.getElementsByTagName("demand-video")[0].shadowRoot.getElementById("__video");
@@ -14512,6 +14562,7 @@ function Camera_Video_isHidden() {
 
 function initPkg_VideoTools_Camera_Video_Func() {
     let dom = document.getElementsByTagName("demand-video")[0];
+    let dom_video = document.getElementsByClassName("Video")[0];
     let camera = document.getElementById("ex-camera");
     let closeBtn = document.getElementById("ex-camera-close");
     let gif = null;
@@ -14555,7 +14606,14 @@ function initPkg_VideoTools_Camera_Video_Func() {
     })
     dom.addEventListener("mouseleave", () => {
         camera.style.display = "none";
+        clearTimeout(timer_timeout);
     })
+    if (dom_video) {
+        dom_video.addEventListener("mouseleave", () => {
+            camera.style.display = "none";
+            clearTimeout(timer_timeout);
+        })
+    }
     camera.addEventListener("mousedown", (e) => {
         if (e.target.id === "ex-camera-close") return;
         downTime = new Date().getTime();
@@ -15408,18 +15466,24 @@ function initPkg_VideoTools_VideoRecall() {
     initPkg_VideoTools_VideoRecall_Func();
 }
 
+var VideoRecall_keydownHandler = null;
 
 function initPkg_VideoTools_VideoRecall_Func() {
-    getValidDom([".layout-Player-video", ".layout-Player-videoEntity video"]).addEventListener("keydown", (e) => {
-        if (isInput == true) {
-            return;
-        }
-        if (e.keyCode == 37) {
-            liveVideoNode.currentTime += -3;
-        } else if (e.keyCode == 39) {
-            liveVideoNode.currentTime += 3;
-        }
-    });
+    if (VideoRecall_keydownHandler) {
+        document.removeEventListener("keydown", VideoRecall_keydownHandler, true);
+    }
+
+    VideoRecall_keydownHandler = (e) => {
+        if (isInput) return;
+        if (e.target && (e.target.isContentEditable || /^(input|textarea)$/i.test(e.target.tagName))) return;
+        if (e.keyCode != 37 && e.keyCode != 39 && e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+        liveVideoNode = liveVideoNode || document.querySelector(".layout-Player-videoEntity video");
+        if (!liveVideoNode) return;
+        e.preventDefault();
+        liveVideoNode.currentTime = Math.max(0, (liveVideoNode.currentTime || 0) + (e.keyCode == 37 || e.key === "ArrowLeft" ? -3 : 3));
+    };
+
+    document.addEventListener("keydown", VideoRecall_keydownHandler, true);
 }
 
 function initPkg_VideoTools_VideoSpeed() {
@@ -15570,65 +15634,55 @@ function initPkg_VideoTools_Func() {
 }
 
 let videoScale = 1;
+var VideoZoom_down = null;
+var VideoZoom_wheelHandler = null;
 function initPkg_VideoTools_VideoZoom() {
-    let domWrap = getValidDom([".layout-Player-video", ".layout-Player-videoEntity"]);
+    let domWrap = getValidDom([".layout-Player-videoEntity", ".layout-Player-video"]);
     let domVideoWrap = document.getElementsByClassName("layout-Player-videoEntity")[0];
 
     let x = 0;
     let y = 0;
 
-    let mousedownX = 0;
-    let mousedownY = 0;
-    let mouseupX = 0;
-    let mouseupY = 0;
-
+    if (!domWrap || !domVideoWrap) return;
     domVideoWrap.style.transition = "all 0.1s";
-    domWrap.addEventListener("mousewheel", e => {
-        if (!e.ctrlKey) {
-            return;
-        }
+
+    if (VideoZoom_wheelHandler) window.removeEventListener("wheel", VideoZoom_wheelHandler, true);
+    VideoZoom_wheelHandler = (e) => {
+        if (!e.ctrlKey) return;
+        domWrap = domWrap || getValidDom([".layout-Player-videoEntity", ".layout-Player-video"]);
+        domVideoWrap = domVideoWrap || document.getElementsByClassName("layout-Player-videoEntity")[0];
+        if (!domWrap || !domVideoWrap) return;
+        const r = domWrap.getBoundingClientRect();
+        if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) return;
         e.preventDefault();
-        e.stopPropagation();
-        let delta = e.wheelDelta || -e.detail;
-        x = e.screenX - domWrap.getBoundingClientRect().left;
-        y = e.screenY - domWrap.getBoundingClientRect().top;
-        if (delta >= 0) {
-            videoScale += 0.1;
-        } else {
-            videoScale -= 0.1;
-        }
+        e.stopImmediatePropagation();
+        x = e.clientX - r.left;
+        y = e.clientY - r.top;
+        videoScale += e.deltaY < 0 ? 0.1 : -0.1;
+        if (videoScale < 0.1) videoScale = 0.1;
         domVideoWrap.style.transform = `scale(${videoScale})`;
         domVideoWrap.style.transformOrigin = `${x}px ${y}px`;
-    });
+    };
+    window.addEventListener("wheel", VideoZoom_wheelHandler, { capture: true, passive: false });
 
-    domWrap.addEventListener("mousedown", e => {
-        if (!e.ctrlKey) {
-            return;
-        }
-        if (e.button === 0) {
-            mousedownX = e.clientX - domWrap.getBoundingClientRect().left;
-            mousedownY = e.clientY - domWrap.getBoundingClientRect().top;
-        }
-    });
+    document.addEventListener("mousedown", (e) => {
+        if (!e.ctrlKey || e.button !== 0) return;
+        const p = e.composedPath ? e.composedPath() : null;
+        if (p ? (!p.includes(domWrap) && !p.includes(domVideoWrap)) : (!domWrap.contains(e.target) && !domVideoWrap.contains(e.target))) return;
+        const r = domWrap.getBoundingClientRect();
+        VideoZoom_down = { x: e.clientX - r.left, y: e.clientY - r.top };
+    }, true);
 
-    domWrap.addEventListener("mouseup", e => {
-        if (!e.ctrlKey) {
-            return;
-        }
-        if (e.button === 0) {
-            mouseupX = e.clientX - domWrap.getBoundingClientRect().left;
-            mouseupY = e.clientY - domWrap.getBoundingClientRect().top;
-
-            let delX = mouseupX - mousedownX;
-            let delY = mouseupY - mousedownY;
-
-            x -= delX;
-            y -= delY;
-            if (domVideoWrap.style.transform !== "") {
-                domVideoWrap.style.transformOrigin = `${x}px ${y}px`;
-            }
-        }
-    });
+    document.addEventListener("mouseup", (e) => {
+        if (!VideoZoom_down || !e.ctrlKey || e.button !== 0) return;
+        const p = e.composedPath ? e.composedPath() : null;
+        if (p ? (!p.includes(domWrap) && !p.includes(domVideoWrap)) : (!domWrap.contains(e.target) && !domVideoWrap.contains(e.target))) return;
+        const r = domWrap.getBoundingClientRect();
+        x -= (e.clientX - r.left) - VideoZoom_down.x;
+        y -= (e.clientY - r.top) - VideoZoom_down.y;
+        if (domVideoWrap.style.transform) domVideoWrap.style.transformOrigin = `${x}px ${y}px`;
+        VideoZoom_down = null;
+    }, true);
 }
 
 
