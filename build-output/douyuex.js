@@ -3,7 +3,7 @@
 // @name         DouyuEx-斗鱼直播间增强插件
 // @namespace    https://github.com/qianjiachun
 // @icon         data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMTA4cHgiIGhlaWdodD0iMTA4cHgiIHZpZXdCb3g9IjAgMCAxMDggMTA4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPgogICAgPHRpdGxlPueyvueBteeQgzwvdGl0bGU+CiAgICA8ZyBpZD0i6aG16Z2iLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSLnsr7ngbXnkIMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuODMwNzY5LCAwLjgzMDc2OSkiIGZpbGwtcnVsZT0ibm9uemVybyI+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik01My4xNjkyMzA3LDEwNi4zMzg0NjEgQzIzLjgyNzY5MjIsMTA2LjMzODQ2MSAwLDgyLjUxMDc2OTIgMCw1My4xNjkyMzA3IEMwLDUxLjAwMzA3NjkgMS43NzIzMDc3NSw0OS4yMzA3NjkyIDMuOTM4NDYxNSw0OS4yMzA3NjkyIEwzMy40NzY5MjMsNDkuMjMwNzY5MiBDMzUuNjQzMDc2OSw0OS4yMzA3NjkyIDM3LjQxNTM4NDUsNTEuMDAzMDc3IDM3LjQxNTM4NDYsNTMuMTY5MjMwNyBDMzcuNDE1Mzg0Niw2MS44MzM4NDYxIDQ0LjUwNDYxNTQsNjguOTIzMDc2OSA1My4xNjkyMzA3LDY4LjkyMzA3NjkgQzYxLjgzMzg0NjEsNjguOTIzMDc2OSA2OC45MjMwNzY5LDYxLjgzMzg0NjEgNjguOTIzMDc2OSw1My4xNjkyMzA3IEM2OC45MjMwNzY5LDUxLjAwMzA3NjkgNzAuNjk1Mzg0Niw0OS4yMzA3NjkyIDcyLjg2MTUzODUsNDkuMjMwNzY5MiBMMTAyLjQsNDkuMjMwNzY5MiBDMTA0LjU2NjE1NCw0OS4yMzA3NjkyIDEwNi4zMzg0NjEsNTEuMDAzMDc3IDEwNi4zMzg0NjEsNTMuMTY5MjMwNyBDMTA2LjMzODQ2MSw4Mi41MTA3NjkyIDgyLjUxMDc2OTIsMTA2LjMzODQ2MSA1My4xNjkyMzA3LDEwNi4zMzg0NjEgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iIzMzMzYzQSI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNOC4wNzM4NDYxMiw1Ny4xMDc2OTIyIEMxMC4wNDMwNzY5LDgwLjI0NjE1MzcgMjkuNTM4NDYxNSw5OC40NjE1Mzg1IDUzLjE2OTIzMDcsOTguNDYxNTM4NSBDNzYuOCw5OC40NjE1Mzg1IDk2LjI5NTM4NDYsODAuMjQ2MTUzOSA5OC4yNjQ2MTU0LDU3LjEwNzY5MjIgTDc2LjUwNDYxNTQsNTcuMTA3NjkyMiBDNzQuNjMzODQ2MSw2OC4yMzM4NDYxIDY0Ljg4NjE1MzksNzYuOCA1My4xNjkyMzA3LDc2LjggQzQxLjQ1MjMwNzYsNzYuOCAzMS43MDQ2MTU0LDY4LjIzMzg0NjEgMjkuODMzODQ2MSw1Ny4xMDc2OTIyIEw4LjA3Mzg0NjEyLDU3LjEwNzY5MjIgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNTMuMTY5MjMwOCwzLjkzODQ2MTUgQzI1Ljk5Mzg0NjEsMy45Mzg0NjE1IDMuOTM4NDYxNSwyNS45OTM4NDYxIDMuOTM4NDYxNSw1My4xNjkyMzA3IEwzMy40NzY5MjMsNTMuMTY5MjMwNyBDMzMuNDc2OTIzLDQyLjMzODQ2MTUgNDIuMzM4NDYxNSwzMy40NzY5MjMgNTMuMTY5MjMwOCwzMy40NzY5MjMgQzY0LDMzLjQ3NjkyMyA3Mi44NjE1Mzg1LDQyLjMzODQ2MTUgNzIuODYxNTM4NSw1My4xNjkyMzA3IEwxMDIuNCw1My4xNjkyMzA3IEMxMDIuNCwyNS45OTM4NDYxIDgwLjM0NDYxNTQsMy45Mzg0NjE1IDUzLjE2OTIzMDgsMy45Mzg0NjE1IFoiIGlkPSLot6/lvoQiIGZpbGw9IiNENjA5MDkiPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTEwMi40LDU3LjEwNzY5MjIgTDcyLjg2MTUzODUsNTcuMTA3NjkyMiBDNzAuNjk1Mzg0Niw1Ny4xMDc2OTIyIDY4LjkyMzA3Nyw1NS4zMzUzODQ1IDY4LjkyMzA3NjksNTMuMTY5MjMwNyBDNjguOTIzMDc2OSw0NC41MDQ2MTU0IDYxLjgzMzg0NjEsMzcuNDE1Mzg0NiA1My4xNjkyMzA3LDM3LjQxNTM4NDYgQzQ0LjUwNDYxNTQsMzcuNDE1Mzg0NiAzNy40MTUzODQ2LDQ0LjUwNDYxNTQgMzcuNDE1Mzg0Niw1My4xNjkyMzA3IEMzNy40MTUzODQ2LDU1LjMzNTM4NDYgMzUuNjQzMDc2OSw1Ny4xMDc2OTIyIDMzLjQ3NjkyMyw1Ny4xMDc2OTIyIEwzLjkzODQ2MTUsNTcuMTA3NjkyMiBDMS43NzIzMDc2Miw1Ny4xMDc2OTIyIDAsNTUuMzM1Mzg0NSAwLDUzLjE2OTIzMDcgQzAsMjMuODI3NjkyMiAyMy44Mjc2OTIzLDAgNTMuMTY5MjMwNywwIEM4Mi41MTA3NjkyLDAgMTA2LjMzODQ2MSwyMy44Mjc2OTIyIDEwNi4zMzg0NjEsNTMuMTY5MjMwNyBDMTA2LjMzODQ2MSw1NS4zMzUzODQ2IDEwNC41NjYxNTQsNTcuMTA3NjkyMiAxMDIuNCw1Ny4xMDc2OTIyIFoiIGlkPSLot6/lvoQiIGZpbGw9IiMzMzM2M0EiPjwvcGF0aD4KICAgICAgICAgICAgPHBhdGggZD0iTTc2LjUwNDYxNTQsNDkuMjMwNzY5MyBMOTguMzYzMDc2OSw0OS4yMzA3NjkzIEM5Ni4yOTUzODQ2LDI2LjA5MjMwNzYgNzYuOCw3Ljg3NjkyMyA1My4xNjkyMzA3LDcuODc2OTIzIEMyOS41Mzg0NjE1LDcuODc2OTIzIDEwLjA0MzA3NjksMjYuMDkyMzA3NiA4LjA3Mzg0NjEyLDQ5LjIzMDc2OTMgTDI5LjkzMjMwNzYsNDkuMjMwNzY5MyBDMzEuNzA0NjE1NCwzOC4xMDQ2MTU0IDQxLjQ1MjMwNzYsMjkuNTM4NDYxNSA1My4xNjkyMzA3LDI5LjUzODQ2MTUgQzY0Ljg4NjE1MzksMjkuNTM4NDYxNSA3NC42MzM4NDYxLDM4LjEwNDYxNTQgNzYuNTA0NjE1NCw0OS4yMzA3NjkzIEw3Ni41MDQ2MTU0LDQ5LjIzMDc2OTMgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0Q2MDkwOSI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNTMuMTY5MjMwNyw3Ni44IEM0MC4xNzIzMDc2LDc2LjggMjkuNTM4NDYxNSw2Ni4xNjYxNTM5IDI5LjUzODQ2MTUsNTMuMTY5MjMwNyBDMjkuNTM4NDYxNSw0MC4xNzIzMDc2IDQwLjE3MjMwNzYsMjkuNTM4NDYxNSA1My4xNjkyMzA3LDI5LjUzODQ2MTUgQzY2LjE2NjE1MzksMjkuNTM4NDYxNSA3Ni44LDQwLjE3MjMwNzYgNzYuOCw1My4xNjkyMzA3IEM3Ni44LDY2LjE2NjE1MzkgNjYuMTY2MTUzOSw3Ni44IDUzLjE2OTIzMDcsNzYuOCBaIiBpZD0i6Lev5b6EIiBmaWxsPSIjMzMzNjNBIj48L3BhdGg+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik01My4xNjkyMzA3LDM3LjQxNTM4NDYgQzQ0LjUwNDYxNTQsMzcuNDE1Mzg0NiAzNy40MTUzODQ2LDQ0LjUwNDYxNTQgMzcuNDE1Mzg0Niw1My4xNjkyMzA3IEMzNy40MTUzODQ2LDYxLjgzMzg0NjEgNDQuNTA0NjE1NCw2OC45MjMwNzY5IDUzLjE2OTIzMDcsNjguOTIzMDc2OSBDNjEuODMzODQ2MSw2OC45MjMwNzY5IDY4LjkyMzA3NjksNjEuODMzODQ2MSA2OC45MjMwNzY5LDUzLjE2OTIzMDcgQzY4LjkyMzA3NjksNDQuNTA0NjE1NCA2MS44MzM4NDYxLDM3LjQxNTM4NDYgNTMuMTY5MjMwNywzNy40MTUzODQ2IEw1My4xNjkyMzA3LDM3LjQxNTM4NDYgWiIgaWQ9Iui3r+W+hCIgZmlsbD0iI0ZGRkZGRiI+PC9wYXRoPgogICAgICAgICAgICA8cGF0aCBkPSJNNDMuMzIzMDc2OSw1My4xNjkyMzA3IEM0My4zMjMwNzY5LDU4LjYwNzExMTQgNDcuNzMxMzUwMSw2My4wMTUzODQ2IDUzLjE2OTIzMDcsNjMuMDE1Mzg0NiBDNTguNjA3MTExNCw2My4wMTUzODQ2IDYzLjAxNTM4NDYsNTguNjA3MTExNCA2My4wMTUzODQ2LDUzLjE2OTIzMDcgQzYzLjAxNTM4NDYsNDcuNzMxMzUwMSA1OC42MDcxMTE0LDQzLjMyMzA3NjkgNTMuMTY5MjMwNyw0My4zMjMwNzY5IEM0Ny43MzEzNTAxLDQzLjMyMzA3NjkgNDMuMzIzMDc2OSw0Ny43MzEzNTAxIDQzLjMyMzA3NjksNTMuMTY5MjMwNyBaIiBpZD0i6Lev5b6EIiBmaWxsPSIjMzMzNjNBIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=
-// @version      2026.02.02.01
+// @version      2026.02.04.02
 // @description  斗鱼直播间增强插件，功能：弹幕自动变色防检测循环发送 一键续牌 查看真实人数/查看主播数据 已播时长 一键签到(直播间/车队/鱼吧/客户端) 一键领取鱼粮(宝箱/气泡/任务) 一键寻宝 送出指定数量的礼物 一键清空背包 屏蔽广告 调节弹幕大小 自动更新 同屏画中画/多直播间小窗观看/可在斗鱼看多个平台直播(虎牙/b站) 获取真实直播流地址 自动抢礼物红包 背包信息扩展 简洁模式 夜间模式 开播提醒 幻神模式 关键词回复 关键词禁言 自动谢礼物 自动抢宝箱 弹幕右键信息扩展 防止下播自动跳转 影院模式 直播时间流控制 弹幕投票 直播滤镜 直播音频流 账号多开/切换 显示粉丝牌获取日期 月消费数据显示 弹幕时速 相机截图录制gif 全景播放器 斗鱼视频下载/弹幕ass下载 直播画面局部缩放 全站抽奖信息 直播音效增强 阻止P2P上传 显示贡献榜贡献值 恢复弹幕显示 斗鱼视频弹幕高能进度条 检测弹幕是否发送成功 查看主播配置信息 自动网页全屏 自动最高画质 弹幕无限收藏 收藏弹幕搜索 支持弹幕带图片 屏蔽弹幕背景 弹幕+1 房间VIP到期提醒 自动钓鱼 防止自动暂停直播 恢复已关闭鱼吧 弹幕小尾巴 屏蔽重复弹幕 画质增强
 // @author       小淳
 // @match			*://*.douyu.com/0*
@@ -86,6 +86,7 @@ function initPkg() {
   initPkg_BagInfo();
   initPkg_Update();
   // initPkg_SyncJoy();
+  initPkg_AutoAnchorStar();
   initPkg_Fkbuff();
   initPkg_Monitor();
   initPkg_Lottery();
@@ -503,7 +504,7 @@ function initStyles() {
 	align-items: flex-start;
 }
 
-.extool > div:not(.ex_giftAnimation) {
+.extool > div:not(.ex_giftAnimation):not(.extool__close) {
 	background: rgba(255,255,255,0.82);
 	border: 1px solid rgba(0,0,0,0.10);
 	border-radius: 10px;
@@ -515,6 +516,29 @@ function initStyles() {
 	gap: 6px 10px;
 	align-items: center;
 	min-width: 220px;
+}
+
+.extool__close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	width: 26px;
+	height: 26px;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	user-select: none;
+	background: rgba(0,0,0,0.06);
+	color: rgba(0,0,0,0.72);
+	font-size: 18px;
+	line-height: 26px;
+	z-index: 60;
+}
+
+.extool__close:hover {
+	background: rgba(0,0,0,0.10);
 }
 
 .extool__treasure,
@@ -625,7 +649,8 @@ function initStyles() {
 	position: absolute;
 	z-index: 50;
 	pointer-events: none;
-}.text-879f3e {
+}
+.text-879f3e {
   height: auto !important;
   max-height: 48px !important;
 }
@@ -1226,20 +1251,9 @@ function initStyles() {
     background-size: contain;
 } */
 
-#refresh-video2 {
-    display: none;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
-}
-
-#refresh-video2-svg {
-    fill: rgba(0,0,0,.6)
-}
-
 .refresh-barrage {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     vertical-align: top;
     margin: 0 2px;
     padding: 0 8px;
@@ -1254,6 +1268,27 @@ function initStyles() {
     user-select: none;
 }
 
+.refresh-barrage.ex-active {
+    background: linear-gradient(180deg, rgb(38, 169, 235), rgb(18, 150, 219));
+    border-color: rgb(18, 150, 219);
+    box-shadow: 0 0 0 2px rgba(18, 150, 219, .22), 0 8px 16px rgba(18, 150, 219, .28);
+    font-weight: 700;
+}
+
+.refresh-barrage.ex-active:hover {
+    box-shadow: 0 0 0 2px rgba(18, 150, 219, .28), 0 10px 18px rgba(18, 150, 219, .36);
+}
+
+.refresh-barrage.ex-active::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    margin-left: 6px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .95);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .22);
+}
+
 .live-next-body .refresh-barrage {
     background-color: var(--front-background-color);
     border: 1px solid var(--front-border-color);
@@ -1265,14 +1300,16 @@ function initStyles() {
 
 .top-0-important {
     top: 0 !important;
-}.room-vip {
+}
+.room-vip {
   -moz-user-select:none;/*火狐*/
   -webkit-user-select:none;/*webkit浏览器*/
   -ms-user-select:none;/*IE10*/
   -khtml-user-select:none;/*早期浏览器*/
   user-select:none;
   vertical-align: middle;
-  float: left;
+  position: absolute;
+  left: 12px;
 }.repeated-danmaku {
   opacity: 0 !important;
   pointer-events: none !important;
@@ -3432,6 +3469,30 @@ function initPkg_AudioLine_Func() {
         })
     });
 }
+function initPkg_AutoAnchorStar() {
+	initPkg_AutoAnchorStar_Dom();
+	initPkg_AutoAnchorStar_Func();
+}
+
+function initPkg_AutoAnchorStar_Dom() {
+	AutoAnchorStar_insertIcon();
+}
+function AutoAnchorStar_insertIcon() {
+	let a = document.createElement("div");
+	a.className = "ex-auto-anchor-star";
+	a.innerHTML = `<a class="ex-panel__icon" title="全自动代抢星推荐红包"><img style="width:36px;height:36px;" src="https://shark2.douyucdn.cn/front-publish/live-new-anchor-support-master/assets/images/entryIcon_ee486a8.png"/></a>`;
+	
+	let b = document.getElementsByClassName("ex-panel__wrap")[0];
+	b.insertBefore(a, b.childNodes[0]);
+}
+
+function initPkg_AutoAnchorStar_Func() {
+	document.getElementsByClassName("ex-auto-anchor-star")[0].addEventListener("click", function() {
+        openPage("https://xtj.douyuex.com/");
+	});
+}
+
+
 let timeout;
 function initPkg_BagInfo() {
 	initPkg_BagInfo_Func();
@@ -5258,6 +5319,7 @@ function initPkg_ExpandTool_Dom() {
 function ExpandTool_insertModal() {
 	let a = document.createElement("div");
 	a.className = "extool";
+    a.innerHTML = `<div class="extool__close" title="关闭">×</div>`;
 	
 	let b = document.getElementsByClassName("layout-Player-chat")[0];
 	b.insertBefore(a, b.childNodes[0]);
@@ -5280,6 +5342,15 @@ function initPkg_ExpandTool_Func() {
 	document.getElementsByClassName("extool-icon")[0].addEventListener("click", function() {
 		showExRightPanel("扩展功能");
 	});
+
+    const closeBtn = document.getElementsByClassName("extool__close")[0];
+    if (closeBtn) {
+        closeBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const panel = document.getElementsByClassName("extool")[0];
+            if (panel) panel.style.display = "none";
+        });
+    }
 }
 
 let autoFishInfo = [];
@@ -9824,29 +9895,49 @@ function initPkg_Monitor_Func() {
 }
 
 
+const MONTH_COST_CACHE_KEY = "ExSave_MonthCost";
+const MONTH_COST_SEE_STATUS_KEY = "ExSave_MonthCost_SeeStatus";
+
 let totalMonthCost = 0;
-let typeNum = 0;
-let typeCount = 0;
 let typeDetail = [];
 
 let svg_see = `<svg t="1619141525444" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4635" width="16" height="16" style="/* display: inline-block; */"><path d="M1009.592 531.212C863.184 730.624 696.96 832 512 832c-184.96 0-351.184-101.376-497.592-300.788C10.384 525.864 8 519.212 8 512s2.384-13.864 6.408-19.212C160.816 293.376 327.04 192 512 192c184.96 0 351.184 101.376 497.592 300.788 4.024 5.348 6.408 12 6.408 19.212s-2.384 13.864-6.408 19.212zM512 768c156.864 0 300.54-84.332 432.012-256C812.54 340.332 668.864 256 512 256c-156.864 0-300.54 84.332-432.012 256C211.46 683.668 355.136 768 512 768z m0-64c-106.04 0-192-85.96-192-192s85.96-192 192-192 192 85.96 192 192-85.96 192-192 192z m0-64c70.692 0 128-57.308 128-128s-57.308-128-128-128-128 57.308-128 128 57.308 128 128 128z" p-id="4636" fill="#707070"></path></svg>`;
 let svg_unsee = `<svg t="1619143157694" class="icon" viewBox="0 0 1186 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1733" width="16" height="16"><path d="M591.707784 915.740462A642.870487 642.870487 0 0 1 2.965954 526.459025a39.298888 39.298888 0 0 1 0-28.91805 632.489649 632.489649 0 0 1 584.292899-388.539948h8.897862a630.265183 630.265183 0 0 1 584.292899 388.539948 39.298888 39.298888 0 0 1 0 28.91805 637.680068 637.680068 0 0 1-336.635757 337.377245 646.577929 646.577929 0 0 1-252.106073 51.904192zM77.856287 512.370744a565.755688 565.755688 0 0 0 1026.961505 0 556.116338 556.116338 0 0 0-508.661077-329.220872h-8.897862a556.857827 556.857827 0 0 0-509.402566 329.220872z" p-id="1734" fill="#707070"></path><path d="M590.966296 732.592814a218.739093 218.739093 0 1 1 222.446535-218.739093 218.739093 218.739093 0 0 1-222.446535 218.739093z m0-362.587852a144.590248 144.590248 0 1 0 148.29769 143.848759 148.29769 148.29769 0 0 0-148.29769-143.848759z" p-id="1735" fill="#707070"></path><path d="M1137.443284 1023.997776a37.074423 37.074423 0 0 1-24.469119-8.897862L20.761677 65.253208A37.074423 37.074423 0 0 1 68.958426 8.900086l1092.212489 946.880752a37.074423 37.074423 0 0 1 0 52.64568 35.591446 35.591446 0 0 1-23.727631 15.571258z" p-id="1736" fill="#707070"></path></svg>`;
 
-let seeStatus = 1; // 0 不可视 1 可视
+let seeStatus = 0;
+
+function MonthCost_getContainerDom() {
+	return document.getElementsByClassName("month-cost")[0];
+}
+
+function MonthCost_getMoneyDom() {
+	return document.getElementById("monthcost__money");
+}
+
+function MonthCost_getIconDom() {
+	return document.getElementsByClassName("monthcost__icon")[0];
+}
+
+function MonthCost_renderSeeStatus() {
+	const iconDom = MonthCost_getIconDom();
+	const moneyDom = MonthCost_getMoneyDom();
+	if (!iconDom || !moneyDom) return;
+	if (seeStatus === 1) {
+		iconDom.innerHTML = svg_see;
+	} else {
+		moneyDom.innerText = "***";
+		iconDom.innerHTML = svg_unsee;
+	}
+	MonthCost_ContentAttrTitle();
+}
+
 function initPkg_MonthCost() {
-	// if (document.getElementsByClassName("SociatyLabel")[0].innerText == "伐木累") {
-	// 	return;
-	// }
 	initPkg_MonthCost_Dom();
 	initPkg_MonthCost_Func();
 	seeStatus = MonthCost_getSeeStatus();
-	const icon = document.getElementsByClassName("monthcost__icon")[0];
-	if (!icon) return;
-	if (seeStatus == 1) {
-		icon.innerHTML = svg_see;
+	MonthCost_renderSeeStatus();
+	if (seeStatus === 1) {
 		MonthCost_updateCost();
-	} else {
-		icon.innerHTML = svg_unsee;
 	}
 }
 
@@ -9858,43 +9949,37 @@ function MonthCost_insertIcon() {
 	let a = document.createElement("span");
 	a.className = "month-cost";
 	a.innerHTML = `
-	本月已消费 <span id="monthcost__money">***</span> 元
+	本月消费 <span id="monthcost__money">***</span> 元
 	<span class="monthcost__icon"></span>
 	`;
 	a.title = "数据每日更新，根据个人中心消费数据统计"
-	let b = getValidDom([".PlayerToolbar-ContentCell .PlayerToolbar-Wealth"]);
-	b && b.insertBefore(a, b.childNodes[0]);
+	let b = getValidDom(["#js-backpack-enter"]);
+	if (b) {
+		b = b.parentElement;
+		b && b.insertBefore(a, b.childNodes[0]);
+	}
 }
 
 function initPkg_MonthCost_Func() {
-	const icon = document.getElementsByClassName("monthcost__icon")[0];
-	if (!icon) return;
-	icon.addEventListener("click", () => {
-		if (seeStatus == 1) {
-			seeStatus = 0;
-			document.getElementById("monthcost__money").innerText = "***";
-			document.getElementsByClassName("monthcost__icon")[0].innerHTML = svg_unsee;
-		} else {
-			seeStatus = 1;
-			document.getElementsByClassName("monthcost__icon")[0].innerHTML = svg_see;
-			MonthCost_updateCost();
-		}
-		MonthCost_ContentAttrTitle();
+	const iconDom = MonthCost_getIconDom();
+	if (!iconDom) return;
+	iconDom.addEventListener("click", () => {
+		seeStatus = seeStatus === 1 ? 0 : 1;
 		MonthCost_saveSeeStatus();
-	})
+		MonthCost_renderSeeStatus();
+		if (seeStatus === 1) MonthCost_updateCost();
+	});
 }
 
 
 function MonthCost_saveSeeStatus() {
-	localStorage.setItem("ExSave_MonthCost_SeeStatus", seeStatus);
+	localStorage.setItem(MONTH_COST_SEE_STATUS_KEY, String(seeStatus));
 }
 
 function MonthCost_getSeeStatus() {
-	let storage = localStorage.getItem("ExSave_MonthCost_SeeStatus");
-	if (storage == null) {
-		storage = 1;
-	}
-	return storage;
+	let storage = localStorage.getItem(MONTH_COST_SEE_STATUS_KEY);
+	if (storage == null) return 0;
+	return Number(storage) === 1 ? 1 : 0;
 }
 
 function MonthCost_queryData(url) {
@@ -9907,7 +9992,9 @@ function MonthCost_queryData(url) {
             return res.json();
         }).then(ret => {
             resolve(ret);
-        })
+        }).catch(() => {
+			resolve({ error: -1, data: [] });
+		});
     })
 }
 
@@ -9915,7 +10002,7 @@ function MonthCost_queryData(url) {
 async function getMonthCost_gift() {
 	const [start, end] = getMonthTimeRange();
 	const [formattedStart, formattedEnd] = getFormattedMonthTimeRange();
-	let direction = 1;
+	const direction = 1;
 	let data = [];
 	let hasMoreData = true;
 	let id = 0;
@@ -9930,30 +10017,27 @@ async function getMonthCost_gift() {
 		if (ret.error == 1000) {
 			await new Promise(resolve => setTimeout(resolve, 2000));
 		} else {
-			data = data.concat(ret.data);
-			if (ret.data.length < 20) {
+			let nextData = (ret && ret.data) || [];
+			data = data.concat(nextData);
+			if (nextData.length < 20) {
 				hasMoreData = false;
 			} else {
-				id = ret.data[ret.data.length - 1].id;
+				id = nextData[nextData.length - 1].id;
 			}
 		}
 	}
 
-	data.forEach(item => {
-		totalMonthCost += Math.abs(item.amount)
-	});
-
 	let categorizedData = {};
-	data.forEach(item => {
-		if (!categorizedData[item.consumeTypeDesc]) {
-			categorizedData[item.consumeTypeDesc] = 0;
-		}
-		categorizedData[item.consumeTypeDesc] += Math.abs(item.amount);
-	});
+	for (const item of data) {
+		let money = Math.abs(item.amount);
+		totalMonthCost += money;
+		let key = item.consumeTypeDesc || "其他";
+		if (!categorizedData[key]) categorizedData[key] = 0;
+		categorizedData[key] += money;
+	}
 
-	for (let type in categorizedData) {
-		typeDetail[typeNum] = { 'title': type, 'money': categorizedData[type] };
-		typeNum++;
+	for (let title in categorizedData) {
+		typeDetail.push({ title, money: categorizedData[title] });
 	}
 
 }
@@ -9963,20 +10047,23 @@ async function getMonthCost_diamondFans() {
 	let page = 1;
 	let data = [];
 	let hasMoreData = true;
+	let now = new Date();
+	let nowMonth = now.getMonth();
+	let nowYear = now.getFullYear();
 
 	while (hasMoreData) {
 		let url = `https://www.douyu.com/japi/interactnc/web/dFansbadge/myLogs?type=${type}&page=${page}`;
 		let ret = await MonthCost_queryData(url);
-		ret.data.list.forEach(item => {
+		let list = (((ret || {}).data || {}).list) || [];
+		for (const item of list) {
 			let consumeDate = new Date(item.consumeTime * 1000);
-			let currentDate = new Date();
-			if (consumeDate.getMonth() === currentDate.getMonth() && consumeDate.getFullYear() === currentDate.getFullYear()) {
+			if (consumeDate.getMonth() === nowMonth && consumeDate.getFullYear() === nowYear) {
 				data.push(item);
 			}
-		});
-		if (!ret.data.list[ret.data.list.length - 1]) break;
-		let lastItemDate = new Date(ret.data.list[ret.data.list.length - 1].consumeTime * 1000);
-		if (ret.data.list.length < 20 || lastItemDate.getMonth() !== new Date().getMonth() || lastItemDate.getFullYear() !== new Date().getFullYear()) {
+		}
+		if (!list[list.length - 1]) break;
+		let lastItemDate = new Date(list[list.length - 1].consumeTime * 1000);
+		if (list.length < 20 || lastItemDate.getMonth() !== nowMonth || lastItemDate.getFullYear() !== nowYear) {
 			hasMoreData = false;
 		} else {
 			page++;
@@ -9984,11 +10071,9 @@ async function getMonthCost_diamondFans() {
 	}
 
 	let diamondFansMoney = 0;
-	data.forEach(item => {
-		diamondFansMoney += Math.abs(item.consumeMoney)
-	});
+	for (const item of data) diamondFansMoney += Math.abs(item.consumeMoney);
 	if (diamondFansMoney > 0) {
-		typeDetail.push({ 'title': '钻粉充值/续费', 'money': diamondFansMoney });
+		typeDetail.push({ title: "钻粉充值/续费", money: diamondFansMoney });
 	}
 	totalMonthCost += diamondFansMoney;
 }
@@ -10000,19 +10085,21 @@ async function getMonthCost() {
 	await getMonthCost_diamondFans();
 	MonthCost_saveData();
 	MonthCost_ContentAttrTitle();
-	document.getElementById("monthcost__money").innerText = String(totalMonthCost / 100);
+	let moneyDom = MonthCost_getMoneyDom();
+	if (moneyDom) moneyDom.innerText = String(totalMonthCost / 100);
 }
 
 function MonthCost_ContentAttrTitle(){
-	let a = document.getElementsByClassName("month-cost")[0];
-	if(seeStatus == 1 && typeDetail.length > 0){
+	let containerDom = MonthCost_getContainerDom();
+	if (!containerDom) return;
+	if (seeStatus === 1 && typeDetail.length > 0) {
 		let titleContent = "数据每日更新，根据个人中心消费数据统计。\n--- ---\n";
 		typeDetail.forEach(detail => {
 			titleContent += `${detail.title}: ${String(detail.money / 100)} 元\n`;
 		});
-		a.title = titleContent;
-	}else{
-		a.title = "数据每日更新，根据个人中心消费数据统计。"
+		containerDom.title = titleContent;
+	} else {
+		containerDom.title = "数据每日更新，根据个人中心消费数据统计。";
 	}
 }
 
@@ -10046,20 +10133,28 @@ function MonthCost_saveData() {
 		updateTime: new Date().getTime(),
 		typeDetail: typeDetail 
 	}
-	let storage = localStorage.getItem("ExSave_MonthCost");
+	let storage = localStorage.getItem(MONTH_COST_CACHE_KEY);
 	if (storage !== null) {
-		storage = JSON.parse(storage);
+		try {
+			storage = JSON.parse(storage);
+		} catch (e) {
+			storage = {};
+		}
 	} else {
 		storage = {};
 	}
 	storage[my_uid] = data;
-	localStorage.setItem("ExSave_MonthCost", JSON.stringify(storage));
+	localStorage.setItem(MONTH_COST_CACHE_KEY, JSON.stringify(storage));
 }
 
 function MonthCost_getData() {
-	let storage = localStorage.getItem("ExSave_MonthCost");
+	let storage = localStorage.getItem(MONTH_COST_CACHE_KEY);
 	if (storage !== null) {
-		storage = JSON.parse(storage);
+		try {
+			storage = JSON.parse(storage);
+		} catch (e) {
+			storage = {};
+		}
 	} else {
 		storage = {};
 	}
@@ -10067,10 +10162,10 @@ function MonthCost_getData() {
 }
 
 function MonthCost_updateCost() {
+	if (seeStatus !== 1) return;
 	let timeDiff = 1;
 	let tmpCost = 0;
 	let tmpTypeDetail = [];
-	// 默认为1，也就是要更新
 	let now = new Date().getDate();
 
 	let storage = MonthCost_getData();
@@ -10079,17 +10174,20 @@ function MonthCost_updateCost() {
 		timeDiff = Math.abs(now - new Date(item.updateTime).getDate());
 		tmpCost = item.monthCost;
 		tmpTypeDetail = item.typeDetail || [];
-		document.getElementById("monthcost__money").innerText = String(tmpCost / 100);
+		let moneyDom = MonthCost_getMoneyDom();
+		if (moneyDom) moneyDom.innerText = String(tmpCost / 100);
 		typeDetail = tmpTypeDetail;
 		MonthCost_ContentAttrTitle();
 	}else{
-		document.getElementById("monthcost__money").innerHTML = `<span class="PlayerToolbar-dataLoadding"></span>`;
+		let moneyDom = MonthCost_getMoneyDom();
+		if (moneyDom) moneyDom.innerHTML = `<span class="PlayerToolbar-dataLoadding"></span>`;
 	}
 
 	if (timeDiff >= 1) {
 		getMonthCost();
 	}
 }
+
 let svg_night  = '<svg t="1587640254282" class="icon" viewBox="0 0 1055 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5670" width="26" height="26"><path d="M388.06497 594.013091c-96.566303-167.253333-39.067152-381.889939 128.217212-478.487273a348.656485 348.656485 0 0 1 256.248242-36.864C623.491879-5.306182 435.417212-11.170909 276.542061 80.616727 37.236364 218.763636-44.776727 524.815515 93.401212 764.152242c138.146909 239.305697 444.198788 321.318788 683.535515 183.140849 158.875152-91.725576 247.870061-257.520485 249.669818-428.559515a348.656485 348.656485 0 0 1-160.085333 203.496727c-167.253333 96.566303-381.889939 39.036121-478.487273-128.217212" p-id="5671" fill="#8a8a8a"></path></svg>';
 let svg_day = '<svg t="1587640423416" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2270" width="26" height="26"><path d="M270.016 197.248l-83.84-84.544-69.76 70.464 83.776 84.544 69.76-70.4zM139.648 465.024H0v93.888h139.648V465.024zM558.528 0H465.472v136.192h93.056V0z m349.056 183.168l-69.76-70.464-83.84 84.544L819.2 263.04l88.384-79.872z m-153.6 643.584l83.84 84.48 65.28-65.728L819.2 760.96l-65.216 65.792z m130.368-267.84H1024V465.024h-139.648v93.888zM512.064 230.08C358.4 230.08 232.768 356.992 232.768 512c0 155.008 125.632 281.856 279.296 281.856 153.6 0 279.232-126.848 279.232-281.856 0-154.944-125.632-281.856-279.232-281.856zM465.472 1024h93.056v-136.256H465.472V1024z m-349.056-183.232l69.76 70.4 83.84-84.48L204.8 760.96 116.48 840.768z" p-id="2271" fill="#8a8a8a"></path></svg>';
 
@@ -11512,12 +11610,22 @@ function Refresh_Barrage_insertIcon() {
 function initPkg_Refresh_Barrage_Func() {
 	document.getElementById("refresh-barrage").addEventListener("click", function() {
         if (current_barrage_status == 0) {
-            // 简化
-            setRefreshBarrage();
+            PostbirdAlertBox.confirm({
+                'title': '提示',
+                'content': '是否屏蔽弹幕前缀（如粉丝牌、钻粉、贵族等标志）',
+                'okBtn': '确定',
+                'cancelBtn': '取消',
+                'onConfirm': function () {
+                    setRefreshBarrage();
+                    saveData_Refresh();
+                },
+                'onCancel': function () {
+                }
+            });
         } else {
             cancelRefreshBarrage();
+            saveData_Refresh();
         }
-        saveData_Refresh();
     });
 }
 
@@ -11554,16 +11662,29 @@ function setRefreshBarrage() {
     `;
     StyleHook_set("Ex_Style_RefreshBarrage", cssText);
     current_barrage_status = 1;
-    document.getElementById("refresh-barrage").style.backgroundColor = "rgb(18,150,219)";
+    document.getElementById("refresh-barrage").classList.add("ex-active");
     document.getElementById("refresh-barrage__text").style.color = "#fff";
+    document.getElementById("refresh-barrage__text").innerText = "前缀";
+    let svg = document.getElementById("refresh-barrage__svg");
+    if (svg) {
+        let p = svg.getElementsByTagName("path")[0];
+        if (p) p.setAttribute("fill", "#ffffff");
+    }
 }
 
 function cancelRefreshBarrage() {
     StyleHook_remove("Ex_Style_RefreshBarrage");
     current_barrage_status = 0;
-    document.getElementById("refresh-barrage").style.backgroundColor = "";
+    document.getElementById("refresh-barrage").classList.remove("ex-active");
     document.getElementById("refresh-barrage__text").style.color = "";
+    document.getElementById("refresh-barrage__text").innerText = "前缀";
+    let svg = document.getElementById("refresh-barrage__svg");
+    if (svg) {
+        let p = svg.getElementsByTagName("path")[0];
+        if (p) p.setAttribute("fill", "#AFAFAF");
+    }
 }
+
 function initPkg_Refresh_BarrageFrame() {
 	initPkg_Refresh_BarrageFrame_Dom();
     initPkg_Refresh_BarrageFrame_Func();
@@ -11575,9 +11696,9 @@ function initPkg_Refresh_BarrageFrame_Dom() {
 }
 function Refresh_BarrageFrame_insertIcon() {
 	let a = document.createElement("a");
-    a.className = "Barrage-toolbarLock";
+    a.className = "refresh-barrage";
     a.id = "refresh-barrage-frame";
-	a.innerHTML = '<i class="Barrage-toolbarIcon"></i><span id="refresh-barrage-frame__text" class="Barrage-toolbarText">拉高</span>';
+	a.innerHTML = '<svg t="1588051109604" id="refresh-barrage-frame__svg" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3095" width="16" height="16"><path d="M512 128 192 448h192v448h256V448h192L512 128z" fill="#AFAFAF" p-id="3096"></path></svg><i class="Barrage-toolbarIcon"></i><span id="refresh-barrage-frame__text" class="Barrage-toolbarText">拉高</span>';
 	let b = document.getElementsByClassName("Barrage-toolbar")[0];
 	b.insertBefore(a, b.childNodes[0]);
 }
@@ -11593,15 +11714,39 @@ function initPkg_Refresh_BarrageFrame_Func() {
             dom_activity.style.display = "block";
             dom_topBarrage.className = "Barrage";
             document.getElementById("refresh-barrage-frame__text").innerText = "拉高";
+            document.getElementById("refresh-barrage-frame").classList.remove("ex-active");
+            document.getElementById("refresh-barrage-frame__text").style.color = "";
+            let svg = document.getElementById("refresh-barrage-frame__svg");
+            if (svg) {
+                let p = svg.getElementsByTagName("path")[0];
+                if (p) p.setAttribute("fill", "#AFAFAF");
+            }
+            saveData_Refresh();
 
         } else {
-            // 没拉高
-            dom_rank.style.display = "none";
-            dom_activity.style.display = "none";
-            dom_topBarrage.className = "Barrage top-0-important";
-            document.getElementById("refresh-barrage-frame__text").innerText = "恢复";
+            PostbirdAlertBox.confirm({
+                'title': '提示',
+                'content': '是否拉高弹幕框，隐藏日榜周榜',
+                'okBtn': '确定',
+                'cancelBtn': '取消',
+                'onConfirm': function () {
+                    dom_rank.style.display = "none";
+                    dom_activity.style.display = "none";
+                    dom_topBarrage.className = "Barrage top-0-important";
+                    document.getElementById("refresh-barrage-frame__text").innerText = "拉高";
+                    document.getElementById("refresh-barrage-frame").classList.add("ex-active");
+                    document.getElementById("refresh-barrage-frame__text").style.color = "#fff";
+                    let svg = document.getElementById("refresh-barrage-frame__svg");
+                    if (svg) {
+                        let p = svg.getElementsByTagName("path")[0];
+                        if (p) p.setAttribute("fill", "#ffffff");
+                    }
+                    saveData_Refresh();
+                },
+                'onCancel': function () {
+                }
+            });
         }
-        saveData_Refresh();
     });
 }
 
@@ -11629,7 +11774,14 @@ function initPkg_Refresh_BarrageFrame_Set() {
             let dom_activity = document.getElementById("js-room-activity");
             dom_rank.style.display = "none";
             dom_activity.style.display = "none";
-            document.getElementById("refresh-barrage-frame__text").innerText = "恢复";
+            document.getElementById("refresh-barrage-frame__text").innerText = "拉高";
+            document.getElementById("refresh-barrage-frame").classList.add("ex-active");
+            document.getElementById("refresh-barrage-frame__text").style.color = "#fff";
+            let svg = document.getElementById("refresh-barrage-frame__svg");
+            if (svg) {
+                let p = svg.getElementsByTagName("path")[0];
+                if (p) p.setAttribute("fill", "#ffffff");
+            }
         }
     }
 }
@@ -11661,17 +11813,10 @@ function Refresh_Video_insertIcon() {
     let b = document.getElementsByClassName("menu-da2a9e")[0];
     b.insertBefore(a, b.childNodes[b.childNodes.length -1]);
 
-    a = document.createElement("div");
-    a.id = "refresh-video2";
-    a.title = "视频区简洁模式";
-    a.innerHTML = '<svg t="1587295753406" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6410" width="22" height="22"><path d="M218.88 64l73.728 23.168c-9.792 20.608-18.432 41.216-25.792 61.824h224.896v73.408H362.688c19.648 25.728 39.36 54.08 59.008 84.992l-77.44 42.496a1235.456 1235.456 0 0 0-66.368-127.552h-47.936L189.376 288c-14.72 20.608-34.432 43.776-59.008 69.504L64 307.328C135.296 235.2 186.944 154.112 218.88 64z m383.488 0l70.08 23.168c-7.36 20.608-16 41.216-25.792 61.824h261.824v73.408h-151.168c19.648 25.728 36.864 52.8 51.648 81.088l-66.368 42.496a1440.32 1440.32 0 0 0-70.08-123.584h-59.072a594.816 594.816 0 0 1-95.872 131.264L451.2 303.424C520 231.36 570.432 151.552 602.368 64zM259.456 334.336a491.52 491.52 0 0 1 84.8 108.16l-70.08 38.592c-17.216-36.032-43.008-72.064-77.44-108.16l62.72-38.592z m125.376 48.832H832v472.576c0 33.472-7.36 59.2-22.144 77.248-14.72 17.984-36.864 27.008-66.368 27.008-24.576 0-44.352-1.28-78.784-3.84l-18.432-64c39.36 2.56 71.296 3.84 95.872 3.84 17.216 0 25.792-18.048 25.792-54.08V448.832H384.832V383.168zM128 448h64v512H128V448z m512 64.448V832H320V512.448h320zM576 640V576H384.832v64H576z m-191.168 64v64H576v-64H384.832z" p-id="6411" id="refresh-video2-svg"></path></svg>';
-    b = document.getElementsByClassName("PlayerToolbar")[0];
-    b.insertBefore(a, b.childNodes[0]);
-
     if (!document.getElementById("refresh-video3")) {
         a = document.createElement("div");
         a.id = "refresh-video3";
-        a.title = "关闭简洁模式";
+        a.title = "开启简洁模式";
         a.innerText = "简";
         a.style = "position:absolute;right:18px;bottom:58px;width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.55);color:#fff;z-index:9999;cursor:pointer;user-select:none;font-size:18px;line-height:32px;opacity:0;transform:scale(.9);transition:opacity .15s ease,transform .15s ease,background-color .15s ease;pointer-events:none;";
         b = document.getElementById("js-player-dialog");
@@ -11731,7 +11876,7 @@ function initPkg_Refresh_Video_Func() {
     }
 
     function setRefreshVideo3Show() {
-        if (!refresh_video3 || !refresh_Video_getStatus()) return;
+        if (!refresh_video3) return;
         refresh_video3.style.opacity = "1";
         refresh_video3.style.transform = "scale(1)";
         refresh_video3.style.pointerEvents = "auto";
@@ -11750,7 +11895,6 @@ function initPkg_Refresh_Video_Func() {
     }
     if (refresh_video3) {
         refresh_video3.addEventListener("mouseenter", () => {
-            if (!refresh_Video_getStatus()) return;
             refresh_video3.style.opacity = "1";
             refresh_video3.style.transform = "scale(1.08)";
             refresh_video3.style.pointerEvents = "auto";
@@ -11758,75 +11902,49 @@ function initPkg_Refresh_Video_Func() {
             clearTimeout(timer_timeout);
         });
         refresh_video3.addEventListener("mouseleave", () => {
-            if (!refresh_Video_getStatus()) return;
             refresh_video3.style.transform = "scale(1)";
             refresh_video3.style.backgroundColor = "rgba(0,0,0,.55)";
         });
     }
 
+    function toggleRefreshVideo() {
+        let dom_toolbar = document.getElementsByClassName("PlayerToolbar-ContentRow")[0];
+        let dom_video = getValidDom([".layout-Player-video", ".stream__T55I3"]);
+        let dom_refresh = document.getElementById("refresh-video");
+        let dom_refresh3 = document.getElementById("refresh-video3");
+        if (!dom_toolbar || !dom_video || !dom_refresh) return;
+
+        if (dom_toolbar.style.visibility == "hidden") {
+            dom_toolbar.style.visibility = "visible";
+            dom_video.style = "";
+            if (dom_refresh3) {
+                dom_refresh3.style.opacity = "0";
+                dom_refresh3.style.transform = "scale(.9)";
+                dom_refresh3.style.pointerEvents = "none";
+                dom_refresh3.title = "开启简洁模式";
+            }
+            dom_refresh.innerText = "简洁模式";
+            refresh_Video_removeStyle();
+        } else {
+            dom_toolbar.style.visibility = "hidden";
+            dom_video.style = "bottom:0;z-index:25";
+            dom_refresh.innerText = "✓ 简洁模式";
+            if (dom_refresh3) dom_refresh3.title = "关闭简洁模式";
+            refresh_Video_setStyle();
+        }
+        changeToolBarZIndex();
+        saveData_Refresh();
+        resizeWindow();
+    }
+
 	document.getElementById("refresh-video").addEventListener("click", (e) => {
-        let dom_toolbar = document.getElementsByClassName("PlayerToolbar-ContentRow")[0];
-        let dom_video = getValidDom([".layout-Player-video", ".stream__T55I3"]);
-        let dom_refresh = document.getElementById("refresh-video");
-        let dom_refresh2 = document.getElementById("refresh-video2");
-        let dom_refresh3 = document.getElementById("refresh-video3");
-        if (dom_toolbar.style.visibility == "hidden") {
-            dom_toolbar.style.visibility = "visible";
-            dom_video.style = "";
-            dom_refresh2.style.display = "none";
-            if (dom_refresh3) {
-                dom_refresh3.style.opacity = "0";
-                dom_refresh3.style.transform = "scale(.9)";
-                dom_refresh3.style.pointerEvents = "none";
-            }
-            dom_refresh.innerText = "简洁模式";
-            refresh_Video_removeStyle();
-        } else {
-            dom_toolbar.style.visibility = "hidden";
-            dom_video.style = "bottom:0;z-index:25";
-            dom_refresh2.style.display = "block";
-            dom_refresh.innerText = "✓ 简洁模式";
-            refresh_Video_setStyle();
-        }
-        changeToolBarZIndex();
-        saveData_Refresh();
-        resizeWindow();
-    });
-    document.getElementById("refresh-video2").addEventListener("click", () => {
-        let dom_toolbar = document.getElementsByClassName("PlayerToolbar-ContentRow")[0];
-        let dom_video = getValidDom([".layout-Player-video", ".stream__T55I3"]);
-        let dom_refresh = document.getElementById("refresh-video");
-        let dom_refresh2 = document.getElementById("refresh-video2");
-        let dom_refresh3 = document.getElementById("refresh-video3");
-        if (dom_toolbar.style.visibility == "hidden") {
-            dom_toolbar.style.visibility = "visible";
-            dom_video.style = "";
-            dom_refresh2.style.display = "none";
-            if (dom_refresh3) {
-                dom_refresh3.style.opacity = "0";
-                dom_refresh3.style.transform = "scale(.9)";
-                dom_refresh3.style.pointerEvents = "none";
-            }
-            dom_refresh.innerText = "简洁模式";
-            refresh_Video_removeStyle();
-        } else {
-            dom_toolbar.style.visibility = "hidden";
-            dom_video.style = "bottom:0;z-index:25";
-            dom_refresh2.style.display = "block";
-            dom_refresh.innerText = "✓ 简洁模式";
-            refresh_Video_setStyle();
-        }
-        changeToolBarZIndex();
-        saveData_Refresh();
-        resizeWindow();
+        toggleRefreshVideo();
     });
 
     if (refresh_video3) {
         refresh_video3.addEventListener("click", (e) => {
             e.stopPropagation();
-            if (!refresh_Video_getStatus()) return;
-            let dom_refresh2 = document.getElementById("refresh-video2");
-            if (dom_refresh2) dom_refresh2.click();
+            toggleRefreshVideo();
         });
     }
 }
@@ -11850,7 +11968,6 @@ function initPkg_Refresh_Video_Set() {
         if (retJson.video.status == true) {
             let dom_toolbar = document.getElementsByClassName("PlayerToolbar-ContentRow")[0];
             let dom_video = getValidDom([".layout-Player-video", ".stream__T55I3"]);
-            let dom_refresh2 = document.getElementById("refresh-video2");
             let dom_refresh = document.getElementById("refresh-video");
             let dom_refresh3 = document.getElementById("refresh-video3");
             let dom_player_toolbar = document.getElementById("js-player-toolbar");
@@ -11866,11 +11983,11 @@ function initPkg_Refresh_Video_Set() {
             }
             const isBeta = !!document.getElementsByClassName("live-next-body")[0];
             if (isBeta) dom_player_toolbar.parentElement.style = "z-index:20";
-            dom_refresh2.style.display = "block";
             if (dom_refresh3) {
                 dom_refresh3.style.opacity = "0";
                 dom_refresh3.style.transform = "scale(.9)";
                 dom_refresh3.style.pointerEvents = "none";
+                dom_refresh3.title = "关闭简洁模式";
             }
             dom_refresh.innerText = "✓ 简洁模式";
             refresh_Video_setStyle();
@@ -12273,7 +12390,7 @@ function getYubaStatus(groupId) {
   });
 }
 
-const roomVipExpireDayLimit = 3;
+const roomVipExpireDayLimit = 5;
 function initPkg_RoomVip() {
   setRoomVipExpireDays();
 }
@@ -12284,8 +12401,11 @@ function initPkg_RoomVip_Dom() {
   a.innerHTML = `
 	距VIP到期 <span id="room-vip-expire-days">**</span> 天
 	`;
-  let b = getValidDom([".PlayerToolbar-ContentCell .PlayerToolbar-Wealth"]);
-  b && b.insertBefore(a, b.childNodes[0]);
+  let b = getValidDom(["#js-backpack-enter"]);
+  if (b) {
+    b = b.parentElement;
+    b && b.insertBefore(a, b.childNodes[0]);
+  }
 }
 
 function setRoomVipExpireDays() {
@@ -14163,7 +14283,7 @@ function initPkg_SyncJoy_Func() {
 
 // 版本号
 // 格式 yyyy.MM.dd.**
-var curVersion = "2026.02.02.01"
+var curVersion = "2026.02.04.02"
 var isNeedUpdate = false
 var lastestVersion = ""
 function initPkg_Update() {
@@ -15634,17 +15754,20 @@ function initPkg_VideoTools_Func() {
 }
 
 let videoScale = 1;
-var VideoZoom_down = null;
 var VideoZoom_wheelHandler = null;
+var VideoZoom_moveHandler = null;
+var VideoZoom_upHandler = null;
+var VideoZoom_drag = null;
 function initPkg_VideoTools_VideoZoom() {
     let domWrap = getValidDom([".layout-Player-videoEntity", ".layout-Player-video"]);
     let domVideoWrap = document.getElementsByClassName("layout-Player-videoEntity")[0];
 
-    let x = 0;
-    let y = 0;
+    let tx = 0;
+    let ty = 0;
 
     if (!domWrap || !domVideoWrap) return;
-    domVideoWrap.style.transition = "all 0.1s";
+    domVideoWrap.style.transformOrigin = "0 0";
+    domVideoWrap.style.transition = "transform 0.1s";
 
     if (VideoZoom_wheelHandler) window.removeEventListener("wheel", VideoZoom_wheelHandler, true);
     VideoZoom_wheelHandler = (e) => {
@@ -15656,33 +15779,44 @@ function initPkg_VideoTools_VideoZoom() {
         if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) return;
         e.preventDefault();
         e.stopImmediatePropagation();
-        x = e.clientX - r.left;
-        y = e.clientY - r.top;
-        videoScale += e.deltaY < 0 ? 0.1 : -0.1;
+        let px = e.clientX - r.left;
+        let py = e.clientY - r.top;
+        let nextScale = videoScale + (e.deltaY < 0 ? 0.1 : -0.1);
+        if (nextScale < 0.1) nextScale = 0.1;
+        let wx = (px - tx) / videoScale;
+        let wy = (py - ty) / videoScale;
+        tx = px - wx * nextScale;
+        ty = py - wy * nextScale;
+        videoScale = nextScale;
         if (videoScale < 0.1) videoScale = 0.1;
-        domVideoWrap.style.transform = `scale(${videoScale})`;
-        domVideoWrap.style.transformOrigin = `${x}px ${y}px`;
+        domVideoWrap.style.transform = `translate(${tx}px, ${ty}px) scale(${videoScale})`;
     };
     window.addEventListener("wheel", VideoZoom_wheelHandler, { capture: true, passive: false });
 
-    document.addEventListener("mousedown", (e) => {
+    if (VideoZoom_moveHandler) window.removeEventListener("mousemove", VideoZoom_moveHandler, true);
+    if (VideoZoom_upHandler) window.removeEventListener("mouseup", VideoZoom_upHandler, true);
+    window.addEventListener("mousedown", (e) => {
         if (!e.ctrlKey || e.button !== 0) return;
-        const p = e.composedPath ? e.composedPath() : null;
-        if (p ? (!p.includes(domWrap) && !p.includes(domVideoWrap)) : (!domWrap.contains(e.target) && !domVideoWrap.contains(e.target))) return;
         const r = domWrap.getBoundingClientRect();
-        VideoZoom_down = { x: e.clientX - r.left, y: e.clientY - r.top };
+        if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) return;
+        e.preventDefault();
+        domVideoWrap.style.transition = "none";
+        VideoZoom_drag = { x: e.clientX, y: e.clientY, tx, ty };
     }, true);
 
-    document.addEventListener("mouseup", (e) => {
-        if (!VideoZoom_down || !e.ctrlKey || e.button !== 0) return;
-        const p = e.composedPath ? e.composedPath() : null;
-        if (p ? (!p.includes(domWrap) && !p.includes(domVideoWrap)) : (!domWrap.contains(e.target) && !domVideoWrap.contains(e.target))) return;
-        const r = domWrap.getBoundingClientRect();
-        x -= (e.clientX - r.left) - VideoZoom_down.x;
-        y -= (e.clientY - r.top) - VideoZoom_down.y;
-        if (domVideoWrap.style.transform) domVideoWrap.style.transformOrigin = `${x}px ${y}px`;
-        VideoZoom_down = null;
-    }, true);
+    VideoZoom_moveHandler = (e) => {
+        if (!VideoZoom_drag) return;
+        tx = VideoZoom_drag.tx + (e.clientX - VideoZoom_drag.x);
+        ty = VideoZoom_drag.ty + (e.clientY - VideoZoom_drag.y);
+        domVideoWrap.style.transform = `translate(${tx}px, ${ty}px) scale(${videoScale})`;
+    };
+    VideoZoom_upHandler = () => {
+        if (!VideoZoom_drag) return;
+        VideoZoom_drag = null;
+        domVideoWrap.style.transition = "transform 0.1s";
+    };
+    window.addEventListener("mousemove", VideoZoom_moveHandler, true);
+    window.addEventListener("mouseup", VideoZoom_upHandler, true);
 }
 
 
