@@ -4921,7 +4921,7 @@ const dyVideoBarrage_domName = "ex-barrageLine";
 const dyVideoBarrage_switchDomName = "ex-barrageLine-switch";
 function initPkg_DyVideoBarrageLine() {
     let timer = setInterval(() => {
-        let progress = document.getElementsByTagName("demand-video")[0].shadowRoot.getElementById("demandcontroller-bar").shadowRoot.querySelector("demand-video-controller-progress").shadowRoot.querySelector(".ProgressBar-Safearea");
+        let progress = document.getElementsByTagName("demand-video")[0].shadowRoot.getElementById("demandcontroller-bar").shadowRoot.querySelector("demand-video-controller-progress").shadowRoot.querySelector(".ProgressBar-Sign");
         let hashidShadow = document.getElementsByTagName("demand-video-toolbar")[0].shadowRoot;
         let hashIdDom = document.getElementsByTagName("demand-video-toolbar")[0].shadowRoot;
         if (progress && hashidShadow && hashIdDom) {
@@ -7261,7 +7261,9 @@ function initPkg_LastLiveTime_Dom() {
 
     const timer = setInterval(() => {
       const player = document.querySelector(".room-Player");
-      if (player) {
+      const hasLastLiveTime = document.getElementsByClassName("LastLiveTime").length > 0;
+      
+      if (player && hasLastLiveTime) {
         clearInterval(timer);
 
         const overlay = document.createElement("div");
@@ -14582,7 +14584,6 @@ function initPkg_VideoTime() {
         VideoTime_setData();
         let videoDom = document.getElementsByTagName("demand-video")[0].shadowRoot.getElementById("__video");
         let showtimeDom = document.getElementsByTagName("demand-video")[0].shadowRoot.getElementById("demandcontroller-bar").shadowRoot.querySelector("demand-video-controller-progress").shadowRoot.querySelector("demand-video-controller-preview");
-
         if (videoDom !== undefined && videoDom !== null) {
             clearInterval(timer);
             videoTime_domhook_videoChange = new MutationObserver(function(mutations) {
@@ -14639,7 +14640,7 @@ function VideoTime_getShowTime() {
 }
 
 function VideoTime_setShowTime(timeStr) {
-    let dom = document.getElementsByTagName("demand-video")[0].shadowRoot.getElementById("demandcontroller-bar").shadowRoot.querySelector("demand-video-controller-progress").shadowRoot.querySelector("demand-video-controller-preview").shadowRoot.querySelector(".Preview-Time");
+    let dom = document.getElementsByTagName("demand-video")[0].shadowRoot.getElementById("demandcontroller-bar").shadowRoot.querySelector("demand-video-controller-progress").shadowRoot.querySelector("demand-video-controller-preview").shadowRoot.querySelector(".Preview label");
     if (dom) {
         dom.style.position = "relative";
         dom.style.bottom = "60px"
