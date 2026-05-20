@@ -67,6 +67,7 @@ function init() {
     initKillP2P();
     initFullScreen();
     initHighestVideoQuality();
+    initPkg_NoLogin();
     removeAD();
     initPkg_Statistics();
     initPkg_Console();
@@ -1164,6 +1165,9 @@ function initStyles() {
     top: 3px;
     cursor: pointer;
     margin-left: 3px;
+}/* 隐藏登录的提示 */
+.multiBitRate-da4b60 {
+  display: none !important;
 }.exVideoDiv {
     width: 500px;
     height: 250px;
@@ -1467,7 +1471,18 @@ function initStyles() {
 
 .metadata__panel li:hover {
   background-color: rgb(85, 85, 85);
-}  #ex-filter {
+}  #ex-pipcontrol {
+    float: left;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-size: contain;
+    pointer-events: all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}#ex-filter {
     float: left;
     width: 24px;
     height: 24px;
@@ -8526,6 +8541,22 @@ function cancelNightModeIframe() {
     StyleHook_removeIframe(document.getElementsByClassName("BottomGroup")[0].getElementsByTagName("iframe")[0].contentWindow.document, "Ex_Style_NightModeIframe");
 }
 
+function NoLogin_applyDouyuRateRecord() {
+    const NO_LOGIN_RATE_KEY = "rateRecordTime_h5p_room";
+    try {
+        const raw = localStorage.getItem(NO_LOGIN_RATE_KEY);
+        let data = raw ? JSON.parse(raw) : {};
+        if ("object" !== typeof data || null === data) data = {};
+        if ("v" === data.v) return;
+        data.v = "v";
+        localStorage.setItem(NO_LOGIN_RATE_KEY, JSON.stringify(data));
+    } catch (e) {}
+}
+
+function initPkg_NoLogin() {
+    NoLogin_applyDouyuRateRecord();
+}
+
 var videoPlayerArr = [];
 
 function initPkg_PopupPlayer() {
@@ -12072,6 +12103,937 @@ function MetaData_init() {
     });
 }
 
+let icon_pipcontrol = `<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAApElEQVR4AexTAQ6AIAisftJP6if9rKfUU/qJkds5RppsYbOWoyg4OUHomsLrQwTOucXZrRmV5yUaYDTQE2JwAm9rby4fhL1OBMxn8vkTZMv4vhKhCZFafRnQsGsmPjrJyCqnNROfnuRcdPhRa6nhh67vDnAyrX4+A+qSqMgTR0FklDiewSadiX8NbsXeQEDd0NOTFGwgwCWO/IeMwAcCGKx1cYIdAAD//3oahzQAAAAGSURBVAMAxtKrMXdkXvIAAAAASUVORK5CYII="/>`;
+
+let icon_pipcontrol_set = `<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAB2klEQVR4AcyUgXHCMAxF7S7SsglsApMAk0AngU1gE/qeiRxMgFC43jXnH8mK9b9sJflIf3z9P4HT6fQFpoGxA3h6BxBKvIHwAHYB4gewZH5zPCUAwZxsibW46ZhS2qfz9YURmOEYFYB8SpqVY5Kkk5zzJPWXYt/9tPVGBVge5Nuc8yznfETUI1JY8gWxPTGPcIdtjuuhAIvnCMT21/gxJNev5Ew8QuPmMD2PhwIs+QSOFVVabUJUEmNHYqVyJpJjynAnsSaNCUT1JbO7KSQkklj4yP4I/YoxAYnqYh2qNjbD10YBpT/EYo57HmMCkRC2ZF2ITPAdC47ONSIRqDu5K0CCzRKSDl5DSOyBu/C5qG+bk8BNgY48EsqbEgnXlrX2wlczGtsUMxAgwaovybdB6jOwBBugldgmr7o1fif1eIw1AiRZxV1yEnwmmUVoBeHkUQ3IE1cjwNwvFJM8lqZygpJjkqQ+E/qutdlN5am7qkBXvWGbZ7K+H5bVBrlkaxqsFfp1bUm4ulUB4m4T0w9Er8kfkvWZvVcFqEoBt+lb4T/e5l1W/mtyZaqAE7AARQTrR6OoR/ESORztv8hdAH8D/u99K2zey+QDAQMCERvtTpy+hesjeovsVvIPAAAA//+5v3LIAAAABklEQVQDAFMMzjFiZ8i8AAAAAElFTkSuQmCC"/>`;
+
+let icon_pipcontrol_send = `<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAs0lEQVR4AeyU3Q2AIAyE1UkcRTfTyXQTR8GW5MgFCCQFXwxELD/HfaRpWKaP248AzrnL9WsPMs8p2rDYIa7wYIBfmxubN6FfAqC9LsMBqKaxmCJULVxqc+g4FgEstI6LAFQszGtz6DgWASy0jgegmrkkRVKKq3TzyxoTE4AI9KltfVlv8fFfDqAbN0rSGHc10Z4DHGIaBCpq6TFgF/OzxTA+ywA1D7mLhdZ5AMjNu5vrpV4AAAD//9kfWOoAAAAGSURBVAMAe2CtMQj8RU0AAAAASUVORK5CYII="/>`;
+
+let pip_ws_instance = null;
+
+let pipConfig = {
+    fontSize: 18,
+    speed: 2.5,
+    area: "full",
+    trackHeight: 28,
+    mergeMode: "combo",
+    lowPowerMode: false
+};
+
+function initPkg_PictureInPictureControl() {
+    initPkg_PictureInPictureControl_Dom();
+    initPkg_PictureInPictureControl_Func();
+}
+
+function initPkg_PictureInPictureControl_Dom() {
+    PictureInPictureControl_insertIcon();
+}
+
+function PictureInPictureControl_insertIcon() {
+    let a = document.createElement("div");
+    a.id = "ex-pipcontrol";
+    a.title = "画中画增强";
+    a.innerHTML = icon_pipcontrol;
+    let b = document.querySelector(".icon-7e38e8");
+    b.after(a);
+}
+
+function initPkg_PictureInPictureControl_Func() {
+    document.getElementById("ex-pipcontrol").addEventListener("click", () => {
+        const video = document.getElementById("__video2");
+        if (!video) {
+            showMessage("【画中画增强】当前直播间不支持画中画增强功能", "error");
+            return;
+        }
+        if (!window.documentPictureInPicture) {
+            showMessage("【画中画增强】当前浏览器不支持画中画增强功能，建议使用 Chrome 116+ 或 Edge 116+", "error");
+            return;
+        }
+        const saved = localStorage.getItem("ExSave_PipSet");
+        if (saved) try {
+            const obj = JSON.parse(saved);
+            Object.assign(pipConfig, obj);
+        } catch (e) {}
+        PictureInPictureControl_handle();
+    });
+}
+
+function PictureInPictureControl_toggleMainVideoVisibility(hide) {
+    const mainVideo = document.getElementById("__video2");
+    if (!mainVideo) return;
+    if (hide) {
+        mainVideo.style.setProperty("opacity", "0.01", "important");
+        mainVideo.style.setProperty("pointer-events", "none", "important");
+    } else {
+        mainVideo.style.removeProperty("opacity");
+        mainVideo.style.removeProperty("pointer-events");
+    }
+}
+
+function PictureInPictureControl_toggleSourcePagePower(enable) {
+    const powerHogs = [ ".layout-Player", ".room-html5-player", ".Barrage-list", ".DiamondsFansRankList", ".wm-view", ".wm-tabv2", ".comment-37342a", ".DanmuEffectDom", ".layout-Player-asideMainTop" ];
+    const freezeWhitelists = [ ".ChatSend-txt", ".ChatSend-button" ];
+    powerHogs.forEach(selector => {
+        const el = document.querySelector(selector);
+        if (!el) return;
+        if (enable) el.style.setProperty("display", "none", "important"); else el.style.removeProperty("display");
+    });
+    freezeWhitelists.forEach(selector => {
+        const el = document.querySelector(selector);
+        if (!el) return;
+        if (enable) {
+            el.style.setProperty("opacity", "0.01", "important");
+            el.style.setProperty("pointer-events", "none", "important");
+        } else {
+            el.style.removeProperty("opacity");
+            el.style.removeProperty("pointer-events");
+        }
+    });
+}
+
+async function PictureInPictureControl_handle() {
+    const video = document.getElementById("__video2");
+    if (pip_ws_instance) {
+        try {
+            pip_ws_instance.close();
+        } catch (e) {}
+        pip_ws_instance = null;
+    }
+    const pipWindow = await documentPictureInPicture.requestWindow({
+        width: 670,
+        height: 380,
+        disallowReturnToOpener: true,
+        preferInitialWindowPlacement: true
+    });
+    pipWindow.document.body.innerHTML = PictureInPictureControl_getTemplate();
+    const pipVideo = pipWindow.document.getElementById("pip-video");
+    const danmakuLayer = pipWindow.document.getElementById("danmaku");
+    const setBtn = pipWindow.document.getElementById("pip-set");
+    const sendBtn = pipWindow.document.getElementById("pip-send");
+    const toast = pipWindow.document.getElementById("pip-toast");
+    PictureInPictureControl_toggleMainVideoVisibility(true);
+    if (false !== pipConfig.lowPowerMode) PictureInPictureControl_toggleSourcePagePower(true);
+    pipVideo.srcObject = video.captureStream();
+    await pipVideo.play().catch(() => {});
+    setBtn.addEventListener("click", () => {
+        PictureInPictureControl_openSettingPanel();
+        toast.innerText = "已在斗鱼直播页面打开设置面板";
+        toast.classList.add("show");
+        clearTimeout(toast._timer);
+        toast._timer = setTimeout(() => toast.classList.remove("show"), 5e3);
+    });
+    sendBtn.addEventListener("click", () => {
+        const panel = pipWindow.document.getElementById("input-panel");
+        const inputField = pipWindow.document.getElementById("pip-input-field");
+        if (panel.classList.contains("active")) panel.classList.remove("active"); else {
+            panel.classList.add("active");
+            inputField.focus();
+        }
+    });
+    PictureInPictureControl_bindSendEvents(pipWindow, danmakuLayer);
+    PictureInPictureControl_bindVideoSync(video, pipVideo);
+    PictureInPictureControl_startComboCleaner();
+    pip_ws_instance = new Ex_WebSocket_UnLogin(rid, ret => {
+        const msg = PictureInPictureControl_parseWSMsg(ret);
+        PictureInPictureControl_handleComboAndRender(msg, pipWindow, danmakuLayer);
+    });
+    PictureInPictureControl_bindCleanup(video, pipWindow, pipVideo);
+}
+
+function PictureInPictureControl_bindVideoSync(video, pipVideo) {
+    function syncVideo() {
+        if (video.paused) pipVideo.pause(); else pipVideo.play().catch(() => {});
+    }
+    video.addEventListener("play", syncVideo);
+    video.addEventListener("pause", syncVideo);
+}
+
+function PictureInPictureControl_bindCleanup(video, pipWindow, pipVideo) {
+    window.__pip_is_active__ = true;
+    function cleanup() {
+        window.__pip_is_active__ = false;
+        PictureInPictureControl_toggleSourcePagePower(false);
+        PictureInPictureControl_toggleMainVideoVisibility(false);
+        if (pip_ws_instance) {
+            try {
+                pip_ws_instance.close();
+            } catch (e) {}
+            pip_ws_instance = null;
+        }
+        if (comboCleanerTimer) {
+            clearInterval(comboCleanerTimer);
+            comboCleanerTimer = null;
+        }
+        comboMap.clear();
+        try {
+            pipVideo.srcObject = null;
+        } catch (e) {}
+        try {
+            pipWindow.close();
+        } catch (e) {}
+    }
+    pipWindow.addEventListener("pagehide", cleanup);
+    const timer = setInterval(() => {
+        if (pipWindow.closed) {
+            clearInterval(timer);
+            cleanup();
+        }
+    }, 2e3);
+}
+
+const comboMap = new Map();
+
+let comboCleanerTimer = null;
+
+function PictureInPictureControl_parseWSMsg(ret) {
+    if (!ret || !ret.startsWith("type@=chatmsg/")) return null;
+    const obj = {};
+    const parts = ret.split("/");
+    for (let i = 0; i < parts.length; i++) {
+        const p = parts[i];
+        const idx = p.indexOf("@=");
+        if (-1 === idx) continue;
+        obj[p.substring(0, idx)] = p.substring(idx + 2);
+    }
+    const txt = obj.txt ? decodeURIComponent(obj.txt) : "";
+    if (!txt) return null;
+    return {
+        text: txt,
+        color: obj.col ? parseInt(obj.col) : 0,
+        uid: obj.uid || ""
+    };
+}
+
+function PictureInPictureControl_getDanmakuColor(col) {
+    switch (col) {
+      case 1:
+        return "#ff3b30";
+
+      case 2:
+        return "#0a84ff";
+
+      case 3:
+        return "#34c759";
+
+      case 4:
+        return "#ff9500";
+
+      case 5:
+        return "#af52de";
+
+      case 6:
+        return "#ff2d55";
+
+      default:
+        return "#ffffff";
+    }
+}
+
+function PictureInPictureControl_getTrack(pipWindow, textWidth) {
+    let maxTracks = Math.floor(pipWindow.innerHeight / pipConfig.trackHeight);
+    if ("half" === pipConfig.area) maxTracks = Math.floor(maxTracks / 2); else if ("quarter" === pipConfig.area) maxTracks = Math.floor(maxTracks / 4);
+    maxTracks = Math.max(1, maxTracks);
+    if (!window.__pip_track_state__) window.__pip_track_state__ = [];
+    const state = window.__pip_track_state__;
+    const screenWidth = pipWindow.innerWidth;
+    const baseDuration = 15 / pipConfig.speed;
+    const duration = Math.max(.7 * baseDuration, Math.min(1.4 * baseDuration, baseDuration + textWidth / 120 / pipConfig.speed));
+    const currentSpeed = (screenWidth + textWidth) / duration;
+    let bestTrack = -1;
+    for (let i = 0; i < maxTracks; i++) {
+        const lastDanmaku = state[i];
+        if (!lastDanmaku) {
+            state[i] = {
+                textWidth: textWidth,
+                speed: currentSpeed,
+                startTime: Date.now(),
+                duration: 1e3 * duration
+            };
+            return i;
+        }
+        const elapsed = Date.now() - lastDanmaku.startTime;
+        if (elapsed >= lastDanmaku.duration) {
+            state[i] = {
+                textWidth: textWidth,
+                speed: currentSpeed,
+                startTime: Date.now(),
+                duration: 1e3 * duration
+            };
+            return i;
+        }
+        const lastDistance = lastDanmaku.speed * (elapsed / 1e3);
+        const lastHeadX = screenWidth - lastDistance;
+        const lastTailX = lastHeadX + lastDanmaku.textWidth;
+        const safeGap = 16;
+        if (lastTailX > screenWidth - safeGap) continue;
+        if (currentSpeed > lastDanmaku.speed) {
+            const timeLeftForLast = lastDanmaku.duration - elapsed;
+            const catchUpTime = lastHeadX / (currentSpeed - lastDanmaku.speed);
+            if (1e3 * catchUpTime < timeLeftForLast) continue;
+        }
+        bestTrack = i;
+        break;
+    }
+    if (-1 === bestTrack) {
+        let minTailX = 1 / 0;
+        for (let i = 0; i < maxTracks; i++) {
+            const ld = state[i];
+            if (!ld) {
+                bestTrack = i;
+                break;
+            }
+            const elapsed = Date.now() - ld.startTime;
+            const lastTailX = screenWidth - ld.speed * (elapsed / 1e3) + ld.textWidth;
+            if (lastTailX < minTailX) {
+                minTailX = lastTailX;
+                bestTrack = i;
+            }
+        }
+    }
+    state[bestTrack] = {
+        textWidth: textWidth,
+        speed: currentSpeed,
+        startTime: Date.now(),
+        duration: 1e3 * duration
+    };
+    return bestTrack;
+}
+
+function PictureInPictureControl_findMatchKey(text) {
+    if (comboMap.has(text)) return text;
+    const getCleanKey = str => str.replace(/\s+/g, "").split("").filter((v, i, a) => a.indexOf(v) === i).join("");
+    const currentClean = getCleanKey(text);
+    if (!currentClean) return text;
+    for (var existingKey of comboMap.keys()) {
+        const existingClean = getCleanKey(existingKey);
+        if (currentClean === existingClean) if (Math.abs(text.length - existingKey.length) <= 6) return existingKey;
+        if (text.includes(existingKey) || existingKey.includes(text)) if (Math.abs(text.length - existingKey.length) <= 4) return existingKey;
+    }
+    return text;
+}
+
+function PictureInPictureControl_startComboCleaner() {
+    if (comboCleanerTimer) clearInterval(comboCleanerTimer);
+    comboCleanerTimer = setInterval(() => {
+        const now = Date.now();
+        for (var [ key, info ] of comboMap.entries()) {
+            const recentCount = info.timestamps.filter(t => now - t <= 8e3).length;
+            if (recentCount < 10) {
+                if (info.dom) {
+                    info.dom.remove();
+                    info.dom = null;
+                }
+                comboMap.delete(key);
+            }
+        }
+    }, 1e3);
+}
+
+function PictureInPictureControl_handleComboAndRender(msg, pipWindow, danmakuLayer) {
+    if (!msg || !msg.text) return;
+    if (my_uid && msg.uid === my_uid) return;
+    const currentMode = pipConfig.mergeMode || "combo";
+    if ("all" === currentMode) {
+        PictureInPictureControl_renderDanmaku(msg, pipWindow, danmakuLayer);
+        return;
+    }
+    const now = Date.now();
+    const matchedKey = PictureInPictureControl_findMatchKey(msg.text);
+    if (!comboMap.has(matchedKey)) comboMap.set(matchedKey, {
+        timestamps: [],
+        dom: null,
+        displayCount: 0
+    });
+    const info = comboMap.get(matchedKey);
+    info.timestamps.push(now);
+    if ("single" === currentMode) {
+        const singleFrequency = info.timestamps.filter(t => now - t <= 4e3).length;
+        if (singleFrequency > 1) return;
+        PictureInPictureControl_renderDanmaku(msg, pipWindow, danmakuLayer);
+        return;
+    }
+    info.timestamps = info.timestamps.filter(t => now - t <= 8e3);
+    const recentFrequency = info.timestamps.length;
+    if (recentFrequency >= 10) {
+        if (0 === info.displayCount) info.displayCount = Math.max(10, recentFrequency); else info.displayCount += 1;
+        const container = pipWindow.document.getElementById("combo-container");
+        if (container) {
+            if (!info.dom) {
+                info.dom = pipWindow.document.createElement("div");
+                info.dom.className = "combo-item";
+                container.appendChild(info.dom);
+            }
+            info.dom.innerHTML = `${matchedKey} <span class="combo-count">X ${info.displayCount}</span>`;
+        }
+    } else {
+        if (info.dom) {
+            info.dom.remove();
+            info.dom = null;
+            info.displayCount = 0;
+        }
+        PictureInPictureControl_renderDanmaku(msg, pipWindow, danmakuLayer);
+    }
+}
+
+function PictureInPictureControl_renderDanmaku(msg, pipWindow, danmakuLayer, isSelf = false) {
+    if (!msg || !msg.text) return;
+    const el = pipWindow.document.createElement("div");
+    el.className = "dm" + (isSelf ? " dm-self" : "");
+    el.innerText = msg.text;
+    el.style.fontSize = pipConfig.fontSize + "px";
+    el.style.color = isSelf ? "#00ff66" : PictureInPictureControl_getDanmakuColor(msg.color);
+    if (!isSelf) el.style.textShadow = "1px 1px 1px #000, -1px -1px 1px #000, 1px -1px 1px #000, -1px 1px 1px #000";
+    el.style.visibility = "hidden";
+    danmakuLayer.appendChild(el);
+    const textWidth = el.offsetWidth;
+    const screenWidth = pipWindow.innerWidth;
+    const track = PictureInPictureControl_getTrack(pipWindow, textWidth);
+    const y = track * pipConfig.trackHeight;
+    const currentTrackState = window.__pip_track_state__[track];
+    const animDuration = currentTrackState.duration / 1e3;
+    el.style.top = y + "px";
+    el.style.left = screenWidth + "px";
+    el.style.visibility = "visible";
+    const animationName = `exPipMove_` + Math.random().toString(36).substring(2, 9);
+    const pipDoc = pipWindow.document;
+    let styleSheet = pipDoc.getElementById("ex-danmaku-styles");
+    if (!styleSheet) {
+        styleSheet = pipDoc.createElement("style");
+        styleSheet.id = "ex-danmaku-styles";
+        pipDoc.head.appendChild(styleSheet);
+    }
+    styleSheet.sheet.insertRule(`
+        @keyframes ${animationName} {
+            from { transform: translateX(0); }
+            to { transform: translateX(-${screenWidth + textWidth + 30}px); }
+        }
+    `, 0);
+    el.style.animation = `${animationName} ${animDuration}s linear forwards`;
+    el.addEventListener("animationend", () => {
+        el.remove();
+        try {
+            const sheet = styleSheet.sheet;
+            for (let i = 0; i < sheet.cssRules.length; i++) if (sheet.cssRules[i].name === animationName) {
+                sheet.deleteRule(i);
+                break;
+            }
+        } catch (e) {}
+    });
+}
+
+function PictureInPictureControl_bindSendEvents(pipWindow, danmakuLayer) {
+    const inputField = pipWindow.document.getElementById("pip-input-field");
+    const submitBtn = pipWindow.document.getElementById("pip-submit-btn");
+    const panel = pipWindow.document.getElementById("input-panel");
+    async function doSubmit() {
+        const content = inputField.value.trim();
+        if (!content) return;
+        inputField.value = "";
+        panel.classList.remove("active");
+        const toast = pipWindow.document.getElementById("pip-toast");
+        toast.innerText = "发送成功";
+        toast.classList.add("show");
+        clearTimeout(toast._timer);
+        toast._timer = setTimeout(() => toast.classList.remove("show"), 2e3);
+        PictureInPictureControl_renderDanmaku({
+            text: content,
+            color: 0
+        }, pipWindow, danmakuLayer, true);
+        try {
+            await PictureInPictureControl_SendDanmaku(content);
+        } catch (err) {
+            console.error("弹幕发送接口调用失败:", err);
+        }
+    }
+    inputField.addEventListener("keydown", e => {
+        if ("Enter" === e.key) doSubmit();
+    });
+    submitBtn.addEventListener("click", () => {
+        doSubmit();
+    });
+}
+
+async function PictureInPictureControl_SendDanmaku(text) {
+    let textarea = document.querySelector("div.ChatSend-txt");
+    const button = document.querySelector(".ChatSend-button");
+    textarea.innerText = text;
+    button.click();
+    return true;
+}
+
+function PictureInPictureControl_openSettingPanel() {
+    let panel = document.getElementById("pip-setting-panel");
+    const defaultConfigs = {
+        fontSize: 18,
+        speed: 2.5,
+        area: "full",
+        trackHeight: 28,
+        mergeMode: "combo",
+        lowPowerMode: false
+    };
+    const refreshPanelUI = () => {
+        document.getElementById("pip-area").value = pipConfig.area;
+        document.getElementById("pip-mergemode").value = pipConfig.mergeMode || "combo";
+        document.getElementById("pip-lowpowermode").value = false !== pipConfig.lowPowerMode ? "on" : "off";
+        document.getElementById("pip-fontsize").value = pipConfig.fontSize;
+        document.getElementById("pip-fontsize-value").innerText = pipConfig.fontSize;
+        document.getElementById("pip-trackheight").value = pipConfig.trackHeight || 28;
+        document.getElementById("pip-trackheight-value").innerText = pipConfig.trackHeight || 28;
+        document.getElementById("pip-speed").value = pipConfig.speed;
+        document.getElementById("pip-speed-value").innerText = pipConfig.speed;
+    };
+    if (panel) {
+        panel.style.display = "block";
+        refreshPanelUI();
+        return;
+    }
+    panel = document.createElement("div");
+    panel.id = "pip-setting-panel";
+    panel.innerHTML = `
+        <div class="pip-setting-title">画中画弹幕设置</div>
+
+        <div class="pip-setting-item">
+            <span>弹幕字号</span>
+            <input id="pip-fontsize" type="range" min="12" max="48" value="${pipConfig.fontSize}">
+            <span id="pip-fontsize-value">${pipConfig.fontSize}</span>
+        </div>
+
+        <div class="pip-setting-item">
+            <span>弹幕上下间距</span>
+            <input id="pip-trackheight" type="range" min="14" max="60" value="${pipConfig.trackHeight || 28}">
+            <span id="pip-trackheight-value">${pipConfig.trackHeight || 28}</span>
+        </div>
+
+        <div class="pip-setting-item">
+            <span>弹幕速度</span>
+            <input id="pip-speed" type="range" min="1" max="10" step="0.5" value="${pipConfig.speed}">
+            <span id="pip-speed-value">${pipConfig.speed}</span>
+        </div>
+
+        <div class="pip-setting-item">
+            <span>弹幕显示区域</span>
+            <select id="pip-area">
+                <option value="full">全屏</option>
+                <option value="half">1/2</option>
+                <option value="quarter">1/4</option>
+            </select>
+        </div>
+
+        <div class="pip-setting-item item-vertical">
+            <div class="item-label-row">
+                <span>重复弹幕合并</span>
+                <select id="pip-mergemode">
+                    <option value="all">全部显示</option>
+                    <option value="single">只显示一条</option>
+                    <option value="combo">合并显示（如X5）</option>
+                </select>
+            </div>
+            <div class="pip-setting-tip">短时间内多条相同弹幕内容时的显示方式</div>
+        </div>
+
+        <div class="pip-setting-item item-vertical">
+            <div class="item-label-row">
+                <span>原网页低功耗</span>
+                <select id="pip-lowpowermode">
+                    <option value="on">开启</option>
+                    <option value="off">关闭</option>
+                </select>
+            </div>
+            <div class="pip-setting-tip">开启后，拉起画中画时将切断并隐藏原网页的视频、礼物与网页弹幕，大幅压低 CPU 占用</div>
+        </div>
+
+        <div class="pip-footer-row">
+            <span class="pip-setting-reset">恢复默认</span>
+            <div class="pip-setting-close">完成</div>
+        </div>
+    `;
+    if (!document.getElementById("pip-setting-style")) {
+        const style = document.createElement("style");
+        style.id = "pip-setting-style";
+        style.innerHTML = `
+            #pip-setting-panel {
+                position: fixed;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 440px;
+                background: rgba(255, 255, 255, 0.98);
+                border: 1px solid rgba(212, 212, 216, 1);
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+                border-radius: 12px;
+                padding: 24px;
+                z-index: 999999;
+                font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif;
+                color: #18181b;
+                box-sizing: border-box;
+                backdrop-filter: blur(10px);
+            }
+
+            .pip-setting-title {
+                font-size: 16px;
+                font-weight: 600;
+                margin-bottom: 24px;
+                color: #000000;
+                text-align: center;
+                letter-spacing: 0.5px;
+            }
+
+            .pip-setting-item {
+                margin-bottom: 18px;
+                display: flex;
+                align-items: center;
+                font-size: 13px;
+            }
+
+            .pip-setting-item.item-vertical {
+                margin-bottom: 20px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .item-label-row {
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+
+            .pip-setting-item span:first-child {
+                width: 100px;
+                color: #3f3f46;
+                font-weight: 600;
+            }
+
+            .pip-setting-item input[type="range"] {
+                flex: 1;
+                margin: 0 14px;
+                -webkit-appearance: none;
+                background: #d4d4d8;
+                height: 4px;
+                border-radius: 2px;
+                outline: none;
+            }
+
+            .pip-setting-item input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: #ff5d23;
+                cursor: pointer;
+                transition: transform 0.1s;
+            }
+
+            .pip-setting-item input[type="range"]::-webkit-slider-thumb:hover {
+                transform: scale(1.2);
+            }
+
+            .pip-setting-item select {
+                flex: 1;
+                background: #f4f4f5;
+                color: #18181b;
+                padding: 6px 10px;
+                border-radius: 6px;
+                border: 1px solid #cdcdd6;
+                outline: none;
+                font-size: 13px;
+                cursor: pointer;
+                transition: border-color 0.2s, background 0.2s;
+                font-weight: 500;
+            }
+
+            .pip-setting-item select:focus {
+                border-color: #ff5d23;
+                background: #ffffff;
+            }
+
+            .pip-setting-item span:last-child {
+                width: 32px;
+                text-align: right;
+                color: #ff5d23;
+                font-weight: bold;
+                font-family: monospace;
+            }
+
+            .pip-setting-tip {
+                font-size: 11px;
+                color: #52525b;
+                margin-top: 6px;
+                margin-left: 100px;
+                line-height: 1.4;
+            }
+
+            .pip-footer-row {
+                margin-top: 28px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .pip-setting-reset {
+                font-size: 13px;
+                color: #71717a;
+                cursor: pointer;
+                transition: color 0.2s;
+                text-decoration: underline;
+                user-select: none;
+                font-weight: 500;
+            }
+
+            .pip-setting-reset:hover {
+                color: #ff5d23;
+            }
+
+            .pip-setting-close {
+                background: #ff5d23;
+                color: #fff;
+                text-align: center;
+                padding: 8px 24px;
+                border-radius: 8px;
+                cursor: pointer;
+                font-weight: 600;
+                font-size: 14px;
+                transition: background 0.2s, transform 0.1s;
+                box-shadow: 0 4px 12px rgba(255, 93, 35, 0.15);
+            }
+
+            .pip-setting-close:hover {
+                background: #e04e1b;
+            }
+
+            .pip-setting-close:active {
+                transform: scale(0.98);
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    document.body.appendChild(panel);
+    const font = document.getElementById("pip-fontsize");
+    const track = document.getElementById("pip-trackheight");
+    const speed = document.getElementById("pip-speed");
+    const area = document.getElementById("pip-area");
+    const merge = document.getElementById("pip-mergemode");
+    const lowPower = document.getElementById("pip-lowpowermode");
+    area.value = pipConfig.area;
+    merge.value = pipConfig.mergeMode || "combo";
+    lowPower.value = false !== pipConfig.lowPowerMode ? "on" : "off";
+    const save = () => {
+        localStorage.setItem("ExSave_PipSet", JSON.stringify(pipConfig));
+    };
+    font.addEventListener("input", () => {
+        pipConfig.fontSize = parseInt(font.value);
+        document.getElementById("pip-fontsize-value").innerText = pipConfig.fontSize;
+        save();
+    });
+    track.addEventListener("input", () => {
+        pipConfig.trackHeight = parseInt(track.value);
+        document.getElementById("pip-trackheight-value").innerText = pipConfig.trackHeight;
+        save();
+    });
+    speed.addEventListener("input", () => {
+        pipConfig.speed = parseFloat(speed.value);
+        document.getElementById("pip-speed-value").innerText = pipConfig.speed;
+        save();
+    });
+    area.addEventListener("change", () => {
+        pipConfig.area = area.value;
+        save();
+    });
+    merge.addEventListener("change", () => {
+        pipConfig.mergeMode = merge.value;
+        save();
+    });
+    lowPower.addEventListener("change", () => {
+        pipConfig.lowPowerMode = "on" === lowPower.value;
+        save();
+        if (window.__pip_is_active__) PictureInPictureControl_toggleSourcePagePower(pipConfig.lowPowerMode);
+    });
+    panel.querySelector(".pip-setting-reset").addEventListener("click", () => {
+        if (confirm("确定要将画中画设置恢复为默认配置吗？")) {
+            Object.assign(pipConfig, defaultConfigs);
+            save();
+            refreshPanelUI();
+            if (window.__pip_is_active__) PictureInPictureControl_toggleSourcePagePower(pipConfig.lowPowerMode);
+        }
+    });
+    panel.querySelector(".pip-setting-close").addEventListener("click", () => {
+        panel.style.display = "none";
+    });
+}
+
+function PictureInPictureControl_getTemplate() {
+    return `
+        <style>
+            html,body{margin:0;width:100%;height:100%;overflow:hidden;background:black;font-family: sans-serif;}
+            #wrap{position:relative;width:100%;height:100%;display:flex;flex-direction:column;}
+            #main-view{position:relative;flex:1;width:100%;overflow:hidden;}
+            video{width:100%;height:100%;object-fit:contain;}
+            #danmaku{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+            
+            #combo-container {
+                position: absolute;
+                top: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 6px;
+                pointer-events: none;
+                z-index: 9999;
+            }
+            .combo-item {
+                background: rgba(0, 0, 0, 0.75);
+                color: #fff;
+                padding: 4px 14px;
+                border-radius: 20px;
+                font-size: 14px;
+                font-weight: bold;
+                white-space: nowrap;
+                border: 1px solid rgba(255, 193, 7, 0.7);
+                text-shadow: 1px 1px 2px #000;
+            }
+            .combo-count {
+                color: #ffeb3b;
+                font-style: italic;
+                margin-left: 6px;
+                display: inline-block;
+                transform: scale(1.1);
+            }
+
+            .dm{
+                position:absolute;
+                white-space:nowrap;
+                will-change:transform;
+                box-sizing: border-box;
+                font-weight: 700;
+                line-height: 1.2;
+                font-family: "SimHei", "Microsoft YaHei", "Arial Black", "Segoe UI Historic", sans-serif;
+                text-shadow: 
+                    -1px -1px 0 #000,  1px -1px 0 #000, -1px  1px 0 #000,  1px  1px 0 #000,
+                    -1px  0px 0 #000,  1px  0px 0 #000,  0px -1px 0 #000,  0px  1px 0 #000,
+                     0px  0px 2px rgba(0,0,0,0.8);
+            }
+            
+            .dm-self {
+                background-color: rgba(0, 0, 0, 0.35);
+                border: 1px solid #00ff66 !important;
+                padding: 2px 8px;
+                border-radius: 4px;
+                box-shadow: 0 0 4px rgba(0, 255, 102, 0.4), inset 0 0 4px rgba(0, 255, 102, 0.15);
+            }
+
+            #pip-btns{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                justify-content: center;
+                left: -50px;
+                padding: 4px;
+                z-index: 1000;
+                transition: all 0.3s;
+                flex-direction: column;
+            }
+
+            .pip-btn {
+                border: 2px solid #FFF;
+                border-radius: 50%;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                padding: 4px;
+                background: #00000094;
+                cursor: pointer;
+                z-index: 1000;
+                transition: all 0.3s;
+                margin: 5px 0;
+            }
+
+            .pip-btn:hover {background:#000000c4;}
+            #wrap:hover #pip-btns {left:10px}
+
+            #pip-toast{
+                position:absolute;
+                left:50%;top:50%;
+                transform:translate(-50%,-50%);
+                background:rgba(0,0,0,.75);
+                color:#fff;
+                padding:10px 16px;
+                border-radius:10px;
+                font-size:14px;
+                z-index:99999;
+                opacity:0;
+                transition:opacity .3s;
+                pointer-events:none;
+                text-align:center;
+            }
+            #pip-toast.show{opacity:1;}
+
+            #input-panel {
+                display: none;
+                background: #18181c;
+                padding: 8px 12px;
+                box-sizing: border-box;
+                border-top: 1px solid #2f2f35;
+                align-items: center;
+                gap: 10px;
+                z-index: 10000;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+            #input-panel.active {
+                display: flex;
+            }
+            #pip-input-field {
+                flex: 1;
+                background: #2a2a30;
+                border: 1px solid #3f3f46;
+                border-radius: 6px;
+                color: #fff;
+                padding: 6px 10px;
+                font-size: 14px;
+                outline: none;
+            }
+            #pip-input-field:focus {
+                border-color: #ff5d23;
+            }
+            #pip-submit-btn {
+                background: #ff5d23;
+                color: #fff;
+                border: none;
+                padding: 6px 14px;
+                border-radius: 6px;
+                font-size: 14px;
+                cursor: pointer;
+                font-weight: bold;
+                transition: background 0.2s;
+            }
+            #pip-submit-btn:hover {
+                background: #e04e1b;
+            }
+        </style>
+
+        <div id="wrap">
+            <div id="main-view">
+                <div id="pip-btns">
+                    <div id="pip-set" class="pip-btn">${icon_pipcontrol_set}</div>
+                    <div id="pip-send" class="pip-btn">${icon_pipcontrol_send}</div>
+                </div>
+                <video id="pip-video" autoplay muted playsinline></video>
+                <div id="danmaku"></div>
+                <div id="combo-container"></div>
+                <div id="pip-toast"></div>
+            </div>
+            
+            <div id="input-panel">
+                <input type="text" id="pip-input-field" placeholder="发条弹幕吧..." maxlength="50" autocomplete="off" />
+                <button id="pip-submit-btn">发送</button>
+            </div>
+        </div>
+    `;
+}
+
 function initPkg_VideoTools_FrameChase() {
     initPkg_VideoTools_FrameChase_Dom();
     initPkg_VideoTools_FrameChase_Func();
@@ -12752,6 +13714,7 @@ function initPkg_VideoTools_Module() {
     initPkg_VideoTools_Camera();
     initPkg_VideoTools_VideoZoom();
     initPkg_VideoTools_MetaData();
+    initPkg_PictureInPictureControl();
 }
 
 function initPkg_VideoTools_Func() {
@@ -14321,8 +15284,20 @@ function getRealRid_Douyu(url, realrid_callback) {
         let url = doc.getElementsByTagName("html")[0].innerHTML;
         let urlLen = "$ROOM.room_id =".length;
         let ridPos = url.indexOf("$ROOM.room_id =");
-        let rid = url.substring(ridPos + urlLen, url.indexOf(";", ridPos + urlLen));
-        rid = rid.trim();
+        let rid = "";
+        if (ridPos > 0) {
+            rid = url.substring(ridPos + urlLen, url.indexOf(";", ridPos + urlLen));
+            rid = rid.trim();
+        } else {
+            rid = getStrMiddle(url, `roomID:`, `,`);
+            if (rid) rid = rid.trim(); else {
+                let canonicalLink = doc.querySelector(`link[rel="canonical"]`);
+                if (canonicalLink) {
+                    let href = canonicalLink.getAttribute(`href`);
+                    rid = href.split("/").pop().trim();
+                }
+            }
+        }
         if (true == isRid(rid)) realrid_callback(rid); else showMessage("获取直播间失败，请检查直播间地址是否正确！", "error");
     }).catch(err => {
         console.log("请求失败!", err);
